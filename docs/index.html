@@ -5,26 +5,28 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="description"
-		content="Lumazon, specialist in schaduw- en zontechniek, werkt aan een nieuwe website. Schrijf je in en ontvang als eerste een update wanneer we live gaan." />
-	<title>Lumazon | Schaduw- en zontechniek in Nederland</title>
+		content="Lumazon uit de Zaanstreek werkt aan een nieuwe website. Specialist in schaduw- en zontechniek voor Zaanstreek, Zaanstad en omgeving." />
+	<title>Lumazon | Schaduw- en zontechniek in de Zaanstreek</title>
 	<link rel="canonical" href="https://lumazon.nl/" />
 	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 	<meta name="theme-color" content="#12372f" />
+	<meta name="geo.region" content="NL-NH" />
+	<meta name="geo.placename" content="Zaanstreek" />
 
 	<meta property="og:locale" content="nl_NL" />
 	<meta property="og:type" content="website" />
 	<meta property="og:site_name" content="Lumazon" />
-	<meta property="og:title" content="Lumazon | Schaduw- en zontechniek in Nederland" />
+	<meta property="og:title" content="Lumazon | Schaduw- en zontechniek in de Zaanstreek" />
 	<meta property="og:description"
-		content="Lumazon werkt aan een nieuwe website. Ontvang als eerste updates over schaduw- en zontechniek, montage, onderhoud en advies." />
+		content="Lumazon uit de Zaanstreek werkt aan een nieuwe website. Ontvang als eerste updates over schaduw- en zontechniek, montage, onderhoud en advies in de regio." />
 	<meta property="og:url" content="https://lumazon.nl/" />
 	<meta property="og:image" content="https://lumazon.nl/assets/pond.png" />
 	<meta property="og:image:alt" content="Illustratie van de Lumazon coming-soon pagina" />
 
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Lumazon | Schaduw- en zontechniek in Nederland" />
+	<meta name="twitter:title" content="Lumazon | Schaduw- en zontechniek in de Zaanstreek" />
 	<meta name="twitter:description"
-		content="Lumazon werkt aan een nieuwe website. Ontvang als eerste updates over schaduw- en zontechniek, montage, onderhoud en advies." />
+		content="Lumazon uit de Zaanstreek werkt aan een nieuwe website. Ontvang als eerste updates over schaduw- en zontechniek, montage, onderhoud en advies in de regio." />
 	<meta name="twitter:image" content="https://lumazon.nl/assets/pond.png" />
 
 	<script type="application/ld+json">
@@ -32,13 +34,32 @@
 			"@context": "https://schema.org",
 			"@graph": [
 				{
-					"@type": "Organization",
+					"@type": ["Organization", "LocalBusiness"],
 					"@id": "https://lumazon.nl/#organization",
 					"name": "Lumazon",
 					"url": "https://lumazon.nl/",
 					"logo": "https://lumazon.nl/favicon.ico",
-					"description": "Specialist in schaduw- en zontechniek.",
-					"areaServed": "NL"
+					"description": "Specialist in schaduw- en zontechniek uit de Zaanstreek.",
+					"address": {
+						"@type": "PostalAddress",
+						"addressLocality": "Zaanstreek",
+						"addressRegion": "Noord-Holland",
+						"addressCountry": "NL"
+					},
+					"areaServed": [
+						{
+							"@type": "AdministrativeArea",
+							"name": "Zaanstreek"
+						},
+						{
+							"@type": "AdministrativeArea",
+							"name": "Zaanstad"
+						},
+						{
+							"@type": "Country",
+							"name": "Nederland"
+						}
+					]
 				},
 				{
 					"@type": "WebSite",
@@ -114,8 +135,8 @@
 
 				<p
 					class="js-reveal-subtext mx-auto px-3 mt-6 max-w-2xl text-base leading-7 text-[#3d4e42] opacity-0 translate-y-2 scale-[0.99] blur-[2px] transition-all duration-[950ms] ease-[cubic-bezier(0.22,1,0.36,1)] sm:text-lg">
-					Schrijf je in en ontvang als eerste updates over onze schaduw- en zontechniek én ontvang korting op
-					je eerste montage!
+					Schrijf je in en ontvang als eerste updates over onze schaduw- en zontechniek, plus korting op je
+					eerste montage.
 				</p>
 
 				<form
@@ -157,8 +178,11 @@
 				<img src="./assets/fogg-tree.png" alt=""
 					class="js-reveal-sprites absolute -bottom-4 right-16 z-50 hidden w-28 opacity-0 translate-y-3 transition-all duration-700 ease-out sm:block md:w-36 lg:w-44" />
 
-				<img src="./assets/fogg-raccoon-with-a-cookie.png" alt=""
-					class="js-reveal-sprites absolute bottom-12 left-[62%] z-30 w-24 -translate-x-1/2 rotate-[1deg] opacity-0 translate-y-3 transition-all duration-700 ease-out sm:bottom-14 sm:left-[58%] sm:w-32 lg:bottom-[5.25rem] lg:left-[60%] lg:w-36" />
+				<img src="./assets/cherry-drake.png" alt=""
+					class="js-reveal-sprites absolute bottom-8 left-[62%] z-30 w-12 -translate-x-1/2 opacity-0 translate-y-3 transition-all duration-700 ease-out sm:bottom-10 sm:left-[58%] sm:w-16 lg:bottom-12 lg:left-[60%] lg:w-20" />
+
+				<img src="./assets/cherry-drake.png" alt=""
+					class="js-reveal-sprites absolute bottom-6 left-[50%] z-20 w-4 -translate-x-1/2 -scale-x-100 opacity-0 translate-y-3 transition-all duration-700 ease-out sm:bottom-3 sm:left-[54%] sm:w-5 lg:bottom-4 lg:left-[68%] lg:w-6" />
 
 			</div>
 		</section>
