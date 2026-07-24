@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const subtextElements = Array.from(document.querySelectorAll('.js-reveal-subtext'));
   const formElements = Array.from(document.querySelectorAll('.js-reveal-form'));
   const treeSideHiddenClass = new WeakMap();
+  const treeScrollMeta = new WeakMap();
 
   spriteElements.forEach((element) => {
     const src = (element.getAttribute('src') || '').toLowerCase();
@@ -40,6 +41,85 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const revealSprites = () => {
     spriteElements.forEach((element) => revealSprite(element));
+  };
+
+  const getSpriteDirection = (element) => {
+    const rect = element.getBoundingClientRect();
+    if (rect.width > 0 && rect.height > 0) {
+      const elementCenter = rect.left + rect.width / 2;
+      const viewportCenter = window.innerWidth / 2;
+      return elementCenter >= viewportCenter ? 1 : -1;
+    }
+
+    const classNames = Array.from(element.classList);
+    const hasRightClass = classNames.some((className) => className.startsWith('right-') || className.startsWith('-right-'));
+    return hasRightClass ? 1 : -1;
+  };
+
+  const captureTreeScrollMeta = () => {
+    const viewportCenter = window.innerWidth / 2;
+
+    spriteElements.forEach((element) => {
+      const src = (element.getAttribute('src') || '').toLowerCase();
+      if (!src.includes('tree')) {
+        treeScrollMeta.delete(element);
+        return;
+      }
+
+      const rect = element.getBoundingClientRect();
+      const elementCenter = rect.width > 0 && rect.height > 0 ? rect.left + rect.width / 2 : viewportCenter;
+      const distanceRatio = Math.min(Math.abs(elementCenter - viewportCenter) / Math.max(viewportCenter, 1), 1);
+      const direction = getSpriteDirection(element);
+      const shiftFactor = Number.parseFloat(element.dataset.scrollShiftFactor || '1');
+      const normalizedShiftFactor = Number.isFinite(shiftFactor) && shiftFactor > 0 ? shiftFactor : 1;
+      const maxShift = (22 + 78 * Math.max(distanceRatio, 0.24)) * normalizedShiftFactor;
+
+      treeScrollMeta.set(element, {
+        direction,
+        maxShift
+      });
+    });
+  };
+
+  const applyTreeScrollShift = () => {
+    const docElement = document.documentElement;
+    const maxScroll = Math.max(docElement.scrollHeight - window.innerHeight, 0);
+    const scrollProgress = maxScroll === 0 ? 1 : Math.min(window.scrollY / maxScroll, 1);
+    const outwardProgress = 1 - scrollProgress;
+
+    spriteElements.forEach((element) => {
+      const meta = treeScrollMeta.get(element);
+      if (!meta) {
+        element.style.translate = '';
+        return;
+      }
+
+      const shift = meta.direction * meta.maxShift * outwardProgress;
+      element.style.translate = `${shift.toFixed(2)}px 0`;
+    });
+  };
+
+  let scrollRafHandle = null;
+  const scheduleSpriteScrollShift = () => {
+    if (scrollRafHandle !== null) {
+      return;
+    }
+
+    scrollRafHandle = window.requestAnimationFrame(() => {
+      scrollRafHandle = null;
+      applyTreeScrollShift();
+    });
+  };
+
+  const setupSpriteScrollAnimation = () => {
+    captureTreeScrollMeta();
+    applyTreeScrollShift();
+
+    window.addEventListener('scroll', scheduleSpriteScrollShift, { passive: true });
+    window.addEventListener('resize', () => {
+      captureTreeScrollMeta();
+      scheduleSpriteScrollShift();
+    });
   };
 
   const observeSpritesOnView = () => {
@@ -80,8 +160,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     revealAllImmediately();
+    setupSpriteScrollAnimation();
     return;
   }
+
+  setupSpriteScrollAnimation();
 
   window.setTimeout(() => {
     reveal(panelElements, ['opacity-0', 'translate-y-2', 'scale-[0.985]']);

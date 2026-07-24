@@ -613,12 +613,12 @@ video {
   left: -2.5rem;
 }
 
-.-left-12{
-  left: -3rem;
-}
-
 .-left-5{
   left: -1.25rem;
+}
+
+.-left-\[3\.5rem\]{
+  left: -3.5rem;
 }
 
 .-top-8{
@@ -679,14 +679,6 @@ video {
 
 .top-8{
   top: 2rem;
-}
-
-.-left-16{
-  left: -4rem;
-}
-
-.-left-\[3\.5rem\]{
-  left: -3.5rem;
 }
 
 .isolate{
@@ -950,6 +942,10 @@ video {
 
 .cursor-not-allowed{
   cursor: not-allowed;
+}
+
+.resize{
+  resize: both;
 }
 
 .flex-col{
