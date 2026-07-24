@@ -1,0 +1,5 @@
+﻿User-agent: *
+Allow: /
+
+# TODO: Controleer definitieve domein-URL (met of zonder www).
+Sitemap: https://lumazon.nl/sitemap.xml
