@@ -5,12 +5,59 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="description"
-		content="Lumazon, zonwering monteursbedrijf, werkt aan een nieuwe website. Schrijf je in en ontvang als eerste een update wanneer we live gaan." />
-	<title>Lumazon | Zonwering monteursbedrijf</title>
+		content="Lumazon, specialist in schaduw- en zontechniek, werkt aan een nieuwe website. Schrijf je in en ontvang als eerste een update wanneer we live gaan." />
+	<title>Lumazon | Schaduw- en zontechniek in Nederland</title>
+	<link rel="canonical" href="https://lumazon.nl/" />
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<meta name="theme-color" content="#12372f" />
+
+	<meta property="og:locale" content="nl_NL" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Lumazon" />
+	<meta property="og:title" content="Lumazon | Schaduw- en zontechniek in Nederland" />
+	<meta property="og:description"
+		content="Lumazon werkt aan een nieuwe website. Ontvang als eerste updates over schaduw- en zontechniek, montage, onderhoud en advies." />
+	<meta property="og:url" content="https://lumazon.nl/" />
+	<meta property="og:image" content="https://lumazon.nl/assets/pond.png" />
+	<meta property="og:image:alt" content="Illustratie van de Lumazon coming-soon pagina" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Lumazon | Schaduw- en zontechniek in Nederland" />
+	<meta name="twitter:description"
+		content="Lumazon werkt aan een nieuwe website. Ontvang als eerste updates over schaduw- en zontechniek, montage, onderhoud en advies." />
+	<meta name="twitter:image" content="https://lumazon.nl/assets/pond.png" />
+
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@graph": [
+				{
+					"@type": "Organization",
+					"@id": "https://lumazon.nl/#organization",
+					"name": "Lumazon",
+					"url": "https://lumazon.nl/",
+					"logo": "https://lumazon.nl/favicon.ico",
+					"description": "Specialist in schaduw- en zontechniek.",
+					"areaServed": "NL"
+				},
+				{
+					"@type": "WebSite",
+					"@id": "https://lumazon.nl/#website",
+					"url": "https://lumazon.nl/",
+					"name": "Lumazon",
+					"inLanguage": "nl-NL",
+					"publisher": {
+						"@id": "https://lumazon.nl/#organization"
+					}
+				}
+			]
+		}
+	</script>
 	<link rel="icon" type="image/x-icon" href="./favicon.ico" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link rel="stylesheet" href="./css/main.css" />
+	<script src="./js/page-load-sequence.js" defer></script>
 </head>
 
 <body class="min-h-full bg-[#12372f] font-georama text-[#223126] antialiased">
@@ -26,24 +73,27 @@
 		</div>
 
 		<section
-			class="relative z-10 w-full max-w-7xl rounded-3xl overflow-hidden border border-white/45 bg-[#ecf0e7]/72 shadow-[0_30px_90px_rgba(7,25,20,0.45)] backdrop-blur-xl">
+			class="js-reveal-panel relative z-10 w-full max-w-7xl overflow-hidden rounded-3xl border border-white/45 bg-[#ecf0e7]/72 opacity-0 shadow-[0_30px_90px_rgba(7,25,20,0.45)] backdrop-blur-xl transition-all duration-700 ease-out translate-y-2 scale-[0.985]">
 			<div
-				class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.55),rgba(255,255,255,0.26))]">
+				class="js-reveal-panel pointer-events-none absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.55),rgba(255,255,255,0.26))] opacity-0 transition-opacity duration-700 ease-out">
 			</div>
 
 			<img src="./assets/bouncy-sun-icon.png" alt=""
-				class="pointer-events-none absolute -left-5 -top-8 h-36 w-36 rotate-[-6deg] opacity-95 sm:-left-7 sm:-top-10 sm:h-52 sm:w-52" />
+				class="js-reveal-sprites pointer-events-none absolute -left-5 -top-8 h-36 w-36 rotate-[-6deg] opacity-0 translate-y-3 transition-all duration-700 ease-out sm:-left-7 sm:-top-10 sm:h-52 sm:w-52" />
 
 			<img src="./assets/fogg-bird.png" alt=""
-				class="pointer-events-none absolute right-14 top-8 hidden w-40 opacity-60 md:block lg:w-56" />
+				class="js-reveal-sprites pointer-events-none absolute right-14 top-8 hidden w-40 opacity-0 translate-y-3 transition-all duration-700 ease-out md:block lg:w-56" />
 
 			<img src="./assets/fogg-bird.png" alt=""
-				class="pointer-events-none absolute right-2 top-14 hidden w-24 -scale-x-100 opacity-45 md:block lg:w-32" />
+				class="js-reveal-sprites pointer-events-none absolute right-2 top-14 hidden w-24 -scale-x-100 opacity-0 translate-y-3 transition-all duration-700 ease-out md:block lg:w-32" />
 
-			<div class="pointer-events-none absolute inset-0 z-20 bg-white/15"></div>
+			<div
+				class="js-reveal-panel pointer-events-none absolute inset-0 z-20 bg-white/15 opacity-0 transition-opacity duration-700 ease-out">
+			</div>
 
 			<div class="relative z-30 pb-36 pt-12 text-center sm:pb-44 sm:pt-14 lg:pt-16">
-				<div class="mx-auto w-fit animate-fadeInDown">
+				<div
+					class="js-reveal-logo mx-auto w-fit opacity-0 translate-y-2 scale-[0.99] blur-[2px] transition-all duration-[950ms] ease-[cubic-bezier(0.22,1,0.36,1)]">
 					<svg xmlns="http://www.w3.org/2000/svg" version="1.2" viewBox="0 0 2400 1892"
 						class="h-32 w-auto md:h-44" aria-label="Lumazon logo" role="img"
 						preserveAspectRatio="xMidYMid meet">
@@ -58,23 +108,24 @@
 				</div>
 
 				<h1
-					class="mx-auto px-3 mt-8 max-w-2xl animate-fadeInUp tracking-tight font-baskervville text-4xl leading-[0.95] text-[#2f3f33] sm:text-5xl lg:text-6xl">
-					We zijn bijna klaar met de nieuwe website!
+					class="js-reveal-heading mx-auto px-3 mt-8 max-w-2xl tracking-tight font-baskervville text-4xl leading-[1.00] text-[#2f3f33] opacity-0 translate-y-2 scale-[0.99] blur-[2px] transition-all duration-[950ms] ease-[cubic-bezier(0.22,1,0.36,1)] sm:text-5xl lg:text-6xl">
+					De Nieuwe Website is Bijna Klaar!
 				</h1>
 
 				<p
-					class="mx-auto px-3 mt-6 max-w-2xl animate-fadeInUp200 text-base leading-7 text-[#3d4e42] sm:text-lg">
-					Schrijf je in en ontvang als eerste updates over onze zonwering montage, onderhoud, advies en
-					ontvang korting op je eerste montage!
+					class="js-reveal-subtext mx-auto px-3 mt-6 max-w-2xl text-base leading-7 text-[#3d4e42] opacity-0 translate-y-2 scale-[0.99] blur-[2px] transition-all duration-[950ms] ease-[cubic-bezier(0.22,1,0.36,1)] sm:text-lg">
+					Schrijf je in en ontvang als eerste updates over onze schaduw- en zontechniek én ontvang korting op
+					je eerste montage!
 				</p>
 
 				<form
-					class="mx-auto mt-9 flex w-full max-w-3xl animate-fadeInUp400 flex-col gap-3 px-6 sm:px-10 lg:px-16 sm:flex-row sm:items-center"
+					class="js-reveal-form mx-auto mt-9 flex w-full max-w-3xl flex-col gap-3 px-6 opacity-0 translate-y-2 scale-[0.99] blur-[2px] transition-all duration-[950ms] ease-[cubic-bezier(0.22,1,0.36,1)] sm:px-10 lg:px-16 sm:flex-row sm:items-center"
 					action="https://api.web3forms.com/submit" method="POST">
 					<input type="hidden" name="access_key" value="3efd12ba-1fd4-424c-97b0-f0184a9c1831">
 					<input type="hidden" name="botcheck" value="">
 					<label for="email" class="sr-only">E-mailadres</label>
-					<input type="email" name="email" required placeholder="Vul je e-mailadres in"
+					<input id="email" type="email" name="email" autocomplete="email" required
+						placeholder="Vul je e-mailadres in"
 						class="h-12 w-full rounded-xl border border-[#33493b]/35 bg-white/95 px-5 text-sm text-[#24372b] placeholder:text-[#657b6c] focus:border-[#d09f48] focus:outline-none" />
 					<button type="submit"
 						class="h-12 shrink-0 rounded-xl border border-[#e2b35a] bg-[#f0bd65] px-7 font-medium text-[#2e3324] transition hover:bg-[#e5af53] focus:outline-none">
@@ -89,25 +140,25 @@
 				</div>
 
 				<img src="./assets/pond.png" alt=""
-					class="absolute -bottom-8 left-1/2 z-10 w-[110%] max-w-none -translate-x-1/2 opacity-95 sm:-bottom-[6.5rem] md:-bottom-[7.5rem] lg:-bottom-[14rem]" />
+					class="js-reveal-sprites absolute -bottom-8 left-1/2 z-10 w-[110%] max-w-none -translate-x-1/2 opacity-0 translate-y-3 transition-all duration-700 ease-out sm:-bottom-[6.5rem] md:-bottom-[7.5rem] lg:-bottom-[14rem]" />
 
 				<img src="./assets/fogg-alligator.png" alt=""
-					class="absolute bottom-8 left-[38%] z-40 w-14 -translate-x-1/2 rotate-[-2deg] opacity-95 sm:bottom-10 sm:w-16 lg:bottom-12 lg:w-20" />
+					class="js-reveal-sprites absolute bottom-8 left-[38%] z-40 w-14 -translate-x-1/2 rotate-[-2deg] opacity-0 translate-y-3 transition-all duration-700 ease-out sm:bottom-10 sm:w-16 lg:bottom-12 lg:w-20" />
 
 				<img src="./assets/fogg-pine-tree.png" alt=""
-					class="absolute -bottom-2 -left-10 z-50 w-32 opacity-95 sm:-left-2 sm:w-44 lg:w-52" />
+					class="js-reveal-sprites absolute -bottom-2 -left-10 z-50 w-32 opacity-0 translate-y-3 transition-all duration-700 ease-out sm:-left-2 sm:w-44 lg:w-52" />
 
 				<img src="./assets/fogg-tree.png" alt=""
-					class="absolute -bottom-5 left-14 z-50 hidden w-32 opacity-90 sm:block md:w-40 lg:w-48" />
+					class="js-reveal-sprites absolute -bottom-5 left-14 z-50 hidden w-32 opacity-0 translate-y-3 transition-all duration-700 ease-out sm:block md:w-40 lg:w-48" />
 
 				<img src="./assets/fogg-pine-tree.png" alt=""
-					class="absolute -bottom-2 right-0 z-50 w-32 opacity-95 sm:w-40 lg:w-48" />
+					class="js-reveal-sprites absolute -bottom-2 right-0 z-50 w-32 opacity-0 translate-y-3 transition-all duration-700 ease-out sm:w-40 lg:w-48" />
 
 				<img src="./assets/fogg-tree.png" alt=""
-					class="absolute -bottom-4 right-16 z-50 hidden w-28 opacity-90 sm:block md:w-36 lg:w-44" />
+					class="js-reveal-sprites absolute -bottom-4 right-16 z-50 hidden w-28 opacity-0 translate-y-3 transition-all duration-700 ease-out sm:block md:w-36 lg:w-44" />
 
 				<img src="./assets/fogg-raccoon-with-a-cookie.png" alt=""
-					class="absolute bottom-12 left-[62%] z-30 w-24 -translate-x-1/2 rotate-[1deg] opacity-95 sm:bottom-14 sm:left-[58%] sm:w-32 lg:bottom-[5.25rem] lg:left-[60%] lg:w-36" />
+					class="js-reveal-sprites absolute bottom-12 left-[62%] z-30 w-24 -translate-x-1/2 rotate-[1deg] opacity-0 translate-y-3 transition-all duration-700 ease-out sm:bottom-14 sm:left-[58%] sm:w-32 lg:bottom-[5.25rem] lg:left-[60%] lg:w-36" />
 
 			</div>
 		</section>
