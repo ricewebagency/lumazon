@@ -14,6 +14,8 @@ module.exports = {
       fontFamily: {
         display: ['"Bebas Neue"', "sans-serif"],
         sans: ['"Montserrat"', "sans-serif"],
+        inter: ['"Inter"', "sans-serif"],
+        'instrument-serif': ['"Instrument Serif"', '"Instrument Serif Placeholder"', "serif"],
         montserrat: ['"Montserrat"', "sans-serif"],
         playfair: ['"Playfair Display"', "Georgia", '"Times New Roman"', "serif"],
         baskervville: ['"Baskervville"', "serif"],
@@ -36,6 +38,10 @@ module.exports = {
         spinSlow: {
           from: { transform: "rotate(0deg)" },
           to: { transform: "rotate(360deg)" },
+        },
+        loadingFadeOut: {
+          "0%": { opacity: "1" },
+          "100%": { opacity: "0" },
         },
         logoSwapA: {
           "0%": { transform: "translateX(0)" },
@@ -170,6 +176,7 @@ module.exports = {
         fadeInDown: "fadeInDown 0.6s ease-out both",
         marquee: "marquee 30s linear infinite",
         spinSlow: "spinSlow 60s linear infinite",
+        loadingFadeOut: "loadingFadeOut 0.4s ease-out 0.5s forwards",
         logoSwapA: "logoSwapA 16s ease-in-out infinite",
         logoSwapB: "logoSwapB 16s ease-in-out infinite",
         logoEdgeLeft: "logoEdgeLeft 16s ease-in-out infinite",

@@ -1,1 +1,356 @@
-﻿
+﻿<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lumazon | Zonwering en buitenleven installateur uit de Zaanstreek </title>
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- <script defer src="./js/topbar.js"></script> -->
+    <script defer src="./js/smooth-scroll.js"></script>
+    <script defer src="./js/hero-letters.js"></script>
+    <script defer src="./js/hills-parallax.js"></script>
+    <script defer src="./js/loading-screen.js"></script>
+    <script defer src="./js/header-menu.js"></script>
+    <script defer src="./js/marquee-loop.js"></script>
+</head>
+
+<body class="text-charcoal antialiased">
+    <!-- @include partials/header.html -->
+
+    <main class="relative pb-[1000px]">
+
+        <section id="hero"
+            class="relative isolate overflow-hidden flex justify-center items-center flex-col gap-20 lg:pb-[42px] xl:pb-[120px]">
+
+            <!-- Logo dat vervaagt. -->
+            <div id="loadingScreen"
+                class="absolute inset-0 z-[999] flex items-center justify-center pointer-events-none opacity-100 transition-opacity duration-300 ease-out translate-y-[-50px] lg:translate-y-[-200px]">
+                <div id="loadingScreenLogo"
+                    class="relative h-16 w-16 lg:h-24 lg:w-24 transition-all duration-500 ease-out opacity-100 scale-100">
+                    <img id="loadingScreenImageA" src="./assets/images/logos/lumazon-icon-wit-geel-loading-1.png"
+                        alt="Lumazon"
+                        class="absolute inset-0 h-full w-full object-contain opacity-0 transition-opacity duration-75 ease-out"
+                        decoding="async">
+                    <img id="loadingScreenImageB" src="./assets/images/logos/lumazon-icon-wit-geel-loading-2.png"
+                        alt="Lumazon"
+                        class="absolute inset-0 h-full w-full object-contain opacity-0 transition-opacity duration-75 ease-out"
+                        decoding="async">
+                </div>
+            </div>
+
+            <div class="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(to_bottom,#0033c4,#0072ff,#3b96e4,#43c6ff,#80d0f5)]
+                lg:bg-[linear-gradient(to_bottom,#0033c4,#0095ff,#3bbde4,#43c6ff,#80d0f5)]">
+            </div>
+
+            <div
+                class="relative z-10 w-full max-w-[600px] pt-[100px] px-[20px] flex flex-col items-center gap-[20px] lg:pt-[150px] lg:pb-[50px]">
+                <div class="mx-auto flex items-end gap-1" data-animate-reveal-down data-animate-no-blur
+                    data-animate-delay="3.10">
+                    <div>
+                        <img src="./assets/images/logos/lumazon-icon-wit-geel.png" alt="Lumazon" class="h-8 w-8"
+                            decoding="async">
+                    </div>
+                    <div class="text-white font-inter font-[600] tracking-tight text-[20px]">
+                        Zonwering & Buitenleven
+                    </div>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="mx-auto text-center font-inter font-bold tracking-[-0.045em] text-[45px] lg:text-[75px] leading-none text-white"
+                        data-animate-letters data-animate-delay="0">
+                        Warm buiten?
+                    </div>
+                    <div class="mx-auto text-center font-instrument-serif tracking-tight text-[50px] lg:text-[80px] italic font-[500] leading-none text-white"
+                        data-animate-letters data-animate-delay="0.6">
+                        Koel binnen.
+                    </div>
+                </div>
+                <div class="mx-auto text-center font-inter tracking-[-0.5px] text-[15.2px] lg:text-[20px] leading-[22px] font-[400] text-white"
+                    data-animate-reveal-up data-animate-delay="2.3">
+                    Wij plaatsen en monteren zonwering in en rondom de Zaanstreek voor woningen en bedrijven. Bent u op
+                    zoek naar zonne&shy;schermen, rolluiken, screens of anders?
+                </div>
+                <div data-animate-reveal-up data-animate-no-blur data-animate-delay="2.7"
+                    class="w-full flex justify-center">
+                    <a href="#download"
+                        class="block w-full rounded-2xl bg-[#f4a104] px-[30px] py-[10px] text-center font-inter font-[600] tracking-tight text-[15.2px] text-white transition-colors duration-200 hover:bg-[#db9200] lg:max-w-[260px]">
+                        <div class="mx-auto flex items-center justify-center gap-1">
+                            <div>
+                                <img src="./assets/images/logos/lumazon-icon-wit.png" alt="Lumazon" class="h-8 w-8"
+                                    decoding="async">
+                            </div>
+                            <div class="text-white font-inter font-[600] tracking-tight text-[16px]">
+                                Bekijk al onze diensten
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]"
+                    data-animate-no-blur data-animate-reveal-up data-animate-delay="3.10">
+                    <div class="flex w-max items-center animate-marquee motion-reduce:animate-none" data-marquee-track>
+                        <div class="flex shrink-0 items-center gap-5 pr-5" data-marquee-group>
+                            <span class="shrink-0 text-nowrap text-xs text-white/60">
+                                Rolgordijnen
+                            </span>
+                            <span class="shrink-0 text-nowrap text-xs text-white/60">
+                                Zonneschermen
+                            </span>
+                            <span class="shrink-0 text-nowrap text-xs text-white/60">
+                                Jaloezieën
+                            </span>
+                            <span class="shrink-0 text-nowrap text-xs text-white/60">
+                                Rolluiken
+                            </span>
+                            <span class="shrink-0 text-nowrap text-xs text-white/60">
+                                Plisségordijnen
+                            </span>
+                            <span class="shrink-0 text-nowrap text-xs text-white/60">
+                                Terrasoverkappingen
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transparante-glassy box met zonnepaneel PNG zonder achtergrond erin -->
+            <div class="relative z-10 mx-[20px] mb-[36px] translate-y-[140px] invisible transition-transform duration-[1200ms] [transition-timing-function:cubic-bezier(0.22,1,0.36,1)]"
+                data-animate-lazy-slide-up data-hero-glassy-box data-animate-delay="3.10" data-animate-pending>
+                <div
+                    class="mx-auto w-full max-w-[800px] rounded-lg border border-white/15 bg-white/15 shadow-[inset_0_1px_18px_rgba(255,255,255,0.35),0_20px_60px_rgba(12,29,56,0.28)] backdrop-blur-md overflow-hidden">
+                    <img src="./assets/images/diensten/zonnescherm/project-03-01.jpg" alt="Project 01"
+                        class="mx-auto w-full object-cover" loading="lazy" decoding="async">
+                </div>
+                <div
+                    class="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-[160px] bg-gradient-to-b from-[#eee]/0 via-[#eee]/20 to-[#eee]/40">
+                </div>
+            </div>
+
+            <img src="./assets/images/miscelaneous/hills.png" alt="Hills"
+                class="hero-hill absolute bottom-[0px] min-[410px]:max-[640px]:bottom-[-38px] min-[700px]:bottom-[-72px] lg:bottom-[-120px] xl:bottom-[-210px] min-[1866px]:bottom-[-380px] left-0 w-full min-w-full h-auto z-0 opacity-70 scale-x-[1.25]"
+                data-parallax-depth="0" data-parallax-scale="0.08">
+
+            <img src="./assets/images/miscelaneous/hills.png" alt="Hills"
+                class="hero-hill absolute bottom-[-10px] min-[410px]:max-[640px]:bottom-[-60px] min-[700px]:bottom-[-98px] lg:bottom-[-160px] xl:bottom-[-245px] min-[1866px]:bottom-[-380px] left-0 w-full min-w-full h-auto z-20"
+                data-parallax-depth="0.35" data-parallax-scale="0.12">
+
+            <div
+                class="pointer-events-none absolute inset-x-0 bottom-0 z-[30] h-[110px] bg-gradient-to-b from-white/0 via-white/45 to-white">
+            </div>
+        </section>
+
+        <!-- Onze diensten -->
+        <section class="bg-white py-16 lg:py-24">
+            <div class="mx-auto max-w-3xl px-5">
+                <h2
+                    class="text-center max-w-2xl text-[38px] font-bold font-inter leading-[35px] tracking-[-0.045em] text-charcoal mb-4 lg:text-6xl">
+                    Uw zonwering, waar u die nodig heeft
+                </h2>
+                <p
+                    class="text-center font-inter tracking-[-0.045em] text-gray-600 mb-12 max-w-2xl mx-auto text-[15px] lg:text-lg">
+                    Wij werken samen met topmerken, partners en ervaren monteurs zodat wij u perfect kunnen helpen met
+                    het vinden van de juiste zonwering en buitenleven&shy;oplossingen voor uw woning of bedrijf.
+                </p>
+                <div class="mb-12">
+                    <div class="flex flex-wrap justify-center gap-x-3 gap-y-2">
+                        <!-- Lumazon -->
+                        <div class="inline-flex items-center gap-1 px-3 py-2 rounded-full bg-gray-100">
+                            <img src="./assets/images/logos/lumazon-icon-zwart-geel.png" alt="Lumazon logo"
+                                class="h-4 w-4 object-cover" loading="lazy" decoding="async">
+                            <span class="text-xs font-inter text-charcoal">
+                                Lumazon
+                            </span>
+                        </div>
+
+                        <!-- Sunflex -->
+                        <div class="inline-flex items-center gap-1 px-3 py-2 rounded-full bg-gray-100">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEY3W7wp30HDCh0v5Rydu14tSXj5r471o1xFE4XSS773bgd9WAY54Eh6k&s=10"
+                                alt="Sunflex logo" class="h-4 w-4 object-cover" loading="lazy" decoding="async">
+                            <span class="text-xs font-inter text-charcoal">
+                                Sunflex
+                            </span>
+                        </div>
+
+                        <!-- Klimazon -->
+                        <div class="inline-flex items-center gap-1 px-3 py-2 rounded-full bg-gray-100">
+                            <img src="./assets/images/logos/klimazon-logo.png" alt="Klimazon logo"
+                                class="h-4 w-4 object-cover" loading="lazy" decoding="async">
+                            <span class="text-xs font-inter text-charcoal">
+                                Klimazon
+                            </span>
+                        </div>
+
+                        <!-- Warema -->
+                        <div class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-gray-100">
+                            <img src="./assets/images/logos/warema-logo.png" alt="Warema logo"
+                                class="h-4 w-4 object-cover" loading="lazy" decoding="async">
+                            <span class="text-xs font-inter text-charcoal">
+                                Warema
+                            </span>
+                        </div>
+
+                        <!-- Schuco -->
+                        <div class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-gray-100">
+                            <img src="./assets/images/logos/schuco-logo.png" alt="Schuco logo"
+                                class="h-4 w-4 object-cover" loading="lazy" decoding="async">
+                            <span class="text-xs font-inter text-charcoal">
+                                Schuco
+                            </span>
+                        </div>
+
+                        <!-- Somfy -->
+                        <div class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-gray-100">
+                            <img src="./assets/images/logos/somfy-logo.png" alt="Somfy logo"
+                                class="h-4 w-4 object-cover" loading="lazy" decoding="async">
+                            <span class="text-xs font-inter text-charcoal">
+                                Somfy
+                            </span>
+                        </div>
+
+                        <!-- Renson -->
+                        <div class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-gray-100">
+                            <span class="text-xs font-inter text-charcoal">
+                                Renson
+                            </span>
+                        </div>
+
+                        <!-- Swiggle -->
+                        <div class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-gray-100">
+                            <span class="text-xs font-inter text-charcoal">
+                                Swiggle
+                            </span>
+                        </div>
+
+                        <!-- Energie-efficiënt -->
+                        <div class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-gray-100">
+                            <span class="text-xs font-inter text-charcoal">
+                                Energie-efficiënt
+                            </span>
+                        </div>
+
+                        <!-- Duurzaam -->
+                        <div class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-gray-100">
+                            <span class="text-xs font-inter text-charcoal">
+                                Duurzaam
+                            </span>
+                        </div>
+
+                        <!-- UV-bescherming -->
+                        <div class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-gray-100">
+                            <span class="text-xs font-inter text-charcoal">
+                                UV-bescherming
+                            </span>
+                        </div>
+
+                        <!-- Smart home integratie -->
+                        <div class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-gray-100">
+                            <span class="text-xs font-inter text-charcoal">
+                                Smart home integratie
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Zonneschermen -->
+                    <a href="./diensten/zonneschermen/"
+                        class="group flex flex-col overflow-hidden rounded-[28px] bg-gray-100 p-4 sm:p-5 transition-colors duration-300 hover:bg-gray-200/80">
+                        <div class="flex flex-1 flex-col items-center px-2 pt-2 text-center">
+                            <h3
+                                class="max-w-[14ch] font-inter text-[34px] font-bold leading-[0.95] tracking-[-0.04em] text-charcoal sm:text-[42px]">
+                                Zonneschermen
+                            </h3>
+
+                            <p
+                                class="mt-5 max-w-[32ch] font-inter leading-[18px] tracking-[-0.045em] text-[14px] text-gray-600 sm:text-base">
+                                Zonwering die slim meebeweegt met uw woning. Houd uw woning koel, blokkeer fel licht en
+                                kies een afwerking die past bij uw gevel en terras.
+                            </p>
+                        </div>
+
+                        <div class="mt-7 overflow-hidden rounded-3xl bg-gray-200">
+                            <img src="https://www.schaduwdoekkeuze.nl/images/blogimages/big/zonnescherm-reparatie-zelf-doen-of-uitbesteden.webp"
+                                alt="Zonneschermen"
+                                class="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                                decoding="async">
+                        </div>
+                    </a>
+
+                    <!-- Terrasoverkappingen -->
+                    <a href="./diensten/terrasoverkappingen/"
+                        class="group flex flex-col overflow-hidden rounded-[28px] bg-gray-100 p-4 sm:p-5 transition-colors duration-300 hover:bg-gray-200/80">
+                        <div class="flex flex-1 flex-col items-center px-2 pt-2 text-center">
+                            <h3
+                                class="max-w-[14ch] font-inter text-[34px] font-bold leading-[0.95] tracking-[-0.04em] text-charcoal sm:text-[42px]">
+                                Buiten leven, elk seizoen comfortabel
+                            </h3>
+
+                            <p
+                                class="mt-5 max-w-[32ch] font-inter leading-[18px] tracking-[-0.045em] text-[13px] text-gray-600 sm:text-base">
+                                Terrasoverkappingen die schaduw, beschutting en stijl samenbrengen voor elke dag van
+                                het jaar.
+                            </p>
+                        </div>
+
+                        <div class="mt-7 overflow-hidden rounded-3xl bg-gray-200">
+                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&h=300&fit=crop"
+                                alt="Terrasoverkappingen"
+                                class="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                                decoding="async">
+                        </div>
+                    </a>
+
+                    <!-- Rolgordijnen -->
+                    <a href="./diensten/rolgordijnen/"
+                        class="group flex flex-col overflow-hidden rounded-[28px] bg-gray-100 p-4 sm:p-5 transition-colors duration-300 hover:bg-gray-200/80">
+                        <div class="flex flex-1 flex-col items-center px-2 pt-2 text-center">
+                            <h3
+                                class="max-w-[14ch] font-inter text-[34px] font-bold leading-[0.95] tracking-[-0.04em] text-charcoal sm:text-[42px]">
+                                Licht en privacy precies zoals u wilt
+                            </h3>
+
+                            <p
+                                class="mt-5 max-w-[32ch] font-inter leading-[18px] tracking-[-0.045em] text-[13px] text-gray-600 sm:text-base">
+                                Strakke rolgordijnen op maat met rustige bediening, passende kleuren en een nette
+                                afwerking.
+                            </p>
+                        </div>
+
+                        <div class="mt-7 overflow-hidden rounded-3xl bg-gray-200">
+                            <img src="https://images.unsplash.com/photo-1784886330086-031a3e72ac6b?q=80&w=1175&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Rolgordijnen"
+                                class="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                                decoding="async">
+                        </div>
+                    </a>
+
+                    <!-- Rolluiken -->
+                    <a href="./diensten/rolluiken/"
+                        class="group flex flex-col overflow-hidden rounded-[28px] bg-gray-100 p-4 sm:p-5 transition-colors duration-300 hover:bg-gray-200/80">
+                        <div class="flex flex-1 flex-col items-center px-2 pt-2 text-center">
+                            <h3
+                                class="max-w-[14ch] font-inter text-[34px] font-bold leading-[0.95] tracking-[-0.04em] text-charcoal sm:text-[42px]">
+                                Extra rust, veiligheid en isolatie in huis
+                            </h3>
+
+                            <p
+                                class="mt-5 max-w-[32ch] font-inter leading-[18px] tracking-[-0.045em] text-[13px] text-gray-600 sm:text-base">
+                                Rolluiken die warmte en inkijk verminderen en tegelijk zorgen voor een veilig gevoel,
+                                dag en nacht.
+                            </p>
+                        </div>
+
+                        <div class="mt-7 overflow-hidden rounded-3xl bg-gray-200">
+                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=500&h=300&fit=crop"
+                                alt="Rolluiken"
+                                class="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                                decoding="async">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
