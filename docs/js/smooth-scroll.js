@@ -1,9 +1,40 @@
 // Lenis smooth scroll initialisatie
-// CDN versie wordt geladen via script tag in HTML
 
-document.addEventListener('DOMContentLoaded', () => {
-  // Wacht tot Lenis global beschikbaar is
-  if (typeof Lenis !== 'undefined') {
+const LENIS_CDN_URL = 'https://unpkg.com/lenis@1.3.8/dist/lenis.min.js';
+
+const loadLenis = () => {
+  if (typeof window.Lenis !== 'undefined') {
+    return Promise.resolve(window.Lenis);
+  }
+
+  return new Promise((resolve, reject) => {
+    const existingScript = document.querySelector('script[data-lenis-cdn="true"]');
+
+    if (existingScript) {
+      existingScript.addEventListener('load', () => resolve(window.Lenis), { once: true });
+      existingScript.addEventListener('error', () => reject(new Error('Lenis script kon niet geladen worden.')), { once: true });
+      return;
+    }
+
+    const script = document.createElement('script');
+    script.src = LENIS_CDN_URL;
+    script.async = true;
+    script.dataset.lenisCdn = 'true';
+    script.addEventListener('load', () => resolve(window.Lenis), { once: true });
+    script.addEventListener('error', () => reject(new Error('Lenis script kon niet geladen worden.')), { once: true });
+    document.head.appendChild(script);
+  });
+};
+
+document.addEventListener('DOMContentLoaded', async () => {
+  try {
+    const Lenis = await loadLenis();
+
+    if (typeof Lenis === 'undefined') {
+      console.warn('Lenis is niet beschikbaar. Smooth scroll is uitgeschakeld.');
+      return;
+    }
+
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -86,5 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Maak lenis global beschikbaar voor andere scripts
     window.lenis = lenis;
+  } catch (error) {
+    console.error(error);
   }
 });

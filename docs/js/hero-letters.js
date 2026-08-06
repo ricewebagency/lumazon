@@ -19,6 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
         return `<span class="hero-letter" style="--animation-delay: ${delay + index * 0.05}s;">${char}</span>`;
       })
       .join('');
+
+    // Avoid a flash of unanimated text on quick refreshes.
+    target.classList.remove('invisible');
   });
 
   revealTargets.forEach((target) => {
@@ -27,6 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (Number.isFinite(delay)) {
       target.style.setProperty('--animate-delay', `${delay}s`);
     }
+
+    // Allow CSS opacity/transform animations to run by removing visibility:hidden.
+    target.classList.remove('invisible');
   });
 
   lazyRevealTargets.forEach((target) => {

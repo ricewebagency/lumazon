@@ -20,7 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
     image.src = source;
   });
 
-  const frameDelay = 75;
+  const frameDelay = 100;
+  const introRevealDelay = 100;
+  const initialHoldDelay = 260;
   const finalFadeDelay = 120;
   const removeDelay = 500;
 
@@ -48,24 +50,15 @@ document.addEventListener('DOMContentLoaded', () => {
     loadingLogo.classList.add('opacity-0', 'scale-95');
   };
 
-  const startSequence = async () => {
-    loadingImageA.remove();
-    loadingImageB.remove();
-
-    const frameLayers = loadingFrames.map((source) => createFrameLayer(source));
-
-    for (let index = 0; index < frameLayers.length; index += 1) {
-      if (index > 0) {
-        await delay(frameDelay);
-      }
-
-      const currentLayer = frameLayers[index];
+  const startSequence = async (startIndex = 1) => {
+    for (let index = startIndex; index < loadingFrames.length; index += 1) {
+      const nextLayer = createFrameLayer(loadingFrames[index]);
 
       window.requestAnimationFrame(() => {
-        setOpacity(currentLayer, true);
+        setOpacity(nextLayer, true);
       });
 
-      // Wait for this frame to begin blending before adding the next layer.
+      // Keep previous layers visible; only fade in the new top layer.
       await delay(frameDelay);
     }
 
@@ -82,12 +75,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }, removeDelay);
   };
 
+  // Use loading-1 as the base frame and keep the second starter layer hidden.
+  loadingImageA.src = loadingFrames[0];
+  loadingImageB.src = loadingFrames[0];
+  loadingImageA.classList.remove('duration-75');
+  loadingImageB.classList.remove('duration-75');
+  loadingImageA.classList.add('duration-220');
+  loadingImageB.classList.add('duration-220');
+
+  // Keep loading-1 hidden at first, then fade it in once.
+  setOpacity(loadingImageA, false);
+  setOpacity(loadingImageB, false);
+
+  const revealTimer = window.setTimeout(() => {
+    window.requestAnimationFrame(() => {
+      setOpacity(loadingImageA, true);
+      setOpacity(loadingImageB, false);
+    });
+  }, introRevealDelay);
+
   const timer = window.setTimeout(() => {
-    startSequence();
-  }, 0);
+    startSequence(1);
+  }, introRevealDelay + initialHoldDelay);
 
   // Cleanup on page unload
   window.addEventListener('beforeunload', () => {
+    window.clearTimeout(revealTimer);
     window.clearTimeout(timer);
   });
 });

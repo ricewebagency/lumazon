@@ -2,15 +2,56 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggleButton = document.querySelector('[data-header-menu-toggle]');
   const menu = document.querySelector('[data-header-menu]');
   if (toggleButton && menu) {
+    let closeTimeout;
+
+    const setMenuHeight = (isOpen) => {
+      menu.style.maxHeight = isOpen ? `${menu.scrollHeight}px` : '0px';
+    };
+
+    const setMenuItemsState = (isOpen) => {
+      const items = Array.from(menu.querySelectorAll('[data-header-menu-item]'));
+
+      items.forEach((item, index) => {
+        const delay = isOpen ? `${index * 70}ms` : `${(items.length - index - 1) * 45}ms`;
+        const duration = isOpen ? '260ms' : '180ms';
+        const opacity = isOpen ? '1' : '0';
+        const transform = isOpen ? 'translateY(0)' : 'translateY(-8px)';
+
+        item.style.transitionDelay = delay;
+        item.style.transitionDuration = duration;
+        item.style.opacity = opacity;
+        item.style.transform = transform;
+      });
+    };
+
     const closeMobileMenu = () => {
-      menu.classList.add('hidden');
+      clearTimeout(closeTimeout);
+      setMenuItemsState(false);
+
+      setMenuHeight(false);
+      menu.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
+      menu.classList.add('max-h-0', 'opacity-0', '-translate-y-2', 'pointer-events-none');
+
+      closeTimeout = window.setTimeout(() => {
+        menu.classList.add('hidden');
+      }, 220);
+
       toggleButton.setAttribute('aria-expanded', 'false');
       toggleButton.classList.remove('text-white');
       toggleButton.classList.add('text-white/70');
     };
 
     const openMobileMenu = () => {
+      clearTimeout(closeTimeout);
       menu.classList.remove('hidden');
+
+      requestAnimationFrame(() => {
+        menu.classList.remove('max-h-0', 'opacity-0', '-translate-y-2', 'pointer-events-none');
+        menu.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
+        setMenuHeight(true);
+        setMenuItemsState(true);
+      });
+
       toggleButton.setAttribute('aria-expanded', 'true');
       toggleButton.classList.remove('text-white/70');
       toggleButton.classList.add('text-white');
@@ -47,6 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', () => {
       if (window.innerWidth >= 768) {
         closeMobileMenu();
+      } else if (toggleButton.getAttribute('aria-expanded') === 'true') {
+        setMenuHeight(true);
       }
     });
   }

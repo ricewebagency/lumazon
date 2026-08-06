@@ -5,7 +5,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lumazon | Zonwering en buitenleven installateur uit de Zaanstreek </title>
-    <link rel="icon" href="./favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/images/logos/lumazon-icon-zwart-geel.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/logos/lumazon-icon-zwart-geel.png" />
+    <link rel="mask-icon" href="./assets/images/logos/lumazon-icon-zwart-geel.svg" color="#0033c4" />
+    <meta name="theme-color" content="#0033c4" />
     <link rel="stylesheet" href="./css/main.css" />
     <!-- <script defer src="./js/topbar.js"></script> -->
     <script defer src="./js/smooth-scroll.js"></script>
@@ -14,10 +18,26 @@
     <script defer src="./js/loading-screen.js"></script>
     <script defer src="./js/header-menu.js"></script>
     <script defer src="./js/marquee-loop.js"></script>
+    <script defer src="./js/project-carousel.js"></script>
+    <script defer src="./js/read-more-toggle.js"></script>
+    <script defer src="./js/line-reveal.js"></script>
+    <script defer src="./js/offerte-label.js"></script>
+    <script defer src="./js/whatsapp-float.js"></script>
+    <script defer src="./js/featurable-credit-hider.js"></script>
 </head>
 
 <body class="text-charcoal antialiased">
     <!-- @include partials/header.html -->
+
+    <a href="./offerte/" data-offerte-label
+        class="fixed right-0 top-1/2 z-[80] flex -translate-y-1/2 translate-x-full opacity-0 flex-col items-center gap-6 bg-black px-2 pt-2 pb-3 text-white shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition-[transform,opacity,background-color] duration-500 ease-out hover:bg-black/90 motion-reduce:translate-x-0 motion-reduce:opacity-100"
+        aria-label="Offerte aanvragen">
+        <img src="./assets/images/logos/lumazon-icon-wit.png" alt="Lumazon" class="h-7 w-7" decoding="async">
+        <span
+            class="[writing-mode:vertical-rl] rotate-180 font-inter text-[13px] font-[600] leading-none tracking-wide">
+            Offerte
+        </span>
+    </a>
 
     <main class="relative pb-[1000px]">
 
@@ -57,31 +77,31 @@
                     </div>
                 </div>
                 <div class="flex flex-col items-center">
-                    <div class="mx-auto text-center font-inter font-bold tracking-[-0.045em] text-[45px] lg:text-[75px] leading-none text-white"
+                    <div class="invisible mx-auto text-center font-inter font-bold tracking-[-0.045em] text-[45px] lg:text-[75px] leading-none text-white"
                         data-animate-letters data-animate-delay="0">
                         Warm buiten?
                     </div>
-                    <div class="mx-auto text-center font-instrument-serif tracking-tight text-[50px] lg:text-[80px] italic font-[500] leading-none text-white"
+                    <div class="invisible mx-auto text-center font-instrument-serif tracking-tight text-[50px] lg:text-[80px] italic font-[500] leading-none text-white"
                         data-animate-letters data-animate-delay="0.6">
                         Koel binnen.
                     </div>
                 </div>
-                <div class="mx-auto text-center font-inter tracking-[-0.5px] text-[15.2px] lg:text-[20px] leading-[22px] font-[400] text-white"
-                    data-animate-reveal-up data-animate-delay="2.3">
+                <div class="invisible mx-auto text-center font-inter tracking-[-0.5px] text-[15.2px] lg:text-[20px] leading-[22px] font-[400] text-white"
+                    data-animate-reveal-up data-animate-delay="2.2">
                     Wij plaatsen en monteren zonwering in en rondom de Zaanstreek voor woningen en bedrijven. Bent u op
                     zoek naar zonne&shy;schermen, rolluiken, screens of anders?
                 </div>
                 <div data-animate-reveal-up data-animate-no-blur data-animate-delay="2.7"
                     class="w-full flex justify-center">
-                    <a href="#download"
-                        class="block w-full rounded-2xl bg-[#f4a104] px-[30px] py-[10px] text-center font-inter font-[600] tracking-tight text-[15.2px] text-white transition-colors duration-200 hover:bg-[#db9200] lg:max-w-[260px]">
+                    <a href="./diensten/"
+                        class="block w-full rounded-2xl bg-[#f4a104] px-[30px] py-[10px] text-center font-inter font-[600] tracking-tight text-[15.2px] text-white transition-colors duration-200 hover:bg-[#db9200] lg:max-w-[270px]">
                         <div class="mx-auto flex items-center justify-center gap-1">
                             <div>
                                 <img src="./assets/images/logos/lumazon-icon-wit.png" alt="Lumazon" class="h-8 w-8"
                                     decoding="async">
                             </div>
                             <div class="text-white font-inter font-[600] tracking-tight text-[16px]">
-                                Bekijk al onze diensten
+                                Vraag een offerte aan
                             </div>
                         </div>
                     </a>
@@ -90,6 +110,9 @@
                     data-animate-no-blur data-animate-reveal-up data-animate-delay="3.10">
                     <div class="flex w-max items-center animate-marquee motion-reduce:animate-none" data-marquee-track>
                         <div class="flex shrink-0 items-center gap-5 pr-5" data-marquee-group>
+                            <span class="shrink-0 text-nowrap text-xs text-white/60">
+                                Plisségordijnen
+                            </span>
                             <span class="shrink-0 text-nowrap text-xs text-white/60">
                                 Rolgordijnen
                             </span>
@@ -103,10 +126,7 @@
                                 Rolluiken
                             </span>
                             <span class="shrink-0 text-nowrap text-xs text-white/60">
-                                Plisségordijnen
-                            </span>
-                            <span class="shrink-0 text-nowrap text-xs text-white/60">
-                                Terrasoverkappingen
+                                Screens
                             </span>
                         </div>
                     </div>
@@ -128,7 +148,7 @@
 
             <img src="./assets/images/miscelaneous/hills.png" alt="Hills"
                 class="hero-hill absolute bottom-[0px] min-[410px]:max-[640px]:bottom-[-38px] min-[700px]:bottom-[-72px] lg:bottom-[-120px] xl:bottom-[-210px] min-[1866px]:bottom-[-380px] left-0 w-full min-w-full h-auto z-0 opacity-70 scale-x-[1.25]"
-                data-parallax-depth="0" data-parallax-scale="0.08">
+                data-parallax-depth="0" data-parallax-scale="0.26">
 
             <img src="./assets/images/miscelaneous/hills.png" alt="Hills"
                 class="hero-hill absolute bottom-[-10px] min-[410px]:max-[640px]:bottom-[-60px] min-[700px]:bottom-[-98px] lg:bottom-[-160px] xl:bottom-[-245px] min-[1866px]:bottom-[-380px] left-0 w-full min-w-full h-auto z-20"
@@ -139,26 +159,40 @@
             </div>
         </section>
 
-        <!-- Onze diensten -->
-        <section class="bg-white py-16 lg:py-24">
-            <div class="mx-auto max-w-3xl px-5">
+        <!-- Onze partners, merken -->
+        <section class="relative bg-white py-16 lg:py-24 lg:pb-32 overflow-hidden">
+            <div class="pointer-events-none absolute inset-x-0 bottom-0 z-0">
+                <div class="mx-auto w-full max-w-[1920px]">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0">
+                        <img src="./assets/images/miscelaneous/zaanstreek.svg" alt="" aria-hidden="true"
+                            class="pointer-events-none block w-full" decoding="async">
+                        <img src="./assets/images/miscelaneous/zaanstreek.svg" alt="" aria-hidden="true"
+                            class="pointer-events-none hidden w-full sm:block" decoding="async">
+                        <img src="./assets/images/miscelaneous/zaanstreek.svg" alt="" aria-hidden="true"
+                            class="pointer-events-none hidden w-full lg:block" decoding="async">
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative z-10 mx-auto max-w-3xl px-5">
                 <h2
                     class="text-center max-w-2xl text-[38px] font-bold font-inter leading-[35px] tracking-[-0.045em] text-charcoal mb-4 lg:text-6xl">
                     Uw zonwering, waar u die nodig heeft
                 </h2>
                 <p
                     class="text-center font-inter tracking-[-0.045em] text-gray-600 mb-12 max-w-2xl mx-auto text-[15px] lg:text-lg">
-                    Wij werken samen met topmerken, partners en ervaren monteurs zodat wij u perfect kunnen helpen met
-                    het vinden van de juiste zonwering en buitenleven&shy;oplossingen voor uw woning of bedrijf.
+                    Met betrouwbare monteurs, bekende merken en de juiste partners zorgen wij ervoor dat u perfect
+                    wordt geholpen met het vinden van de juiste zonwering en buitenleven&shy;oplossingen voor uw woning
+                    of bedrijf.
                 </p>
                 <div class="mb-12">
                     <div class="flex flex-wrap justify-center gap-x-3 gap-y-2">
                         <!-- Lumazon -->
                         <div class="inline-flex items-center gap-1 px-3 py-2 rounded-full bg-gray-100">
-                            <img src="./assets/images/logos/lumazon-icon-zwart-geel.png" alt="Lumazon logo"
+                            <img src="./assets/images/logos/luxaflex-logo.png" alt="Luxaflex logo"
                                 class="h-4 w-4 object-cover" loading="lazy" decoding="async">
                             <span class="text-xs font-inter text-charcoal">
-                                Lumazon
+                                Luxaflex
                             </span>
                         </div>
 
@@ -171,14 +205,24 @@
                             </span>
                         </div>
 
+                        <!-- Somfy -->
+                        <div class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-gray-100">
+                            <img src="./assets/images/logos/somfy-logo.png" alt="Somfy logo"
+                                class="h-4 w-4 object-cover" loading="lazy" decoding="async">
+                            <span class="text-xs font-inter text-charcoal">
+                                Somfy
+                            </span>
+                        </div>
+
                         <!-- Klimazon -->
-                        <div class="inline-flex items-center gap-1 px-3 py-2 rounded-full bg-gray-100">
+                        <a href="https://klimazon.nl/" target="_blank"
+                            class="inline-flex items-center gap-1 px-3 py-2 rounded-full bg-gray-100">
                             <img src="./assets/images/logos/klimazon-logo.png" alt="Klimazon logo"
                                 class="h-4 w-4 object-cover" loading="lazy" decoding="async">
                             <span class="text-xs font-inter text-charcoal">
                                 Klimazon
                             </span>
-                        </div>
+                        </a>
 
                         <!-- Warema -->
                         <div class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-gray-100">
@@ -198,15 +242,6 @@
                             </span>
                         </div>
 
-                        <!-- Somfy -->
-                        <div class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-gray-100">
-                            <img src="./assets/images/logos/somfy-logo.png" alt="Somfy logo"
-                                class="h-4 w-4 object-cover" loading="lazy" decoding="async">
-                            <span class="text-xs font-inter text-charcoal">
-                                Somfy
-                            </span>
-                        </div>
-
                         <!-- Renson -->
                         <div class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-gray-100">
                             <span class="text-xs font-inter text-charcoal">
@@ -218,6 +253,27 @@
                         <div class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-gray-100">
                             <span class="text-xs font-inter text-charcoal">
                                 Swiggle
+                            </span>
+                        </div>
+
+                        <!-- Rolluiken -->
+                        <div class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-gray-100">
+                            <span class="text-xs font-inter text-charcoal">
+                                Rolluiken
+                            </span>
+                        </div>
+
+                        <!-- Screens -->
+                        <div class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-gray-100">
+                            <span class="text-xs font-inter text-charcoal">
+                                Screens
+                            </span>
+                        </div>
+
+                        <!-- Zonneschermen -->
+                        <div class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-gray-100">
+                            <span class="text-xs font-inter text-charcoal">
+                                Zonneschermen
                             </span>
                         </div>
 
@@ -250,11 +306,251 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Recente projecten -->
+        <section class="relative overflow-hidden bg-gray-100 py-16 lg:py-24">
+            <div class="mx-auto max-w-3xl relative z-10" data-project-carousel>
+                <div
+                    class="mb-6 px-6 flex flex-col gap-6 overflow-hidden md:flex-row md:items-end md:justify-between md:gap-4">
+                    <div
+                        class="w-full max-w-[560px] rounded-[22px] border border-charcoal/20 px-6 py-7 sm:px-8 sm:py-8">
+                        <p
+                            class="inline-flex items-center gap-2 font-mono uppercase text-[12px] font-semibold tracking-[0.01em] text-charcoal/75">
+                            <span class="h-[7px] w-[7px] bg-charcoal"></span>
+                            Lumazon
+                        </p>
+                        <h2
+                            class="mt-6 font-inter text-[21px] leading-[1.08] tracking-[0.02em] text-charcoal sm:text-[42px] lg:text-[48px]">
+                            Lumazon is een Zaanse installateur uit Assendelft die zonwering voor comfort, schaduw en
+                            uitstraling verzorgt.
+                        </h2>
+                        <p
+                            class="mt-7 max-w-[40ch] font-inter text-[19px] leading-[1.22] tracking-[-0.03em] text-charcoal/90 sm:text-[22px]"
+                            data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
+                            Geen woning, gevel of gezins&shy;situatie is hetzelfde. Daarom kijken we bij Lumazon eerst
+                            wat er nodig is. Waar komt de warmte binnen, hoeveel ruimte is er beschikbaar en welke
+                            installatie past technisch en praktisch het beste?
+                        </p>
+                        <a href="./diensten/zonneschermen/"
+                            class="group mt-8 inline-flex items-center gap-5 rounded-full bg-[#222222] py-1.5 pl-6 pr-1.5 font-inter text-[15px] font-semibold tracking-tight text-white/90 transition-colors duration-200 hover:bg-black">
+                            <span>Bekijk projecten</span>
+                            <span
+                                class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#f4a104] text-charcoal transition-colors duration-200 group-hover:bg-[#db9200]">
+                                <svg viewBox="0 0 24 24" aria-hidden="true" class="h-4 w-4" fill="none"
+                                    stroke="currentColor" stroke-width="2.1" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M5 12h14" />
+                                    <path d="m13 6 6 6-6 6" />
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="flex items-center gap-2 self-end md:self-auto">
+                        <button type="button" data-project-carousel-prev aria-label="Vorige projecten"
+                            class="inline-flex h-11 w-11 items-center justify-center text-charcoal transition-colors duration-200 hover:text-black focus-visible:outline-none focus-visible:text-black">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6" fill="none"
+                                stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M15 18l-6-6 6-6" />
+                            </svg>
+                        </button>
+
+                        <button type="button" data-project-carousel-next aria-label="Volgende projecten"
+                            class="inline-flex h-11 w-11 items-center justify-center text-charcoal transition-colors duration-200 hover:text-black focus-visible:outline-none focus-visible:text-black">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6" fill="none"
+                                stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 6l6 6-6 6" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div data-project-carousel-scroll
+                    class="overflow-x-auto snap-x snap-mandatory scroll-px-5 pb-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+                    <div class="flex gap-6 px-5" data-project-carousel-track>
+
+                        <!-- Project artikel 1 -->
+                        <article data-project-carousel-card data-readmore-card
+                            class="group relative flex shrink-0 snap-center snap-always basis-[calc(100%-2.5rem)] overflow-hidden rounded-[10px] aspect-[3/4]">
+
+                            <img src="./assets/images/diensten/zonnescherm/project-02-01.jpg" alt="Zonneschermen"
+                                class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                                decoding="async">
+
+                            <div
+                                class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/5 via-black/20 to-black/80">
+                            </div>
+
+                            <div class="relative z-10 flex h-full flex-col justify-end gap-3 p-6">
+                                <p class="font-inter text-[12px] font-semibold tracking-wide text-white/60">
+                                    Assendelft
+                                </p>
+                                <h3
+                                    class="font-inter text-[22px] font-bold leading-[1.15] tracking-[-0.03em] text-white">
+                                    Breed knikarmscherm voor schaduw&shy;dekking over het gehele terras
+                                </h3>
+                                <p data-readmore-paragraph
+                                    class="font-inter text-[13px] leading-[1.5] tracking-[-0.02em] text-white/75">
+                                    <span data-readmore-text>
+                                        Zonwering die slim meebeweegt met uw woning. Houd uw woning koel, blokkeer fel
+                                        licht en kies een afwerking die past bij uw gevel en terras.
+                                    </span>
+                                    <button type="button" data-readmore-toggle
+                                        class="inline font-inter text-[13px] leading-[1.5] tracking-tight text-white/60 transition-opacity duration-200 hover:opacity-80"
+                                        aria-expanded="false">
+                                        ... meer
+                                    </button>
+                                </p>
+                                <div>
+                                    <a href="./diensten/zonneschermen/"
+                                        class="mt-1 inline-block rounded-md border border-white/40 bg-white/10 px-4 py-2 font-inter text-[13px] font-semibold tracking-tight text-white backdrop-blur-sm transition-colors duration-200 hover:bg-white/20">
+                                        Bekijk project
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project artikel 2 -->
+                        <article data-project-carousel-card data-readmore-card
+                            class="group relative flex shrink-0 snap-center snap-always basis-[calc(100%-2.5rem)] overflow-hidden rounded-[10px] aspect-[3/4]">
+
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop"
+                                alt="Rolluiken"
+                                class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                                loading="lazy" decoding="async">
+
+                            <div
+                                class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/5 via-black/20 to-black/80">
+                            </div>
+
+                            <div class="relative z-10 flex h-full flex-col justify-end gap-3 p-6">
+                                <p class="font-inter text-[12px] font-semibold tracking-wide text-white/60">
+                                    Zaandam
+                                </p>
+                                <h3
+                                    class="font-inter text-[22px] font-bold leading-[1.15] tracking-[-0.03em] text-white">
+                                    Elektrische rolluiken voor een vrijstaande woning met grote raampartijen
+                                </h3>
+                                <p data-readmore-paragraph
+                                    class="font-inter text-[13px] leading-[1.5] tracking-[-0.02em] text-white/75">
+                                    <span data-readmore-text>
+                                        Rolluiken die warmte, inkijk en geluid weren. Bediend via een schakelaar of
+                                        smartphone, en naadloos geïntegreerd in de gevel.
+                                    </span>
+                                    <button type="button" data-readmore-toggle
+                                        class="inline font-inter text-[13px] leading-[1.5] tracking-tight text-white/60 transition-opacity duration-200 hover:opacity-80"
+                                        aria-expanded="false">
+                                        ... meer
+                                    </button>
+                                </p>
+                                <div>
+                                    <a href="./diensten/rolluiken/"
+                                        class="mt-1 inline-block rounded-md border border-white/40 bg-white/10 px-4 py-2 font-inter text-[13px] font-semibold tracking-tight text-white backdrop-blur-sm transition-colors duration-200 hover:bg-white/20">
+                                        Bekijk project
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project artikel 3 -->
+                        <article data-project-carousel-card data-readmore-card
+                            class="group relative flex shrink-0 snap-center snap-always basis-[calc(100%-2.5rem)] overflow-hidden rounded-[10px] aspect-[3/4]">
+
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop"
+                                alt="Screens"
+                                class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                                loading="lazy" decoding="async">
+
+                            <div
+                                class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/5 via-black/20 to-black/80">
+                            </div>
+
+                            <div class="relative z-10 flex h-full flex-col justify-end gap-3 p-6">
+                                <p class="font-inter text-[12px] font-semibold tracking-wide text-white/60">
+                                    Krommenie
+                                </p>
+                                <h3
+                                    class="font-inter text-[22px] font-bold leading-[1.15] tracking-[-0.03em] text-white">
+                                    Buitenscreens rondom een overdekt terras voor wind&shy;beschutting het hele jaar
+                                </h3>
+                                <p data-readmore-paragraph
+                                    class="font-inter text-[13px] leading-[1.5] tracking-[-0.02em] text-white/75">
+                                    <span data-readmore-text>
+                                        Screens die zon, wind en inkijk tegenhouden zonder het zicht te blokkeren.
+                                        Strak oogende oplossing voor een modern tuinterras.
+                                    </span>
+                                    <button type="button" data-readmore-toggle
+                                        class="inline font-inter text-[13px] leading-[1.5] tracking-tight text-white/60 transition-opacity duration-200 hover:opacity-80"
+                                        aria-expanded="false">
+                                        ... meer
+                                    </button>
+                                </p>
+                                <div>
+                                    <a href="./diensten/screens/"
+                                        class="mt-1 inline-block rounded-md border border-white/40 bg-white/10 px-4 py-2 font-inter text-[13px] font-semibold tracking-tight text-white backdrop-blur-sm transition-colors duration-200 hover:bg-white/20">
+                                        Bekijk project
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project artikel 4 -->
+                        <article data-project-carousel-card data-readmore-card
+                            class="group relative flex shrink-0 snap-center snap-always basis-[calc(100%-2.5rem)] overflow-hidden rounded-[10px] aspect-[3/4]">
+
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop"
+                                alt="Rolgordijnen"
+                                class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                                loading="lazy" decoding="async">
+
+                            <div
+                                class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/5 via-black/20 to-black/80">
+                            </div>
+
+                            <div class="relative z-10 flex h-full flex-col justify-end gap-3 p-6">
+                                <p class="font-inter text-[12px] font-semibold tracking-wide text-white/60">
+                                    Koog aan de Zaan
+                                </p>
+                                <h3
+                                    class="font-inter text-[22px] font-bold leading-[1.15] tracking-[-0.03em] text-white">
+                                    Rolgordijnen op maat voor een lichte woonkamer met dakramen
+                                </h3>
+                                <p data-readmore-paragraph
+                                    class="font-inter text-[13px] leading-[1.5] tracking-[-0.02em] text-white/75">
+                                    <span data-readmore-text>
+                                        Strakke, op maat gemaakte rolgordijnen die verblinding weren en de sfeer in huis
+                                        verbeteren. Rustige bediening, passende kleur, nette afwerking.
+                                    </span>
+                                    <button type="button" data-readmore-toggle
+                                        class="inline font-inter text-[13px] leading-[1.5] tracking-tight text-white/60 transition-opacity duration-200 hover:opacity-80"
+                                        aria-expanded="false">
+                                        ... meer
+                                    </button>
+                                </p>
+                                <div>
+                                    <a href="./diensten/rolgordijnen/"
+                                        class="mt-1 inline-block rounded-md border border-white/40 bg-white/10 px-4 py-2 font-inter text-[13px] font-semibold tracking-tight text-white backdrop-blur-sm transition-colors duration-200 hover:bg-white/20">
+                                        Bekijk project
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Onze diensten -->
+        <section class="bg-white py-16 lg:py-24">
+            <div class="mx-auto max-w-3xl px-5">
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- Zonneschermen -->
-                    <a href="./diensten/zonneschermen/"
-                        class="group flex flex-col overflow-hidden rounded-[28px] bg-gray-100 p-4 sm:p-5 transition-colors duration-300 hover:bg-gray-200/80">
+                    <div
+                        class="group flex flex-col gap-7 overflow-hidden rounded-[28px] bg-gray-100 p-4 pb-6 sm:p-5 transition-colors duration-300">
                         <div class="flex flex-1 flex-col items-center px-2 pt-2 text-center">
                             <h3
                                 class="max-w-[14ch] font-inter text-[34px] font-bold leading-[0.95] tracking-[-0.04em] text-charcoal sm:text-[42px]">
@@ -268,87 +564,157 @@
                             </p>
                         </div>
 
-                        <div class="mt-7 overflow-hidden rounded-3xl bg-gray-200">
-                            <img src="https://www.schaduwdoekkeuze.nl/images/blogimages/big/zonnescherm-reparatie-zelf-doen-of-uitbesteden.webp"
-                                alt="Zonneschermen"
+                        <div class="overflow-hidden mx-3 rounded-2xl bg-gray-200">
+                            <img src="./assets/images/diensten/zonnescherm/project-01-01.jpg" alt="Zonneschermen"
                                 class="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                                 decoding="async">
                         </div>
-                    </a>
 
-                    <!-- Terrasoverkappingen -->
-                    <a href="./diensten/terrasoverkappingen/"
-                        class="group flex flex-col overflow-hidden rounded-[28px] bg-gray-100 p-4 sm:p-5 transition-colors duration-300 hover:bg-gray-200/80">
-                        <div class="flex flex-1 flex-col items-center px-2 pt-2 text-center">
-                            <h3
-                                class="max-w-[14ch] font-inter text-[34px] font-bold leading-[0.95] tracking-[-0.04em] text-charcoal sm:text-[42px]">
-                                Buiten leven, elk seizoen comfortabel
-                            </h3>
-
-                            <p
-                                class="mt-5 max-w-[32ch] font-inter leading-[18px] tracking-[-0.045em] text-[13px] text-gray-600 sm:text-base">
-                                Terrasoverkappingen die schaduw, beschutting en stijl samenbrengen voor elke dag van
-                                het jaar.
-                            </p>
-                        </div>
-
-                        <div class="mt-7 overflow-hidden rounded-3xl bg-gray-200">
-                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&h=300&fit=crop"
-                                alt="Terrasoverkappingen"
-                                class="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                                decoding="async">
-                        </div>
-                    </a>
-
-                    <!-- Rolgordijnen -->
-                    <a href="./diensten/rolgordijnen/"
-                        class="group flex flex-col overflow-hidden rounded-[28px] bg-gray-100 p-4 sm:p-5 transition-colors duration-300 hover:bg-gray-200/80">
-                        <div class="flex flex-1 flex-col items-center px-2 pt-2 text-center">
-                            <h3
-                                class="max-w-[14ch] font-inter text-[34px] font-bold leading-[0.95] tracking-[-0.04em] text-charcoal sm:text-[42px]">
-                                Licht en privacy precies zoals u wilt
-                            </h3>
-
-                            <p
-                                class="mt-5 max-w-[32ch] font-inter leading-[18px] tracking-[-0.045em] text-[13px] text-gray-600 sm:text-base">
-                                Strakke rolgordijnen op maat met rustige bediening, passende kleuren en een nette
-                                afwerking.
-                            </p>
-                        </div>
-
-                        <div class="mt-7 overflow-hidden rounded-3xl bg-gray-200">
-                            <img src="https://images.unsplash.com/photo-1784886330086-031a3e72ac6b?q=80&w=1175&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                alt="Rolgordijnen"
-                                class="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                                decoding="async">
-                        </div>
-                    </a>
+                        <a href="./diensten/zonneschermen/"
+                            class="block w-[calc(100%-1.5rem)] rounded-2xl bg-black px-[30px] py-[10px] mx-auto text-center font-inter font-[600] tracking-tight text-[15.2px] text-white transition-colors duration-200 hover:bg-[#db9200] lg:w-full lg:max-w-[260px]">
+                            <div class="mx-auto flex items-center justify-center gap-2">
+                                <div class="text-white font-inter font-[600] tracking-tight text-[14px]">
+                                    Bekijk zonneschermen
+                                </div>
+                                <div class="text-white font-inter font-[600] tracking-tight text-[14px]">
+                                    →
+                                </div>
+                            </div>
+                        </a>
+                    </div>
 
                     <!-- Rolluiken -->
-                    <a href="./diensten/rolluiken/"
-                        class="group flex flex-col overflow-hidden rounded-[28px] bg-gray-100 p-4 sm:p-5 transition-colors duration-300 hover:bg-gray-200/80">
+                    <div
+                        class="group flex flex-col gap-7 overflow-hidden rounded-[28px] bg-gray-100 p-4 pb-6 sm:p-5 transition-colors duration-300">
                         <div class="flex flex-1 flex-col items-center px-2 pt-2 text-center">
                             <h3
                                 class="max-w-[14ch] font-inter text-[34px] font-bold leading-[0.95] tracking-[-0.04em] text-charcoal sm:text-[42px]">
-                                Extra rust, veiligheid en isolatie in huis
+                                Rolluiken
                             </h3>
 
                             <p
-                                class="mt-5 max-w-[32ch] font-inter leading-[18px] tracking-[-0.045em] text-[13px] text-gray-600 sm:text-base">
+                                class="mt-5 max-w-[32ch] font-inter leading-[18px] tracking-[-0.045em] text-[14px] text-gray-600 sm:text-base">
                                 Rolluiken die warmte en inkijk verminderen en tegelijk zorgen voor een veilig gevoel,
                                 dag en nacht.
                             </p>
                         </div>
 
-                        <div class="mt-7 overflow-hidden rounded-3xl bg-gray-200">
+                        <div class="overflow-hidden mx-3 rounded-3xl bg-gray-200">
                             <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=500&h=300&fit=crop"
                                 alt="Rolluiken"
                                 class="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                                 decoding="async">
                         </div>
-                    </a>
+
+                        <a href="./diensten/rolluiken/"
+                            class="block w-[calc(100%-1.5rem)] rounded-2xl bg-black px-[30px] py-[10px] mx-auto text-center font-inter font-[600] tracking-tight text-[15.2px] text-white transition-colors duration-200 hover:bg-[#db9200] lg:w-full lg:max-w-[260px]">
+                            <div class="mx-auto flex items-center justify-center gap-2">
+                                <div class="text-white font-inter font-[600] tracking-tight text-[14px]">
+                                    Bekijk rolluiken
+                                </div>
+                                <div class="text-white font-inter font-[600] tracking-tight text-[14px]">
+                                    →
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Screens -->
+                    <div
+                        class="group flex flex-col gap-7 overflow-hidden rounded-[28px] bg-gray-100 p-4 pb-6 sm:p-5 transition-colors duration-300">
+                        <div class="flex flex-1 flex-col items-center px-2 pt-2 text-center">
+                            <h3
+                                class="max-w-[14ch] font-inter text-[34px] font-bold leading-[0.95] tracking-[-0.04em] text-charcoal sm:text-[42px]">
+                                Screens
+                            </h3>
+
+                            <p
+                                class="mt-5 max-w-[32ch] font-inter leading-[18px] tracking-[-0.045em] text-[14px] text-gray-600 sm:text-base">
+                                Screens die schaduw, beschutting en stijl samenbrengen voor elke dag van
+                                het jaar.
+                            </p>
+                        </div>
+
+                        <div class="overflow-hidden mx-3 rounded-3xl bg-gray-200">
+                            <img src="./assets/images/diensten/screens/project-01-01.png" alt="Screens"
+                                class="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                                decoding="async">
+                        </div>
+
+                        <a href="./diensten/screens/"
+                            class="block w-[calc(100%-1.5rem)] rounded-2xl bg-black px-[30px] py-[10px] mx-auto text-center font-inter font-[600] tracking-tight text-[15.2px] text-white transition-colors duration-200 hover:bg-[#db9200] lg:w-full lg:max-w-[260px]">
+                            <div class="mx-auto flex items-center justify-center gap-2">
+                                <div class="text-white font-inter font-[600] tracking-tight text-[14px]">
+                                    Bekijk screens
+                                </div>
+                                <div class="text-white font-inter font-[600] tracking-tight text-[14px]">
+                                    →
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Rolgordijnen -->
+                    <div
+                        class="group flex flex-col gap-7 overflow-hidden rounded-[28px] bg-gray-100 p-4 pb-6 sm:p-5 transition-colors duration-300">
+                        <div class="flex flex-1 flex-col items-center px-2 pt-2 text-center">
+                            <h3
+                                class="max-w-[14ch] font-inter text-[34px] font-bold leading-[0.95] tracking-[-0.04em] text-charcoal sm:text-[42px]">
+                                Rolgordijnen
+                            </h3>
+
+                            <p
+                                class="mt-5 max-w-[32ch] font-inter leading-[18px] tracking-[-0.045em] text-[14px] text-gray-600 sm:text-base">
+                                Strakke rolgordijnen op maat met rustige bediening, passende kleuren en een nette
+                                afwerking.
+                            </p>
+                        </div>
+
+                        <div class="overflow-hidden mx-3 rounded-3xl bg-gray-200">
+                            <img src="https://images.unsplash.com/photo-1784886330086-031a3e72ac6b?q=80&w=1175&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Rolgordijnen"
+                                class="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                                decoding="async">
+                        </div>
+
+                        <a href="./diensten/rolgordijnen/"
+                            class="block w-[calc(100%-1.5rem)] rounded-2xl bg-black px-[30px] py-[10px] mx-auto text-center font-inter font-[600] tracking-tight text-[15.2px] text-white transition-colors duration-200 hover:bg-[#db9200] lg:w-full lg:max-w-[260px]">
+                            <div class="mx-auto flex items-center justify-center gap-2">
+                                <div class="text-white font-inter font-[600] tracking-tight text-[14px]">
+                                    Bekijk rolgordijnen
+                                </div>
+                                <div class="text-white font-inter font-[600] tracking-tight text-[14px]">
+                                    →
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
+        </section>
+
+        <section id="reviews" class="bg-[#fafafa] pt-16 lg:pt-24">
+            <div class="mx-auto w-full max-w-6xl px-5">
+                <div class="mx-auto max-w-3xl text-start">
+                    <h3
+                        class="w-max bg-[#ffa500] bg-clip-text font-inter text-[18px] font-bold leading-[35px] tracking-[-0.045em] text-transparent lg:text-6xl">
+                        Online recensies
+                    </h3>
+                    <h2
+                        class="font-inter text-[26px] font-bold leading-[35px] tracking-[-0.045em] text-charcoal lg:text-6xl">
+                        Wat zeggen onze klanten?
+                    </h2>
+                    <p
+                        class="mx-auto mt-4 max-w-2xl font-inter text-[15px] tracking-[-0.02em] text-gray-600 lg:text-lg">
+                        Lees ervaringen van klanten uit de regio en omliggende streken. We zijn trots op ons werk,
+                        en die waardering kunt u terugzien in onze recensies.
+                    </p>
+                </div>
+
+                <div id="featurable-15b9443f-1677-4334-815c-c96482fe8e2f" data-featurable-async class="min-h-[240px]">
+                </div>
+            </div>
+            <script src="https://featurable.com/assets/bundle.js" defer charset="UTF-8"></script>
         </section>
     </main>
 </body>

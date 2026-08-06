@@ -4,6 +4,24 @@ import path from "node:path";
 import { spawn } from "node:child_process";
 import { readdirSync } from "node:fs";
 
+function writeFileWithRetry(filePath, content, encoding = "utf8") {
+  const maxAttempts = 3;
+
+  for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
+    try {
+      writeFileSync(filePath, content, encoding);
+      return;
+    } catch (error) {
+      if (attempt === maxAttempts || error.code !== "EBUSY") {
+        throw error;
+      }
+
+      const waitMs = attempt * 150;
+      Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, waitMs);
+    }
+  }
+}
+
 const SRC = "src";
 const DOCS = "docs";
 
@@ -58,7 +76,7 @@ function renderRootHtmlFile(fileName) {
   const html = renderHtmlWithPartials(source);
 
   ensureDirs();
-  writeFileSync(dest, html, "utf8");
+  writeFileWithRetry(dest, html, "utf8");
 }
 
 function renderAllRootHtmlFiles() {
@@ -113,6 +131,10 @@ const tw = spawn(
   {
     stdio: "inherit",
     shell: process.platform === "win32", // belangrijk voor Windows + spaties in paden
+    env: {
+      ...process.env,
+      NODE_OPTIONS: "--max-old-space-size=2048",
+    },
   }
 );
 
