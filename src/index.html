@@ -335,7 +335,8 @@
                             benodigd is. Waar komt de warmte binnen? Hoeveel ruimte is er beschikbaar? En welke
                             installatie past technisch en praktisch het beste?
                         </p>
-                        <a href="./diensten/"
+                        <a href="./diensten/" data-animate-stagger-reveal data-animate-delay="0.1"
+                            data-animate-stagger="110" data-animate-rise="10" data-animate-duration="620ms"
                             class="group mt-8 inline-flex items-center gap-5 rounded-full bg-[#222222] py-1.5 pl-6 pr-1.5 font-inter text-[16px] font-semibold tracking-tight text-white/90 transition-colors duration-200 hover:bg-black">
                             <span>Onze diensten</span>
                             <span
@@ -350,22 +351,32 @@
                         </a>
                     </div>
 
-                    <div class="flex items-center gap-2 self-end md:self-auto">
-                        <button type="button" data-project-carousel-prev aria-label="Vorige projecten"
-                            class="inline-flex h-11 w-11 items-center justify-center text-charcoal transition-colors duration-200 hover:text-black focus-visible:outline-none focus-visible:text-black">
-                            <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6" fill="none"
-                                stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M15 18l-6-6 6-6" />
-                            </svg>
-                        </button>
+                    <div class="flex flex-row justify-between mt-12 sm:mt-18">
+                        <p
+                            class="inline-flex items-center gap-2 font-mono uppercase text-[12px] font-semibold tracking-[0.01em] text-charcoal/75">
+                            <span class="h-[7px] w-[7px] bg-charcoal"></span>
+                            Projecten
+                        </p>
 
-                        <button type="button" data-project-carousel-next aria-label="Volgende projecten"
-                            class="inline-flex h-11 w-11 items-center justify-center text-charcoal transition-colors duration-200 hover:text-black focus-visible:outline-none focus-visible:text-black">
-                            <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6" fill="none"
-                                stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M9 6l6 6-6 6" />
-                            </svg>
-                        </button>
+                        <div class="flex items-center gap-2 self-end md:self-auto">
+                            <button type="button" data-project-carousel-prev aria-label="Vorige projecten"
+                                class="inline-flex h-11 w-11 items-center justify-center text-charcoal transition-colors duration-200 hover:text-black focus-visible:outline-none focus-visible:text-black">
+                                <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6" fill="none"
+                                    stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M15 18l-6-6 6-6" />
+                                </svg>
+                            </button>
+
+                            <button type="button" data-project-carousel-next aria-label="Volgende projecten"
+                                class="inline-flex h-11 w-11 items-center justify-center text-charcoal transition-colors duration-200 hover:text-black focus-visible:outline-none focus-visible:text-black">
+                                <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6" fill="none"
+                                    stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M9 6l6 6-6 6" />
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
 
@@ -374,8 +385,9 @@
                     <div class="flex gap-6 px-5" data-project-carousel-track>
 
                         <!-- Project artikel 1 -->
-                        <article data-project-carousel-card data-readmore-card
-                            class="group relative flex shrink-0 snap-center snap-always basis-[calc(100%-2.5rem)] overflow-hidden rounded-[10px] aspect-[3/4]">
+                        <a href="./diensten/zonneschermen/" data-project-carousel-card
+                            class="group relative flex shrink-0 snap-center snap-always basis-[calc(100%-2.5rem)] overflow-hidden rounded-[10px] aspect-[3/4]"
+                            aria-label="Lees meer over dit project: breed knikarmscherm voor schaduwdekking over het gehele terras">
 
                             <img src="./assets/images/diensten/zonnescherm/project-02-01.jpg" alt="Zonneschermen"
                                 class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
@@ -385,31 +397,19 @@
                                 class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/5 via-black/20 to-black/80">
                             </div>
 
-                            <div class="relative z-10 flex h-full flex-col justify-end gap-3 p-6">
+                            <div class="relative z-10 flex h-full flex-col justify-end gap-4 p-6">
+                                <span class="block w-full border-t border-white/60"></span>
                                 <h3
                                     class="font-inter text-[22px] font-bold leading-[1.15] tracking-[-0.03em] text-white">
                                     Breed knikarmscherm voor schaduw&shy;dekking over het gehele terras
                                 </h3>
-                                <p data-readmore-paragraph
-                                    class="font-inter text-[13px] leading-[1.5] tracking-[-0.02em] text-white/75">
-                                    <span data-readmore-text>
-                                        Het knikarmscherm houdt de woning koel, blokkeert fel licht en heeft een
-                                        afwerking gekregen die helemaal past bij het terras van deze klant.
-                                    </span>
-                                    <button type="button" data-readmore-toggle
-                                        class="inline font-inter text-[13px] leading-[1.5] tracking-tight text-white/60 transition-opacity duration-200 hover:opacity-80"
-                                        aria-expanded="false">
-                                        ... meer
-                                    </button>
+                                <p class="font-inter text-[13px] leading-[1.5] tracking-[-0.02em] text-white/80">
+                                    Het knikarmscherm houdt de woning koel, blokkeert fel licht en heeft een
+                                    afwerking gekregen die helemaal past bij het terras van deze klant.
                                 </p>
-                                <div>
-                                    <a href="./diensten/zonneschermen/"
-                                        class="mt-1 inline-block rounded-full border border-white/40 bg-white/10 px-4 py-2 font-inter text-[13px] font-semibold tracking-tight text-white backdrop-blur-sm transition-colors duration-200 hover:bg-white/20">
-                                        Lees meer over dit project
-                                    </a>
-                                </div>
+                                <span class="mt-1 block w-full border-t border-white/45"></span>
                             </div>
-                        </article>
+                        </a>
 
                         <!-- Project artikel 2 -->
                         <article data-project-carousel-card data-readmore-card
@@ -713,7 +713,7 @@
                     <p
                         class="mt-7 max-w-[40ch] font-inter text-[19px] leading-[1.22] tracking-[-0.03em] text-charcoal/90 sm:text-[22px]">
                         Wij zijn trots op ons werk, en die waardering kunt u terugzien in onze recensies. Lees hieronder
-                        wat onze klanten hebben geschreven.
+                        wat onze klanten schrijven.
                     </p>
                 </div>
 
