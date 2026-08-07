@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const lazyRevealTargets = document.querySelectorAll('[data-animate-after-lazy][data-animate-pending][data-animate-reveal-up], [data-animate-after-lazy][data-animate-pending][data-animate-reveal-down]');
   const noBlurRevealTargets = document.querySelectorAll('[data-animate-reveal-up][data-animate-no-blur], [data-animate-reveal-down][data-animate-no-blur]');
   const lazySlideUpTargets = document.querySelectorAll('[data-animate-lazy-slide-up][data-animate-pending]');
+  const staggerRevealTargets = document.querySelectorAll('[data-animate-stagger-reveal]');
 
   targets.forEach((target) => {
     const text = target.textContent;
@@ -89,5 +90,64 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.setTimeout(revealTarget, delayMs);
+  });
+
+  staggerRevealTargets.forEach((target) => {
+    const items = Array.from(target.children);
+
+    if (!items.length) {
+      return;
+    }
+
+    const firstDelay = Number.parseFloat(target.getAttribute('data-animate-delay') || '0.15');
+    const staggerMs = Number.parseInt(target.getAttribute('data-animate-stagger') || '75', 10);
+    const risePx = Number.parseInt(target.getAttribute('data-animate-rise') || '12', 10);
+    const transitionDuration = target.getAttribute('data-animate-duration') || '720ms';
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    items.forEach((item, index) => {
+      item.style.opacity = '0';
+      item.style.transform = `translate3d(0, ${risePx}px, 0)`;
+      item.style.willChange = 'opacity, transform';
+      item.style.transitionProperty = 'opacity, transform';
+      item.style.transitionDuration = transitionDuration;
+      item.style.transitionTimingFunction = 'cubic-bezier(0.22, 1, 0.36, 1)';
+      item.style.transitionDelay = `${Math.max(0, firstDelay * 1000) + index * Math.max(0, staggerMs)}ms`;
+    });
+
+    if (prefersReducedMotion) {
+      items.forEach((item) => {
+        item.style.transition = 'none';
+        item.style.opacity = '1';
+        item.style.transform = 'translate3d(0, 0, 0)';
+      });
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            return;
+          }
+
+          window.requestAnimationFrame(() => {
+            items.forEach((item) => {
+              item.style.opacity = '1';
+              item.style.transform = 'translate3d(0, 0, 0)';
+            });
+          });
+
+          observer.unobserve(target);
+        });
+      },
+      {
+        root: null,
+        threshold: 0.35,
+        rootMargin: '0px 0px -8% 0px',
+      }
+    );
+
+    observer.observe(target);
   });
 });

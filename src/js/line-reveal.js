@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const buildLineReveal = (target) => {
     const existingState = states.get(target);
+    const wasRevealed = Boolean(existingState?.revealed);
 
     if (existingState?.observer) {
       existingState.observer.disconnect();
@@ -22,6 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!rawText) {
       return;
     }
+
+    const computedStyle = window.getComputedStyle(target);
+    const lineHeight = computedStyle.lineHeight;
 
     const tokens = rawText.match(/\S+\s*/g) || [rawText];
     const wordSpans = tokens.map((token) => {
@@ -59,9 +63,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const clip = document.createElement('span');
       clip.style.display = 'block';
       clip.style.overflow = 'hidden';
+      clip.style.lineHeight = lineHeight;
 
       const inner = document.createElement('span');
       inner.style.display = 'inline-block';
+      inner.style.lineHeight = lineHeight;
       inner.style.transform = 'translate3d(0, 110%, 0)';
       inner.style.opacity = '0';
       inner.style.willChange = 'transform, opacity';
@@ -91,11 +97,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     states.set(target, state);
 
-    if (prefersReducedMotion) {
+    if (prefersReducedMotion || wasRevealed) {
       lineInners.forEach((line) => {
-        line.style.transition = 'none';
         line.style.transform = 'translate3d(0, 0, 0)';
         line.style.opacity = '1';
+
+        // Keep rebuilds stable on resize once content has already been revealed.
+        if (wasRevealed) {
+          line.style.transition = 'none';
+        }
       });
       state.revealed = true;
       return;
@@ -142,6 +152,15 @@ document.addEventListener('DOMContentLoaded', () => {
     buildLineReveal(target);
   });
 
+  // Fonts can change line breaks after DOMContentLoaded; rebuild once they are ready.
+  if (document.fonts?.ready) {
+    document.fonts.ready.then(() => {
+      targets.forEach((target) => {
+        buildLineReveal(target);
+      });
+    });
+  }
+
   let resizeTicking = false;
 
   window.addEventListener('resize', () => {
@@ -153,12 +172,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.requestAnimationFrame(() => {
       targets.forEach((target) => {
-        const state = states.get(target);
-
-        if (state?.revealed) {
-          return;
-        }
-
         buildLineReveal(target);
       });
 

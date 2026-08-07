@@ -1,7 +1,7 @@
 (() => {
-    const COLLAPSED_LINES = 3;
+    const DEFAULT_COLLAPSED_LINES = 3;
     const COLLAPSED_LABEL = "... meer";
-    const EXPANDED_LABEL = " minder";
+    const EXPANDED_LABEL = "... minder";
 
     const items = [];
 
@@ -19,7 +19,17 @@
         return Number.isFinite(fontSize) ? fontSize * 1.5 : 20;
     };
 
-    const getMaxCollapsedHeight = (paragraph) => getLineHeight(paragraph) * COLLAPSED_LINES;
+    const getCollapsedLines = (paragraph) => {
+        const configuredLines = Number.parseInt(paragraph.dataset.readmoreLines || "", 10);
+
+        if (Number.isFinite(configuredLines) && configuredLines > 0) {
+            return configuredLines;
+        }
+
+        return DEFAULT_COLLAPSED_LINES;
+    };
+
+    const getMaxCollapsedHeight = (paragraph) => getLineHeight(paragraph) * getCollapsedLines(paragraph);
 
     const getCollapsedText = ({ paragraph, textSpan, button, fullText }) => {
         const maxHeight = getMaxCollapsedHeight(paragraph);
@@ -173,5 +183,10 @@
             init();
             items.forEach(recalculateItem);
         });
+    });
+
+    document.addEventListener("readmore:refresh", () => {
+        init();
+        items.forEach(recalculateItem);
     });
 })();

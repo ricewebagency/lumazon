@@ -1,0 +1,772 @@
+{
+  "updatedAt": "2026-05-28T05:48:52.423Z",
+  "reviews": [
+    {
+      "position": 1,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pWT0xYWmhTMkZZVEU1RFRrSkNiMkZQWW01Q1RXYxAB!2m1!1s0x0:0xa62f24a3a6176351!3m1!1s2@1:CAIQACodChtycF9oOjVOLXZhS2FYTE5DTkJCb2FPYm5CTWc%7C%7C?hl=en-US",
+      "rating": 5,
+      "date": "3 months ago",
+      "iso_date": "2026-02-10T12:26:32Z",
+      "iso_date_of_last_edit": "2026-02-10T12:26:32Z",
+      "images": [
+        "https://lh3.googleusercontent.com/grass-cs/ANxoTn0XA-rTE5QQt9vcFL4rjz0M4H0ofSeF9pFJMP5SGtr0zd8X8jI9l0yJSJmdG6odzTphO2AOcOX_YmdCSSYemgODDBjsZxkrgyavzbT57Jsv68BaRAM5y2O09tHGI1zEHx8RFxWisQrKbbw=k-no",
+        "https://lh3.googleusercontent.com/grass-cs/ANxoTn25PWv3TCxc4b5ETTMf21Ay8Zjs17zqdCeZkHVJEnKTWN-fNKD0CsuWr-FFunR1syKl4gJssNFUdidy70UaMdRPlOjr0fkoY2nbioeaJ3RH6rqskcmc-fySg_CaIMkaiKKYNuYyBznrHFmK=k-no",
+        "https://lh3.googleusercontent.com/grass-cs/ANxoTn0w4WxCPiyZFyjCZ9xePtJ5rKdsIts_qu663rXwrCkvHA0_Q7q3GkNY3Ql6NMdccEcd9ozXupEB7s-1OE_Su29wKXzOM_vbxUdzEtn1y_WLy6N-xHPKMfcnzJ0cblJyn82MV7VSl1vJEwie=k-no",
+        "https://lh3.googleusercontent.com/grass-cs/ANxoTn0qkRadKnLZxIx1yqjisswrZNnGyig_a9DJfNZo8DPApb48Xs_dMzzrFZ06lvIS9qeqT_TcYh-uCsULvVV5kIN07GwQOjHlePMtnO1NDWOS7zuBRQenYnqbUYSpJ4cqCrYVmVwgX8R1LNfT=k-no",
+        "https://lh3.googleusercontent.com/grass-cs/ANxoTn0vJmDBvZftCh0JzX0FBxc9fZ6N3nUqiX5EAXO-kyMIghhelb4qgbW6TIj9qrVKY5KL26gr20GtkOwDJQcw01zMSIF8G3GplZS8BgNqByULb28xzoh3kBptQ8R8F-u0_sFEuOxWH7Q0M2a0=k-no"
+      ],
+      "source": "Google",
+      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2pWT0xYWmhTMkZZVEU1RFRrSkNiMkZQWW01Q1RXYxAB",
+      "user": {
+        "name": "Hubert Schüssler",
+        "link": "https://www.google.com/maps/contrib/115054306277800660825?hl=en-US",
+        "contributor_id": "115054306277800660825",
+        "thumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjVYtYq6qsb8RJ3ROYkQor7M5gLt-sJ75aqvGZFLYABBoFaGFHOJog=s120-c-rp-mo-ba12-br100",
+        "local_guide": true,
+        "reviews": 108,
+        "photos": 291
+      },
+      "snippet": "Boy neemt de tijd voor je, alles wordt goed doorgesproken en tussentijds contact is erg prettig. Uiteindelijk zijn de screens echt heel mooi geworden.\nJe merkt duidelijk dat hier mensen werken die verstand hebben van wat ze doen. Dit is wat mij betreft hét adresje in de buurt voor goede zonwering.",
+      "extracted_snippet": {
+        "original": "Boy neemt de tijd voor je, alles wordt goed doorgesproken en tussentijds contact is erg prettig. Uiteindelijk zijn de screens echt heel mooi geworden.\nJe merkt duidelijk dat hier mensen werken die verstand hebben van wat ze doen. Dit is wat mij betreft hét adresje in de buurt voor goede zonwering.",
+        "translated": "Boy neemt de tijd voor je, alles wordt goed doorgesproken en tussentijds contact is erg prettig. Uiteindelijk zijn de screens echt heel mooi geworden.\nJe merkt duidelijk dat hier mensen werken die verstand hebben van wat ze doen. Dit is wat mij betreft hét adresje in de buurt voor goede zonwering."
+      },
+      "details": {
+        "services": "Zonwering",
+        "cleanliness": "Netjes gewerkt en alles schoon achtergelaten."
+      },
+      "translated_details": {
+        "cleanliness": "Worked neatly and left everything clean."
+      },
+      "likes": 0,
+      "response": {
+        "date": "3 months ago",
+        "iso_date": "2026-02-10T15:53:36Z",
+        "iso_date_of_last_edit": "2026-02-10T15:53:36Z",
+        "snippet": "Dankjewel Hubert voor deze mooie woorden en het vertrouwen. Fijn om te horen dat je het contact en het eindresultaat zo prettig hebt ervaren. We doen dit werk met veel plezier en het is mooi als dat ook zo wordt gevoeld. Veel plezier met de screens en je bent altijd welkom bij Lumazon!\n\nGroetjes Boy\n\nLumazon",
+        "extracted_snippet": {
+          "original": "Dankjewel Hubert voor deze mooie woorden en het vertrouwen. Fijn om te horen dat je het contact en het eindresultaat zo prettig hebt ervaren. We doen dit werk met veel plezier en het is mooi als dat ook zo wordt gevoeld. Veel plezier met de screens en je bent altijd welkom bij Lumazon!\n\nGroetjes Boy\n\nLumazon",
+          "translated": "Dankjewel Hubert voor deze mooie woorden en het vertrouwen. Fijn om te horen dat je het contact en het eindresultaat zo prettig hebt ervaren. We doen dit werk met veel plezier en het is mooi als dat ook zo wordt gevoeld. Veel plezier met de screens en je bent altijd welkom bij Lumazon!\n\nGroetjes Boy\n\nLumazon"
+        }
+      }
+    },
+    {
+      "position": 2,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25GVWVGSlFObFZsU0daWGNVWjRNV1J2VlVSb1NsRRAB!2m1!1s0x0:0xa62f24a3a6176351!3m1!1s2@1:CAIQACodChtycF9oOnFUeFJQNlVlSGZXcUZ4MWRvVURoSlE%7C%7C?hl=en-US",
+      "rating": 5,
+      "date": "6 months ago",
+      "iso_date": "2025-11-03T20:27:47Z",
+      "iso_date_of_last_edit": "2025-11-03T20:27:47Z",
+      "images": [
+        "https://lh3.googleusercontent.com/grass-cs/ANxoTn2qFehVTPeuZl2n7oNZlGUv_p7MLvvzqXc0yijEz6kUtypkMA540xwUpUu61d6OxSFLn-GPFyBsGUVycNtek3BCLrbAKG72IseyuBQvNHkZaOdlUwGVcQEn690KNLd_LA2_Q_gkQVGFRWr8=k-no"
+      ],
+      "source": "Google",
+      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT25GVWVGSlFObFZsU0daWGNVWjRNV1J2VlVSb1NsRRAB",
+      "user": {
+        "name": "Gwen van der Steen",
+        "link": "https://www.google.com/maps/contrib/117220179523035516348?hl=en-US",
+        "contributor_id": "117220179523035516348",
+        "thumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjUhit4_xnT5IHlITVaA3LZoTVbv7eRBQgh9q7AYmJlD9927dd_Btw=s120-c-rp-mo-ba12-br100",
+        "local_guide": true,
+        "reviews": 3,
+        "photos": 16
+      },
+      "snippet": "Ik heb een super ervaring gehad en alles is professioneel gedaan. We hebben nieuwe zonwering laten plaatsen aan de achterzijde van ons huis en zijn er heel blij mee. Er werd rustig gewerkt en alles werd netjes uitgelegd. Ook fijn contact tijdens het plaatsen.",
+      "extracted_snippet": {
+        "original": "Ik heb een super ervaring gehad en alles is professioneel gedaan. We hebben nieuwe zonwering laten plaatsen aan de achterzijde van ons huis en zijn er heel blij mee. Er werd rustig gewerkt en alles werd netjes uitgelegd. Ook fijn contact tijdens het plaatsen.",
+        "translated": "Ik heb een super ervaring gehad en alles is professioneel gedaan. We hebben nieuwe zonwering laten plaatsen aan de achterzijde van ons huis en zijn er heel blij mee. Er werd rustig gewerkt en alles werd netjes uitgelegd. Ook fijn contact tijdens het plaatsen."
+      },
+      "details": {
+        "services": "Zonwering",
+        "cleanliness": "Netjes gewerkt en alles schoon achtergelaten."
+      },
+      "translated_details": {
+        "cleanliness": "Worked neatly and left everything clean."
+      },
+      "likes": 0,
+      "response": {
+        "date": "6 months ago",
+        "iso_date": "2025-11-04T16:30:27Z",
+        "iso_date_of_last_edit": "2025-11-04T16:30:27Z",
+        "snippet": "Bedankt Gwen!\n\nWat goed om te horen. We doen ons uiterste best, en dat blijven we doen!\n\nMooi resultaat en fijn dat jullie er blij mee zijn!\n\nGroeten Boy\n\nLumazon",
+        "extracted_snippet": {
+          "original": "Bedankt Gwen!\n\nWat goed om te horen. We doen ons uiterste best, en dat blijven we doen!\n\nMooi resultaat en fijn dat jullie er blij mee zijn!\n\nGroeten Boy\n\nLumazon",
+          "translated": "Bedankt Gwen!\n\nWat goed om te horen. We doen ons uiterste best, en dat blijven we doen!\n\nMooi resultaat en fijn dat jullie er blij mee zijn!\n\nGroeten Boy\n\nLumazon"
+        }
+      }
+    },
+    {
+      "position": 3,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pKclRIQnpiMmsyYkU1MFEzZEJURzVKUkhaVFZWRRAB!2m1!1s0x0:0xa62f24a3a6176351!3m1!1s2@1:CAIQACodChtycF9oOjJrTHBzb2k2bE50Q3dBTG5JRHZTVVE%7C%7C?hl=en-US",
+      "rating": 5,
+      "date": "4 months ago",
+      "iso_date": "2026-01-06T19:29:16Z",
+      "iso_date_of_last_edit": "2026-01-06T19:29:16Z",
+      "images": [
+        "https://lh3.googleusercontent.com/grass-cs/ANxoTn0uzhZ8GnF8llpGgRg6BSI0-0FF5QnZZ0bycjsD6rc0PN-a2TQpmI4AJTl4PdPNJddqxCsuRMYcAuvmfTZyVh405JRxoBHCg5-eoRKbA5SQGRrEsY0uT_H0AInVBvb-33bz7cPDOQLbo8Qe=k-no"
+      ],
+      "source": "Google",
+      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2pKclRIQnpiMmsyYkU1MFEzZEJURzVKUkhaVFZWRRAB",
+      "user": {
+        "name": "Dusty Vlottes",
+        "link": "https://www.google.com/maps/contrib/110573994465086694780?hl=en-US",
+        "contributor_id": "110573994465086694780",
+        "thumbnail": "https://lh3.googleusercontent.com/a/ACg8ocL47KPigTeuk6zUgRH04a15_P0beRZXUV3mX5_5JkxP0d3Nfg=s120-c-rp-mo-br100",
+        "local_guide": true,
+        "reviews": 10,
+        "photos": 7
+      },
+      "snippet": "Ben je opzoek naar goeie zonwering?dan zit je hier goed!!\nBoy neemt de tijd voor je en luister naar de klant!\nEcht een aanrader.\nBij ons zijn screens geplaatst en buiten het feit om dat het goed gebeurd was het ook erg gezellig",
+      "extracted_snippet": {
+        "original": "Ben je opzoek naar goeie zonwering?dan zit je hier goed!!\nBoy neemt de tijd voor je en luister naar de klant!\nEcht een aanrader.\nBij ons zijn screens geplaatst en buiten het feit om dat het goed gebeurd was het ook erg gezellig",
+        "translated": "Ben je opzoek naar goeie zonwering?dan zit je hier goed!!\nBoy neemt de tijd voor je en luister naar de klant!\nEcht een aanrader.\nBij ons zijn screens geplaatst en buiten het feit om dat het goed gebeurd was het ook erg gezellig"
+      },
+      "likes": 0,
+      "response": {
+        "date": "4 months ago",
+        "iso_date": "2026-01-06T19:45:15Z",
+        "iso_date_of_last_edit": "2026-01-06T19:45:15Z",
+        "snippet": "Dankjewel Dusty voor deze mooie review!\nSuper tof om te lezen dat je blij bent met het resultaat. We nemen graag de tijd voor onze klanten, dus fijn dat dat zo is overgekomen. Veel plezier met de screens! 👊",
+        "extracted_snippet": {
+          "original": "Dankjewel Dusty voor deze mooie review!\nSuper tof om te lezen dat je blij bent met het resultaat. We nemen graag de tijd voor onze klanten, dus fijn dat dat zo is overgekomen. Veel plezier met de screens! 👊",
+          "translated": "Dankjewel Dusty voor deze mooie review!\nSuper tof om te lezen dat je blij bent met het resultaat. We nemen graag de tijd voor onze klanten, dus fijn dat dat zo is overgekomen. Veel plezier met de screens! 👊"
+        }
+      }
+    },
+    {
+      "position": 4,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21kRWRrUXhRVGh6TW13M05sVldZVE5zZWtsTVNIYxAB!2m1!1s0x0:0xa62f24a3a6176351!3m1!1s2@1:CAIQACodChtycF9oOmdEdkQxQThzMmw3NlVWYTNseklMSHc%7C%7C?hl=en-US",
+      "rating": 5,
+      "date": "7 months ago",
+      "iso_date": "2025-10-21T07:23:22Z",
+      "iso_date_of_last_edit": "2025-10-21T07:23:22Z",
+      "source": "Google",
+      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT21kRWRrUXhRVGh6TW13M05sVldZVE5zZWtsTVNIYxAB",
+      "user": {
+        "name": "Marcel Jong",
+        "link": "https://www.google.com/maps/contrib/108131397780576485415?hl=en-US",
+        "contributor_id": "108131397780576485415",
+        "thumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjXbW4cThiIpVXGMrYACQVD6ety-phw2Z0bJ55FFx8-mu10AwWKctQ=s120-c-rp-mo-br100",
+        "local_guide": true,
+        "reviews": 4,
+        "photos": 0
+      },
+      "snippet": "Ik was al een tijdje op zoek naar iemand voor nieuwe zonwering en kwam toevallig bij Lumazon terecht.\nAfspraak gemaakt en mijn wensen kenbaar gemaakt.\nDaarna alles netjes ingemeten en geplaatst.\nIk ben er super blij mee en wat een stuk vakwerk.\nIk kan Lumazon aan iedereen aanbevelen.\nSuper bedankt 🙏",
+      "extracted_snippet": {
+        "original": "Ik was al een tijdje op zoek naar iemand voor nieuwe zonwering en kwam toevallig bij Lumazon terecht.\nAfspraak gemaakt en mijn wensen kenbaar gemaakt.\nDaarna alles netjes ingemeten en geplaatst.\nIk ben er super blij mee en wat een stuk vakwerk.\nIk kan Lumazon aan iedereen aanbevelen.\nSuper bedankt 🙏",
+        "translated": "Ik was al een tijdje op zoek naar iemand voor nieuwe zonwering en kwam toevallig bij Lumazon terecht.\nAfspraak gemaakt en mijn wensen kenbaar gemaakt.\nDaarna alles netjes ingemeten en geplaatst.\nIk ben er super blij mee en wat een stuk vakwerk.\nIk kan Lumazon aan iedereen aanbevelen.\nSuper bedankt 🙏"
+      },
+      "details": {
+        "services": "Zonwering",
+        "cleanliness": "Netjes gewerkt en alles schoon achtergelaten."
+      },
+      "translated_details": {
+        "cleanliness": "Worked neatly and left everything clean."
+      },
+      "likes": 0,
+      "response": {
+        "date": "6 months ago",
+        "iso_date": "2025-11-03T20:47:27Z",
+        "iso_date_of_last_edit": "2025-11-03T20:47:27Z",
+        "snippet": "Hey Marcel, super bedankt voor je mooie woorden en vertrouwen! 🙏\nHet was tof om dit bij jullie te mogen plaatsen en we zijn blij dat je er zo tevreden mee bent. Veel plezier ermee! 💪\nGroet, Boy – Lumazon\n",
+        "extracted_snippet": {
+          "original": "Hey Marcel, super bedankt voor je mooie woorden en vertrouwen! 🙏\nHet was tof om dit bij jullie te mogen plaatsen en we zijn blij dat je er zo tevreden mee bent. Veel plezier ermee! 💪\nGroet, Boy – Lumazon\n",
+          "translated": "Hey Marcel, super bedankt voor je mooie woorden en vertrouwen! 🙏\nHet was tof om dit bij jullie te mogen plaatsen en we zijn blij dat je er zo tevreden mee bent. Veel plezier ermee! 💪\nGroet, Boy – Lumazon\n"
+        }
+      }
+    },
+    {
+      "position": 5,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2t0UFZscHNRa1JWTjBwWmREWmxiMnd4TnpKSloyYxAB!2m1!1s0x0:0xa62f24a3a6176351!3m1!1s2@1:CAIQACodChtycF9oOktPVlpsQkRVN0pZdDZlb2wxNzJJZ2c%7C%7C?hl=en-US",
+      "rating": 5,
+      "date": "3 months ago",
+      "iso_date": "2026-02-10T10:36:25Z",
+      "iso_date_of_last_edit": "2026-02-10T10:37:24Z",
+      "source": "Google",
+      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2t0UFZscHNRa1JWTjBwWmREWmxiMnd4TnpKSloyYxAB",
+      "user": {
+        "name": "Stephanie R",
+        "link": "https://www.google.com/maps/contrib/105168513480512655137?hl=en-US",
+        "contributor_id": "105168513480512655137",
+        "thumbnail": "https://lh3.googleusercontent.com/a/ACg8ocLiFCbZn85i_W2Dasn3rHDh-Jr_x8SeljhaorgYsAS90i6YcQ=s120-c-rp-mo-br100",
+        "local_guide": true,
+        "reviews": 2,
+        "photos": 0
+      },
+      "snippet": "Lumazon heeft bij ons de zonwering onwijs mooi geplaatst! Nogmaals bedankt voor het meedenken en prachtige resultaat. Alles ziet er strak uit en werkt perfect!\nTot de volgende keer!",
+      "extracted_snippet": {
+        "original": "Lumazon heeft bij ons de zonwering onwijs mooi geplaatst! Nogmaals bedankt voor het meedenken en prachtige resultaat. Alles ziet er strak uit en werkt perfect!\nTot de volgende keer!",
+        "translated": "Lumazon heeft bij ons de zonwering onwijs mooi geplaatst! Nogmaals bedankt voor het meedenken en prachtige resultaat. Alles ziet er strak uit en werkt perfect!\nTot de volgende keer!"
+      },
+      "likes": 0,
+      "response": {
+        "date": "3 months ago",
+        "iso_date": "2026-02-10T15:54:44Z",
+        "iso_date_of_last_edit": "2026-02-10T15:54:44Z",
+        "snippet": "Dankjewel Stephanie! Fijn dat je het meedenken en het resultaat zo hebt ervaren. We vinden het belangrijk dat alles niet alleen goed werkt maar er ook netjes uitziet. Veel plezier ermee en natuurlijk altijd welkom. Tot de volgende keer!",
+        "extracted_snippet": {
+          "original": "Dankjewel Stephanie! Fijn dat je het meedenken en het resultaat zo hebt ervaren. We vinden het belangrijk dat alles niet alleen goed werkt maar er ook netjes uitziet. Veel plezier ermee en natuurlijk altijd welkom. Tot de volgende keer!",
+          "translated": "Dankjewel Stephanie! Fijn dat je het meedenken en het resultaat zo hebt ervaren. We vinden het belangrijk dat alles niet alleen goed werkt maar er ook netjes uitziet. Veel plezier ermee en natuurlijk altijd welkom. Tot de volgende keer!"
+        }
+      }
+    },
+    {
+      "position": 6,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChdDSUhNMG9nS0VJQ0FnSUNYamItc3J3RRAB!2m1!1s0x0:0xa62f24a3a6176351!3m1!1s2@1:CIHM0ogKEICAgICXjb-srwE%7C%7C?hl=en-US",
+      "rating": 5,
+      "date": "a year ago",
+      "iso_date": "2024-10-19T08:32:15Z",
+      "iso_date_of_last_edit": "2024-10-19T08:32:15Z",
+      "source": "Google",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNYamItc3J3RRAB",
+      "user": {
+        "name": "Niels van Veen",
+        "link": "https://www.google.com/maps/contrib/114315010813238541894?hl=en-US",
+        "contributor_id": "114315010813238541894",
+        "thumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjWD5m0A_UdF0egU6rbqGEjT0QQBPkuQCGmE4nd66FBBTHTAd3A=s120-c-rp-mo-br100",
+        "local_guide": true,
+        "reviews": 8,
+        "photos": 0
+      },
+      "snippet": "Ik ben erg blij met onze nieuwe zonwering. We zijn goed geholpen met zowel het uitzoeken als het plaatsen zelf. Boy neemt de tijd voor je en denkt goed mee. Ga zo door",
+      "extracted_snippet": {
+        "original": "Ik ben erg blij met onze nieuwe zonwering. We zijn goed geholpen met zowel het uitzoeken als het plaatsen zelf. Boy neemt de tijd voor je en denkt goed mee. Ga zo door",
+        "translated": "Ik ben erg blij met onze nieuwe zonwering. We zijn goed geholpen met zowel het uitzoeken als het plaatsen zelf. Boy neemt de tijd voor je en denkt goed mee. Ga zo door"
+      },
+      "details": {
+        "services": "Zonwering"
+      },
+      "likes": 1,
+      "response": {
+        "date": "a year ago",
+        "iso_date": "2024-10-19T16:51:40Z",
+        "iso_date_of_last_edit": "2024-10-19T16:51:40Z",
+        "snippet": "Niels, thnx topper! Veel plezier ermee 👌👍",
+        "extracted_snippet": {
+          "original": "Niels, thnx topper! Veel plezier ermee 👌👍",
+          "translated": "Niels, thnx topper! Veel plezier ermee 👌👍"
+        }
+      }
+    },
+    {
+      "position": 7,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChdDSUhNMG9nS0VJQ0FnSUNudWV2T3B3RRAB!2m1!1s0x0:0xa62f24a3a6176351!3m1!1s2@1:CIHM0ogKEICAgICnuevOpwE%7C%7C?hl=en-US",
+      "rating": 5,
+      "date": "a year ago",
+      "iso_date": "2024-09-27T17:14:25Z",
+      "iso_date_of_last_edit": "2024-09-27T17:14:25Z",
+      "images": [
+        "https://lh3.googleusercontent.com/grass-cs/ANxoTn33hGY9YvnJFkWZp0K6HaJI1aJXCiMUGtlSsYWaoa1EbvXDJcA1trlO4QV1sDtqvy6z0CW7i-YOHL46xq_ySQFqkDZcg6zT0VZy-wr6kVrLEGJcIhcBVcUA7uxxHqE2hcG8wJLI=k-no"
+      ],
+      "source": "Google",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNudWV2T3B3RRAB",
+      "user": {
+        "name": "Marissa Pruim",
+        "link": "https://www.google.com/maps/contrib/115174592283315397966?hl=en-US",
+        "contributor_id": "115174592283315397966",
+        "thumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjVtrsXcWe4pXsivxEUcCo1kadnATSa_GGOgshwVcmf2yV9_Rpb0=s120-c-rp-mo-ba12-br100",
+        "local_guide": true,
+        "reviews": 16,
+        "photos": 12
+      },
+      "snippet": "Ik ben ontzettend blij met onze nieuwe screens! Het is precies zoals ik het wilde en alles is heel netjes afgewerkt. Het eindresultaat overtreft mijn verwachtingen. Super mooi werk!",
+      "extracted_snippet": {
+        "original": "Ik ben ontzettend blij met onze nieuwe screens! Het is precies zoals ik het wilde en alles is heel netjes afgewerkt. Het eindresultaat overtreft mijn verwachtingen. Super mooi werk!",
+        "translated": "Ik ben ontzettend blij met onze nieuwe screens! Het is precies zoals ik het wilde en alles is heel netjes afgewerkt. Het eindresultaat overtreft mijn verwachtingen. Super mooi werk!"
+      },
+      "details": {
+        "services": "Zonwering"
+      },
+      "likes": 0,
+      "response": {
+        "date": "a year ago",
+        "iso_date": "2024-09-29T19:58:00Z",
+        "iso_date_of_last_edit": "2024-09-29T19:58:00Z",
+        "snippet": "Bedankt voor het vertrouwen!",
+        "extracted_snippet": {
+          "original": "Bedankt voor het vertrouwen!",
+          "translated": "Bedankt voor het vertrouwen!"
+        }
+      }
+    },
+    {
+      "position": 8,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChZDSUhNMG9nS0VJQ0FnSUNYalllYkN3EAE!2m1!1s0x0:0xa62f24a3a6176351!3m1!1s2@1:CIHM0ogKEICAgICXjYebCw%7C%7C?hl=en-US",
+      "rating": 5,
+      "date": "a year ago",
+      "iso_date": "2024-10-19T08:19:51Z",
+      "iso_date_of_last_edit": "2024-10-19T08:19:51Z",
+      "source": "Google",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNYalllYkN3EAE",
+      "user": {
+        "name": "Michael Leegwater",
+        "link": "https://www.google.com/maps/contrib/100853233432916470080?hl=en-US",
+        "contributor_id": "100853233432916470080",
+        "thumbnail": "https://lh3.googleusercontent.com/a/ACg8ocKKR4UYmZvJq7h1S75kXiwpliDpeasy7B5cwSWXT6Q61m262A=s120-c-rp-mo-br100",
+        "local_guide": true,
+        "reviews": 5,
+        "photos": 3
+      },
+      "snippet": "Zoek je een aardige vent die verstand heeft van zonwering maar ook goed kan adviseren wat bij je huis past, dan hoef je niet verder te zoeken. Inmiddels meerdere dingen door Lumazon laten doen en ik vind het helemaal top. Mike - Zaandam",
+      "extracted_snippet": {
+        "original": "Zoek je een aardige vent die verstand heeft van zonwering maar ook goed kan adviseren wat bij je huis past, dan hoef je niet verder te zoeken. Inmiddels meerdere dingen door Lumazon laten doen en ik vind het helemaal top. Mike - Zaandam",
+        "translated": "Zoek je een aardige vent die verstand heeft van zonwering maar ook goed kan adviseren wat bij je huis past, dan hoef je niet verder te zoeken. Inmiddels meerdere dingen door Lumazon laten doen en ik vind het helemaal top. Mike - Zaandam"
+      },
+      "details": {
+        "services": "Zonwering"
+      },
+      "likes": 0,
+      "response": {
+        "date": "a year ago",
+        "iso_date": "2024-10-19T08:30:47Z",
+        "iso_date_of_last_edit": "2024-10-19T08:30:47Z",
+        "snippet": "Super Micheal! Altijd leuk om weer wat bij jullie te mogen doen! 👍",
+        "extracted_snippet": {
+          "original": "Super Micheal! Altijd leuk om weer wat bij jullie te mogen doen! 👍",
+          "translated": "Super Micheal! Altijd leuk om weer wat bij jullie te mogen doen! 👍"
+        }
+      }
+    },
+    {
+      "position": 1,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChdDSUhNMG9nS0VJQ0FnSUNYaloyX21BRRAB!2m1!1s0x0:0xa62f24a3a6176351!3m1!1s2@1:CIHM0ogKEICAgICXjZ2_mAE%7C%7C?hl=en",
+      "rating": 5,
+      "date": "a year ago",
+      "iso_date": "2024-10-19T08:03:54Z",
+      "iso_date_of_last_edit": "2024-10-19T08:03:54Z",
+      "images": [
+        "https://lh3.googleusercontent.com/grass-cs/ANxoTn3FRrpH8bmog8crSId-6tvf-TgaCIQv3vOcL77MN817TwcG1Z5IrTFsJtPLxEqz6VMk86LOrVSAM4FrGPMBw2pD7PbmGfUFkpIyY_pAnKSN0BII1YHrwdqhP2DcNTDvU0x0eSDw=k-no"
+      ],
+      "source": "Google",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNYaloyX21BRRAB",
+      "user": {
+        "name": "Floran Elisa Ouderland",
+        "link": "https://www.google.com/maps/contrib/111811325484634955047?hl=en",
+        "contributor_id": "111811325484634955047",
+        "thumbnail": "https://lh3.googleusercontent.com/a/ACg8ocJI1PbY3r6Pdv-30rzhY3IKImSLqpiy87SNYutqqwQzsdvDUg=s120-c-rp-mo-br100",
+        "local_guide": true,
+        "reviews": 5,
+        "photos": 1
+      },
+      "snippet": "Wat een goed bedrijf! Luistert naar je wensen en werkt erg netjes. Ik ben heel blij met onze zonwering!\nKan Lumazon zeker aanraden.",
+      "extracted_snippet": {
+        "original": "Wat een goed bedrijf! Luistert naar je wensen en werkt erg netjes. Ik ben heel blij met onze zonwering!\nKan Lumazon zeker aanraden.",
+        "translated": "Wat een goed bedrijf! Luistert naar je wensen en werkt erg netjes. Ik ben heel blij met onze zonwering!\nKan Lumazon zeker aanraden."
+      },
+      "details": {
+        "services": "Zonwering"
+      },
+      "likes": 0,
+      "response": {
+        "date": "a year ago",
+        "iso_date": "2024-10-19T08:13:45Z",
+        "iso_date_of_last_edit": "2024-10-19T08:13:45Z",
+        "snippet": "Bedankt Floran! Veel plezier ermee 👍🌴",
+        "extracted_snippet": {
+          "original": "Bedankt Floran! Veel plezier ermee 👍🌴",
+          "translated": "Bedankt Floran! Veel plezier ermee 👍🌴"
+        }
+      }
+    },
+    {
+      "position": 2,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChZDSUhNMG9nS0VJQ0FnSUNYemFIZUFnEAE!2m1!1s0x0:0xa62f24a3a6176351!3m1!1s2@1:CIHM0ogKEICAgICXzaHeAg%7C%7C?hl=en",
+      "rating": 5,
+      "date": "a year ago",
+      "iso_date": "2024-10-19T09:31:00Z",
+      "iso_date_of_last_edit": "2024-10-19T09:31:00Z",
+      "images": [
+        "https://lh3.googleusercontent.com/grass-cs/ANxoTn2DG7JcAHH7u5Cr06wbxdxDjbFiGsw-ASG-MZdBcB18pHc44vR6uy8JP4wnuRY-zVVhTvy0E6EQCJpuCIbtxYklWjt0jqrXzmhLOaMSqydiDWHJpRBx5YAbNaprWgZ0wDZzMHK9ZA=k-no"
+      ],
+      "source": "Google",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNYemFIZUFnEAE",
+      "user": {
+        "name": "Vrolijk Vrouwtje",
+        "link": "https://www.google.com/maps/contrib/105740578863206511091?hl=en",
+        "contributor_id": "105740578863206511091",
+        "thumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjX9GWg7VPOtXShA7ssVdvLQvNDnlsldERawRLCvry3CzKOATHtT=s120-c-rp-mo-br100",
+        "local_guide": true,
+        "reviews": 1,
+        "photos": 1
+      },
+      "snippet": "Mijn everaring was helemaal top . Aardige man mooi werk. Al met al top bedrijf met super mooi werk",
+      "extracted_snippet": {
+        "original": "Mijn everaring was helemaal top . Aardige man mooi werk. Al met al top bedrijf met super mooi werk",
+        "translated": "Mijn everaring was helemaal top . Aardige man mooi werk. Al met al top bedrijf met super mooi werk"
+      },
+      "details": {
+        "services": "Zonwering",
+        "requested_style": "Goed meegedacht over wat het beste bij de woning en onze wensen past.",
+        "cleanliness": "Netjes gewerkt en alles schoon achtergelaten."
+      },
+      "translated_details": {
+        "requested_style": "Good advice on what best suited the house and our wishes.",
+        "cleanliness": "Worked neatly and left everything clean."
+      },
+      "likes": 0,
+      "response": {
+        "date": "a year ago",
+        "iso_date": "2024-10-19T16:50:50Z",
+        "iso_date_of_last_edit": "2024-10-19T16:50:50Z",
+        "snippet": "Thnx Joney! Fijn dat je zo tevreden bent 😃 veel plezier ermee.",
+        "extracted_snippet": {
+          "original": "Thnx Joney! Fijn dat je zo tevreden bent 😃 veel plezier ermee.",
+          "translated": "Thnx Joney! Fijn dat je zo tevreden bent 😃 veel plezier ermee."
+        }
+      }
+    },
+    {
+      "position": 3,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChdDSUhNMG9nS0VJQ0FnSUNudWR2czNnRRAB!2m1!1s0x0:0xa62f24a3a6176351!3m1!1s2@1:CIHM0ogKEICAgICnudvs3gE%7C%7C?hl=en",
+      "rating": 5,
+      "date": "a year ago",
+      "iso_date": "2024-09-27T17:16:13Z",
+      "iso_date_of_last_edit": "2024-09-27T17:16:13Z",
+      "images": [
+        "https://lh3.googleusercontent.com/grass-cs/ANxoTn1_2Ca1NSN3jwmqOjLOtFF6egeDgjSoV7SV76WqQV4c5yxFBfIYnl9xgtVS3yJgg-XDDOmwGCpQhgvuJfvmiWBLLwBrmHopxaxegekFL6hfB8VV4DMQe2F3lRsGUDLkLkmegYY=k-no"
+      ],
+      "source": "Google",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNudWR2czNnRRAB",
+      "user": {
+        "name": "Deborah Steding",
+        "link": "https://www.google.com/maps/contrib/104319519456680881231?hl=en",
+        "contributor_id": "104319519456680881231",
+        "thumbnail": "https://lh3.googleusercontent.com/a/ACg8ocJoakTlbGa4k5IJxQsRqlhJUq9_5vTWz2Gm87p9a51VxcjGeg=s120-c-rp-mo-br100",
+        "local_guide": true,
+        "reviews": 2,
+        "photos": 1
+      },
+      "snippet": "Super blij mee!!! We hebben al eerder zonwering laten plaatsen maar dit is echt een wereld van verschil.\nJe bent gepassioneerd aan het werk en levert top resultaat!!!!\nBedankt en tot snel!!!",
+      "extracted_snippet": {
+        "original": "Super blij mee!!! We hebben al eerder zonwering laten plaatsen maar dit is echt een wereld van verschil.\nJe bent gepassioneerd aan het werk en levert top resultaat!!!!\nBedankt en tot snel!!!",
+        "translated": "Super blij mee!!! We hebben al eerder zonwering laten plaatsen maar dit is echt een wereld van verschil.\nJe bent gepassioneerd aan het werk en levert top resultaat!!!!\nBedankt en tot snel!!!"
+      },
+      "details": {
+        "services": "Zonwering"
+      },
+      "likes": 0,
+      "response": {
+        "date": "a year ago",
+        "iso_date": "2024-09-29T19:58:45Z",
+        "iso_date_of_last_edit": "2024-09-29T19:58:45Z",
+        "snippet": "Dankjewel deborah! ",
+        "extracted_snippet": {
+          "original": "Dankjewel deborah! ",
+          "translated": "Dankjewel deborah! "
+        }
+      }
+    },
+    {
+      "position": 4,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChZDSUhNMG9nS0VJQ0FnSUNYalp1WFBnEAE!2m1!1s0x0:0xa62f24a3a6176351!3m1!1s2@1:CIHM0ogKEICAgICXjZuXPg%7C%7C?hl=en",
+      "rating": 5,
+      "date": "a year ago",
+      "iso_date": "2024-10-19T08:16:53Z",
+      "iso_date_of_last_edit": "2024-10-19T08:16:53Z",
+      "source": "Google",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNYalp1WFBnEAE",
+      "user": {
+        "name": "Mike H",
+        "link": "https://www.google.com/maps/contrib/107775235376237990833?hl=en",
+        "contributor_id": "107775235376237990833",
+        "thumbnail": "https://lh3.googleusercontent.com/a/ACg8ocKbrGDctIATjAixwGfEcRD5h_-AwPWiwY7iCtN9SnZ3r-zJHQ=s120-c-rp-mo-br100",
+        "local_guide": true,
+        "reviews": 7,
+        "photos": 0
+      },
+      "snippet": "Pas zonwering laten plaatsen, goed geholpen neemt de tijd voor wat je wil denkt ook mee met je kwa mogelijkheden.\nEn alles zeer netjes en professioneel zeker een aanrader.",
+      "extracted_snippet": {
+        "original": "Pas zonwering laten plaatsen, goed geholpen neemt de tijd voor wat je wil denkt ook mee met je kwa mogelijkheden.\nEn alles zeer netjes en professioneel zeker een aanrader.",
+        "translated": "Pas zonwering laten plaatsen, goed geholpen neemt de tijd voor wat je wil denkt ook mee met je kwa mogelijkheden.\nEn alles zeer netjes en professioneel zeker een aanrader."
+      },
+      "likes": 0,
+      "response": {
+        "date": "a year ago",
+        "iso_date": "2024-10-19T08:29:19Z",
+        "iso_date_of_last_edit": "2024-10-19T08:29:19Z",
+        "snippet": "Thnx Mike! Was gezellig en fijn dat je tevreden bent 🙏👍",
+        "extracted_snippet": {
+          "original": "Thnx Mike! Was gezellig en fijn dat je tevreden bent 🙏👍",
+          "translated": "Thnx Mike! Was gezellig en fijn dat je tevreden bent 🙏👍"
+        }
+      }
+    },
+    {
+      "position": 5,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChdDSUhNMG9nS0VJQ0FnSUNuMmZxYjlBRRAB!2m1!1s0x0:0xa62f24a3a6176351!3m1!1s2@1:CIHM0ogKEICAgICn2fqb9AE%7C%7C?hl=en",
+      "rating": 5,
+      "date": "a year ago",
+      "iso_date": "2024-09-27T14:31:59Z",
+      "iso_date_of_last_edit": "2024-09-27T14:31:59Z",
+      "images": [
+        "https://lh3.googleusercontent.com/grass-cs/ANxoTn0G9d2-E28NbOdFklHvp3BI6_V8aLD_j18VL0Nhj_jM6D-YhmEMBNHXzZzuCG6lt8ihOQ05ue6GCqyl4mRaZPYPwrNxHEWfBiyZ_s6xSuYOmzNX99njl5UqasWr1hDIBx8PnXM=k-no"
+      ],
+      "source": "Google",
+      "review_id": "ChdDSUhNMG9nS0VJQ0FnSUNuMmZxYjlBRRAB",
+      "user": {
+        "name": "Riekie kerkhof",
+        "link": "https://www.google.com/maps/contrib/103326842914011281507?hl=en",
+        "contributor_id": "103326842914011281507",
+        "thumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjVG50NfnHLPSbGWarXlrU0Mnl-TKlrT9AZK6dOPjmvpjY2wSeE=s120-c-rp-mo-br100",
+        "local_guide": true,
+        "reviews": 3,
+        "photos": 1
+      },
+      "snippet": "Ben zeer tevreden we wilde al langer nieuwe zonwering en uiteindelijk bij Lumazon terecht gekomen ik ben ontzettend blij met het resultaat en correct geholpen alles is netjes gemonteerd en werkt top heb het wel is anders meegemaakt bij een ander bedrijf dus al met al mijn conclusie is volgende keer weer naar Lumazon 👍👍👍",
+      "extracted_snippet": {
+        "original": "Ben zeer tevreden we wilde al langer nieuwe zonwering en uiteindelijk bij Lumazon terecht gekomen ik ben ontzettend blij met het resultaat en correct geholpen alles is netjes gemonteerd en werkt top heb het wel is anders meegemaakt bij een ander bedrijf dus al met al mijn conclusie is volgende keer weer naar Lumazon 👍👍👍",
+        "translated": "Ben zeer tevreden we wilde al langer nieuwe zonwering en uiteindelijk bij Lumazon terecht gekomen ik ben ontzettend blij met het resultaat en correct geholpen alles is netjes gemonteerd en werkt top heb het wel is anders meegemaakt bij een ander bedrijf dus al met al mijn conclusie is volgende keer weer naar Lumazon 👍👍👍"
+      },
+      "details": {
+        "services": "Zonwering"
+      },
+      "likes": 0,
+      "response": {
+        "date": "a year ago",
+        "iso_date": "2024-09-29T19:59:33Z",
+        "iso_date_of_last_edit": "2024-09-29T19:59:33Z",
+        "snippet": "Super riekie bedankt!",
+        "extracted_snippet": {
+          "original": "Super riekie bedankt!",
+          "translated": "Super riekie bedankt!"
+        }
+      }
+    },
+    {
+      "position": 6,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChZDSUhNMG9nS0VJQ0FnSUNuMmRUeUdREAE!2m1!1s0x0:0xa62f24a3a6176351!3m1!1s2@1:CIHM0ogKEICAgICn2dTyGQ%7C%7C?hl=en",
+      "rating": 5,
+      "date": "a year ago",
+      "iso_date": "2024-09-27T14:13:28Z",
+      "iso_date_of_last_edit": "2024-09-27T14:13:28Z",
+      "source": "Google",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSUNuMmRUeUdREAE",
+      "user": {
+        "name": "danny den brave",
+        "link": "https://www.google.com/maps/contrib/117818220335648461908?hl=en",
+        "contributor_id": "117818220335648461908",
+        "thumbnail": "https://lh3.googleusercontent.com/a/ACg8ocLR9hS86idWObd4cmushHHXmygHY6LlzWv8NrH2d1Fxn7B59Q=s120-c-rp-mo-br100",
+        "local_guide": true,
+        "reviews": 1,
+        "photos": 0
+      },
+      "snippet": "heb mooie screens laten zetten kreeg ook nog is goed advies van de heer in kwestie",
+      "extracted_snippet": {
+        "original": "heb mooie screens laten zetten kreeg ook nog is goed advies van de heer in kwestie",
+        "translated": "heb mooie screens laten zetten kreeg ook nog is goed advies van de heer in kwestie"
+      },
+      "likes": 0,
+      "response": {
+        "date": "a year ago",
+        "iso_date": "2024-09-27T14:32:45Z",
+        "iso_date_of_last_edit": "2024-09-27T14:32:45Z",
+        "snippet": "Danny het was gezellig! En ik ben erg blij dat je tevreden ben. Veel plezier ermee!",
+        "extracted_snippet": {
+          "original": "Danny het was gezellig! En ik ben erg blij dat je tevreden ben. Veel plezier ermee!",
+          "translated": "Danny het was gezellig! En ik ben erg blij dat je tevreden ben. Veel plezier ermee!"
+        }
+      }
+    },
+    {
+      "position": 7,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChZDSUhNMG9nS0VJQ0FnSURYNU1mOWRBEAE!2m1!1s0x0:0xa62f24a3a6176351!3m1!1s2@1:CIHM0ogKEICAgIDX5Mf9dA%7C%7C?hl=en",
+      "rating": 5,
+      "date": "a year ago",
+      "iso_date": "2024-10-24T13:18:45Z",
+      "iso_date_of_last_edit": "2024-10-24T13:18:45Z",
+      "source": "Google",
+      "review_id": "ChZDSUhNMG9nS0VJQ0FnSURYNU1mOWRBEAE",
+      "user": {
+        "name": "Tess Pruim",
+        "link": "https://www.google.com/maps/contrib/104092629121518274352?hl=en",
+        "contributor_id": "104092629121518274352",
+        "thumbnail": "https://lh3.googleusercontent.com/a/ACg8ocLc_xjUVDV1CCs0bsGV6ReTPC5hXIYgm0OiAd0l2JuIFif1zQ=s120-c-rp-mo-br100",
+        "local_guide": true,
+        "reviews": 2,
+        "photos": 0
+      },
+      "snippet": "Super blij met onze zonwering, netjes gewerkt, top gozer!",
+      "extracted_snippet": {
+        "original": "Super blij met onze zonwering, netjes gewerkt, top gozer!",
+        "translated": "Super blij met onze zonwering, netjes gewerkt, top gozer!"
+      },
+      "likes": 0,
+      "response": {
+        "date": "6 months ago",
+        "iso_date": "2025-11-04T16:30:51Z",
+        "iso_date_of_last_edit": "2025-11-04T16:30:51Z",
+        "snippet": "Bedankt Tessa! Veel plezier ermee!",
+        "extracted_snippet": {
+          "original": "Bedankt Tessa! Veel plezier ermee!",
+          "translated": "Bedankt Tessa! Veel plezier ermee!"
+        }
+      }
+    },
+    {
+      "position": 8,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2s1S2RVNDRSMEUzVDJ0RFQzaDFaRjlITVdWVWNuYxAB!2m1!1s0x0:0xa62f24a3a6176351!3m1!1s2@1:CAIQACodChtycF9oOk5KdU44R0E3T2tDT3h1ZF9HMWVUcnc%7C%7C?hl=en",
+      "rating": 5,
+      "date": "a week ago",
+      "iso_date": "2026-05-18T17:39:35Z",
+      "iso_date_of_last_edit": "2026-05-18T17:39:35Z",
+      "source": "Google",
+      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2s1S2RVNDRSMEUzVDJ0RFQzaDFaRjlITVdWVWNuYxAB",
+      "user": {
+        "name": "Tigo Jong",
+        "link": "https://www.google.com/maps/contrib/104312006992279541430?hl=en",
+        "contributor_id": "104312006992279541430",
+        "thumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjU91Zr1eg_BArJuwz3dgiZVBvrhNx3X0gaJI9hJLH6AQI5wtIw=s120-c-rp-mo-br100",
+        "local_guide": true,
+        "reviews": 2,
+        "photos": 0
+      },
+      "snippet": "Ik heb vandaag mijn zonwering laten plaatsen en ik werd erg fijn geholpen precies wat ik wilde! Super blij met het resultaat zeker een aanrader!!",
+      "extracted_snippet": {
+        "original": "Ik heb vandaag mijn zonwering laten plaatsen en ik werd erg fijn geholpen precies wat ik wilde! Super blij met het resultaat zeker een aanrader!!",
+        "translated": "Ik heb vandaag mijn zonwering laten plaatsen en ik werd erg fijn geholpen precies wat ik wilde! Super blij met het resultaat zeker een aanrader!!"
+      },
+      "likes": 0
+    },
+    {
+      "position": 9,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xOWFlYaE9URkYzUTFkMVJsazVSREkxVTB3eE0yYxAB!2m1!1s0x0:0xa62f24a3a6176351!3m1!1s2@1:CAIQACodChtycF9oOlNXYXhOTFF3Q1d1Rlk5RDI1U0wxM2c%7C%7C?hl=en",
+      "rating": 5,
+      "date": "a week ago",
+      "iso_date": "2026-05-18T14:18:07Z",
+      "iso_date_of_last_edit": "2026-05-18T14:18:07Z",
+      "images": [
+        "https://lh3.googleusercontent.com/grass-cs/ANxoTn0s7-tlzKYYIYOvm7rOHwAiSxWoS_yX5cgc9xBWVooefu-ONIHFZsKF_gP8YL_UgzimYoCygEoluW4oR6rlyQDw-XEROsbuwE0PZoFlSxaQ4TyUPAey5ofpu0I8gzxsyhoN-WKyjRkf-cE=k-no"
+      ],
+      "source": "Google",
+      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2xOWFlYaE9URkYzUTFkMVJsazVSREkxVTB3eE0yYxAB",
+      "user": {
+        "name": "Cindy Woons",
+        "link": "https://www.google.com/maps/contrib/106829975991190174516?hl=en",
+        "contributor_id": "106829975991190174516",
+        "thumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjWQBzF9w_KiD5_UPoNUTpvSU1Woh2K85ex0sXcfdqHE_QWWTjNyDw=s120-c-rp-mo-br100",
+        "local_guide": true,
+        "reviews": 1,
+        "photos": 1
+      },
+      "snippet": "Een zeer goed bedrijf\nWord heel schoon en netjes gewerkt\nHeel vriendelijk geholpen ook na mijn wensen\nZeker een aanrader",
+      "extracted_snippet": {
+        "original": "Een zeer goed bedrijf\nWord heel schoon en netjes gewerkt\nHeel vriendelijk geholpen ook na mijn wensen\nZeker een aanrader",
+        "translated": "Een zeer goed bedrijf\nWord heel schoon en netjes gewerkt\nHeel vriendelijk geholpen ook na mijn wensen\nZeker een aanrader"
+      },
+      "likes": 0
+    },
+    {
+      "position": 10,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21kS2NGRkRRMWhhVm1sd1EwTnlTVmxGYm1OTFpWRRAB!2m1!1s0x0:0xa62f24a3a6176351!3m1!1s2@1:CAIQACodChtycF9oOmdKcFFDQ1haVmlwQ0NySVlFbmNLZVE%7C%7C?hl=en",
+      "rating": 5,
+      "date": "2 weeks ago",
+      "iso_date": "2026-05-13T10:03:34Z",
+      "iso_date_of_last_edit": "2026-05-13T10:03:34Z",
+      "source": "Google",
+      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT21kS2NGRkRRMWhhVm1sd1EwTnlTVmxGYm1OTFpWRRAB",
+      "user": {
+        "name": "Claudia Bodemeijer",
+        "link": "https://www.google.com/maps/contrib/112665049614614933696?hl=en",
+        "contributor_id": "112665049614614933696",
+        "thumbnail": "https://lh3.googleusercontent.com/a/ACg8ocIkXAgR5RvdIkW5fREAp46Nu5ukqdVNg6tm80JmTS0RvV0-Uw=s120-c-rp-mo-br100",
+        "local_guide": true,
+        "reviews": 5,
+        "photos": 0
+      },
+      "details": {
+        "services": "Zonwering",
+        "requested_style": "Goed meegedacht over wat het beste bij de woning en onze wensen past.",
+        "specialties": "Veel mogelijkheden in zonwering en er wordt goed advies gegeven.",
+        "cleanliness": "Netjes gewerkt en alles schoon achtergelaten.",
+        "stylist": "Denkt goed mee, werkt netjes en is prettig in de omgang."
+      },
+      "translated_details": {
+        "requested_style": "Good advice on what best suited the house and our wishes.",
+        "specialties": "Many sun-shading options and good advice.",
+        "cleanliness": "Worked neatly and left everything clean.",
+        "stylist": "Thinks along with you, works neatly and is pleasant to deal with."
+      },
+      "likes": 0,
+      "response": {
+        "date": "2 weeks ago",
+        "iso_date": "2026-05-13T14:47:47Z",
+        "iso_date_of_last_edit": "2026-05-13T14:47:47Z",
+        "snippet": "Dankjewel Claudia! Super om te horen dat jullie blij zijn met het advies en de plaatsing. Veel plezier met de nieuwe zonwering!",
+        "extracted_snippet": {
+          "original": "Dankjewel Claudia! Super om te horen dat jullie blij zijn met het advies en de plaatsing. Veel plezier met de nieuwe zonwering!",
+          "translated": "Dankjewel Claudia! Super om te horen dat jullie blij zijn met het advies en de plaatsing. Veel plezier met de nieuwe zonwering!"
+        }
+      },
+      "snippet": "Heel fijn geholpen bij het uitzoeken van de juiste zonwering. We twijfelde nog tussen verschillende opties maar er werd goed meegedacht en niks opgedrongen. Plaatsing ook keurig gedaan en alles netjes achtergelaten. Erg blij mee!"
+    },
+    {
+      "position": 1,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25Gc1lXcGlUMHBvY2s0dGJtSkxObVpXVlZSMWEwRRAB!2m1!1s0x0:0xa62f24a3a6176351!3m1!1s2@1:CAIQACodChtycF9oOnFsYWpiT0pock4tbmJLNmZWVVR1a0E%7C%7C?hl=en",
+      "rating": 5,
+      "date": "a month ago",
+      "iso_date": "2026-04-15T11:53:47Z",
+      "iso_date_of_last_edit": "2026-04-15T11:53:47Z",
+      "source": "Google",
+      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT25Gc1lXcGlUMHBvY2s0dGJtSkxObVpXVlZSMWEwRRAB",
+      "user": {
+        "name": "Willem van der Goot",
+        "link": "https://www.google.com/maps/contrib/101991685154856645474?hl=en",
+        "contributor_id": "101991685154856645474",
+        "thumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjUvmyMDKZAIAWq7zAijjWWnJBTDrCBr4-LTQpBPHcsKpExxq8g=s120-c-rp-mo-br100",
+        "local_guide": true,
+        "reviews": 1,
+        "photos": 0
+      },
+      "snippet": "Goede service en duidelijke communicatie. Alles volgens afspraak geleverd en gemonteerd. Monteurs werkten netjes en namen het afval ook gewoon mee. Zonnescherm hangt er strak bij 👍",
+      "extracted_snippet": {
+        "original": "Goede service en duidelijke communicatie. Alles volgens afspraak geleverd en gemonteerd. Monteurs werkten netjes en namen het afval ook gewoon mee. Zonnescherm hangt er strak bij 👍",
+        "translated": "Goede service en duidelijke communicatie. Alles volgens afspraak geleverd en gemonteerd. Monteurs werkten netjes en namen het afval ook gewoon mee. Zonnescherm hangt er strak bij 👍"
+      },
+      "details": {
+        "services": "Zonwering"
+      },
+      "likes": 0,
+      "response": {
+        "date": "2 weeks ago",
+        "iso_date": "2026-05-13T14:50:01Z",
+        "iso_date_of_last_edit": "2026-05-13T14:50:01Z",
+        "snippet": "Bedankt Willem! Fijn dat alles volgens afspraak is verlopen en dat je tevreden bent met het resultaat. Veel plezier met het zonnescherm 👍",
+        "extracted_snippet": {
+          "original": "Bedankt Willem! Fijn dat alles volgens afspraak is verlopen en dat je tevreden bent met het resultaat. Veel plezier met het zonnescherm 👍",
+          "translated": "Bedankt Willem! Fijn dat alles volgens afspraak is verlopen en dat je tevreden bent met het resultaat. Veel plezier met het zonnescherm 👍"
+        }
+      }
+    },
+    {
+      "position": 2,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tSRFJIZFFlbEZwTlVsblkzQmtkMEkzYm5wTGVWRRAB!2m1!1s0x0:0xa62f24a3a6176351!3m1!1s2@1:CAIQACodChtycF9oOkRDRHdQelFpNUlnY3Bkd0I3bnpLeVE%7C%7C?hl=en",
+      "rating": 5,
+      "date": "a month ago",
+      "iso_date": "2026-03-31T20:57:06Z",
+      "iso_date_of_last_edit": "2026-03-31T20:57:06Z",
+      "source": "Google",
+      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2tSRFJIZFFlbEZwTlVsblkzQmtkMEkzYm5wTGVWRRAB",
+      "user": {
+        "name": "Rafaël Abdullah Bossto",
+        "link": "https://www.google.com/maps/contrib/111674084903603918752?hl=en",
+        "contributor_id": "111674084903603918752",
+        "thumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjWa4ckpHoh-dRbuXI86iiMQ914Z9YM7588qAZq9rWr5tZx4-fs=s120-c-rp-mo-br100",
+        "local_guide": true,
+        "reviews": 1,
+        "photos": 0
+      },
+      "likes": 0,
+      "response": {
+        "date": "a month ago",
+        "iso_date": "2026-04-01T15:18:03Z",
+        "iso_date_of_last_edit": "2026-04-01T15:18:03Z",
+        "snippet": "Dankjewel Rafaël voor het vertrouwen en de mooie woorden! Fijn om te horen dat de screens goed bevallen en echt verschil maken. Veel plezier ermee!",
+        "extracted_snippet": {
+          "original": "Dankjewel Rafaël voor het vertrouwen en de mooie woorden! Fijn om te horen dat de screens goed bevallen en echt verschil maken. Veel plezier ermee!",
+          "translated": "Dankjewel Rafaël voor het vertrouwen en de mooie woorden! Fijn om te horen dat de screens goed bevallen en echt verschil maken. Veel plezier ermee!"
+        }
+      },
+      "snippet": "Heel tevreden met Lumazon. Van offerte tot montage goed contact gehad en er werd snel gereageerd op vragen. De screens werken perfect en maken echt verschil met de warmte binnen. Zou ze zeker aanraden."
+    }
+  ]
+}
