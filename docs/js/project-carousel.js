@@ -11,10 +11,64 @@ document.addEventListener('DOMContentLoaded', () => {
   const nextButton = carousel.querySelector('[data-project-carousel-next]');
   const cards = Array.from(carousel.querySelectorAll('[data-project-carousel-card]'));
   const reduceMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const firstArticleTitle = carousel.querySelector('[data-project-first-article-title]');
+  const firstArticleCopy = carousel.querySelector('[data-project-first-article-copy]');
 
   if (!track || !prevButton || !nextButton || cards.length < 2) {
     return;
   }
+
+  const setupFirstArticleStagger = () => {
+    const firstArticleItems = [firstArticleTitle, firstArticleCopy].filter(Boolean);
+
+    if (!firstArticleItems.length) {
+      return;
+    }
+
+    if (reduceMotionQuery.matches) {
+      firstArticleItems.forEach((item) => {
+        item.style.opacity = '1';
+        item.style.transform = 'translate3d(0, 0, 0)';
+      });
+      return;
+    }
+
+    firstArticleItems.forEach((item, index) => {
+      item.style.opacity = '0';
+      item.style.transform = 'translate3d(0, 12px, 0)';
+      item.style.willChange = 'opacity, transform';
+      item.style.transitionProperty = 'opacity, transform';
+      item.style.transitionDuration = '700ms';
+      item.style.transitionTimingFunction = 'cubic-bezier(0.22, 1, 0.36, 1)';
+      item.style.transitionDelay = `${140 + index * 140}ms`;
+    });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            return;
+          }
+
+          window.requestAnimationFrame(() => {
+            firstArticleItems.forEach((item) => {
+              item.style.opacity = '1';
+              item.style.transform = 'translate3d(0, 0, 0)';
+            });
+          });
+
+          observer.unobserve(entry.target);
+        });
+      },
+      {
+        root: null,
+        threshold: 0.35,
+        rootMargin: '0px 0px -8% 0px',
+      }
+    );
+
+    observer.observe(carousel);
+  };
 
   const createClone = (card) => {
     const clone = card.cloneNode(true);
@@ -216,6 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
   measure();
   scrollContainer.scrollLeft = groupWidth;
   scheduleActiveCardUpdate();
+  setupFirstArticleStagger();
 
   prevButton.addEventListener('click', () => {
     scrollToIndex(getCurrentIndex() - 1);

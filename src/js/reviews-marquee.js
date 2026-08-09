@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let slideOffsets = [];
     let slideElements = [];
     let scrollTicking = false;
+    let hasRevealedDots = false;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     const normalizeWhitespace = (value) => {
         if (typeof value !== 'string') {
@@ -41,6 +43,31 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         return normalizeWhitespace(fallbackDate);
+    };
+
+    const getReviewTimestamp = (review) => {
+        const isoDateCandidates = [review?.iso_date, review?.iso_date_of_last_edit];
+
+        for (const candidate of isoDateCandidates) {
+            if (typeof candidate !== 'string') {
+                continue;
+            }
+
+            const parsedTimestamp = Date.parse(candidate);
+
+            if (!Number.isNaN(parsedTimestamp)) {
+                return parsedTimestamp;
+            }
+        }
+
+        const fallbackTimestamp = Date.parse(review?.date || '');
+        return Number.isNaN(fallbackTimestamp) ? 0 : fallbackTimestamp;
+    };
+
+    const getReviewContentLength = (review) => {
+        const baseSnippet = normalizeWhitespace(review?.snippet || review?.extracted_snippet?.original || '');
+        const ownerResponse = normalizeWhitespace(review?.response?.snippet || '');
+        return baseSnippet.length + ownerResponse.length;
     };
 
     const createPill = (label) => {
@@ -68,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const createReviewTile = (review) => {
         const card = document.createElement('article');
         card.className =
-            'flex w-[min(88vw,380px)] snap-start shrink-0 flex-col gap-3 self-start rounded-[12px] border border-[#dadce0] bg-white p-4';
+            'flex w-[min(88vw,380px)] snap-start shrink-0 flex-col gap-3 self-start rounded-[22px] border border-charcoal/20 bg-white p-4';
 
         const header = document.createElement('div');
         header.className = 'flex items-start justify-between gap-2';
@@ -141,6 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const snippet = document.createElement('p');
         snippet.className = 'text-[15px] leading-[1.45] tracking-[-0.01em] font-inter text-[#3c4043]';
         snippet.setAttribute('data-readmore-paragraph', '');
+        snippet.setAttribute('data-review-user-snippet', '');
 
         const snippetText = document.createElement('span');
         snippetText.setAttribute('data-readmore-text', '');
@@ -161,6 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (review?.response?.snippet) {
             const response = document.createElement('div');
             response.className = 'border-l-[2px] border-l-grey-200 px-3 py-2';
+            response.setAttribute('data-review-owner-response', '');
 
             const responseTitle = document.createElement('p');
             responseTitle.className = 'text-[11px] font-inter font-semibold tracking-[0.01em] text-[#5f6368]';
@@ -310,11 +339,150 @@ document.addEventListener('DOMContentLoaded', () => {
         dotsContainer.appendChild(dotsFragment);
     };
 
+    const setupDotsReveal = () => {
+        const dotButtons = Array.from(dotsContainer.querySelectorAll('[data-reviews-dot]'));
+
+        if (!dotButtons.length) {
+            return;
+        }
+
+        if (prefersReducedMotion || hasRevealedDots) {
+            dotButtons.forEach((dotButton) => {
+                dotButton.style.opacity = '1';
+                dotButton.style.transform = 'translate3d(0, 0, 0) scale3d(1, 1, 1)';
+
+                if (hasRevealedDots) {
+                    dotButton.style.transition = 'none';
+                }
+            });
+
+            hasRevealedDots = true;
+            return;
+        }
+
+        const firstDelayMs = 170;
+        const dotsStaggerMs = 70;
+
+        dotButtons.forEach((dotButton, index) => {
+            dotButton.style.opacity = '0';
+            dotButton.style.transform = 'translate3d(0, 7px, 0) scale3d(0.82, 1, 1)';
+            dotButton.style.willChange = 'opacity, transform';
+            dotButton.style.transitionProperty = 'opacity, transform';
+            dotButton.style.transitionDuration = '620ms';
+            dotButton.style.transitionTimingFunction = 'cubic-bezier(0.22, 1, 0.36, 1)';
+            dotButton.style.transitionDelay = `${firstDelayMs + index * dotsStaggerMs}ms`;
+        });
+
+        const revealDots = () => {
+            hasRevealedDots = true;
+
+            window.requestAnimationFrame(() => {
+                dotButtons.forEach((dotButton) => {
+                    dotButton.style.opacity = '1';
+                    dotButton.style.transform = 'translate3d(0, 0, 0) scale3d(1, 1, 1)';
+                });
+            });
+        };
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    }
+
+                    revealDots();
+                    observer.unobserve(entry.target);
+                });
+            },
+            {
+                root: null,
+                threshold: 0.35,
+                rootMargin: '0px 0px -8% 0px',
+            }
+        );
+
+        observer.observe(dotsContainer);
+    };
+
     const updateSlides = () => {
         slideElements = Array.from(track.children);
         slideOffsets = slideElements.map((slide) => slide.offsetLeft);
         currentSlideIndex = clamp(findNearestSlideIndex(), 0, Math.max(0, slideElements.length - 1));
         updateSliderUI();
+    };
+
+    const setupEntranceAnimation = () => {
+        if (!slideElements.length) {
+            return;
+        }
+
+        if (prefersReducedMotion) {
+            slideElements.forEach((slide) => {
+                slide.style.opacity = '1';
+                slide.style.transform = 'translate3d(0, 0, 0)';
+            });
+            return;
+        }
+
+        const firstDelayMs = 80;
+        const cardStaggerMs = 110;
+
+        slideElements.forEach((slide, index) => {
+            slide.style.opacity = '0';
+            slide.style.transform = 'translate3d(0, 16px, 0)';
+            slide.style.willChange = 'opacity, transform';
+            slide.style.transitionProperty = 'opacity, transform';
+            slide.style.transitionDuration = '760ms';
+            slide.style.transitionTimingFunction = 'cubic-bezier(0.22, 1, 0.36, 1)';
+            slide.style.transitionDelay = `${firstDelayMs + index * cardStaggerMs}ms`;
+        });
+
+        const firstSlide = slideElements[0];
+        const firstUserSnippet = firstSlide?.querySelector('[data-review-user-snippet]');
+        const firstOwnerResponse = firstSlide?.querySelector('[data-review-owner-response]');
+        const firstCardItems = [firstUserSnippet, firstOwnerResponse].filter(Boolean);
+
+        firstCardItems.forEach((item, index) => {
+            item.style.opacity = '0';
+            item.style.transform = 'translate3d(0, 12px, 0)';
+            item.style.willChange = 'opacity, transform';
+            item.style.transitionProperty = 'opacity, transform';
+            item.style.transitionDuration = '700ms';
+            item.style.transitionTimingFunction = 'cubic-bezier(0.22, 1, 0.36, 1)';
+            item.style.transitionDelay = `${firstDelayMs + cardStaggerMs + index * 140}ms`;
+        });
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    }
+
+                    window.requestAnimationFrame(() => {
+                        slideElements.forEach((slide) => {
+                            slide.style.opacity = '1';
+                            slide.style.transform = 'translate3d(0, 0, 0)';
+                        });
+
+                        firstCardItems.forEach((item) => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translate3d(0, 0, 0)';
+                        });
+                    });
+
+                    observer.unobserve(entry.target);
+                });
+            },
+            {
+                root: null,
+                threshold: 0.35,
+                rootMargin: '0px 0px -8% 0px',
+            }
+        );
+
+        observer.observe(sliderRoot);
     };
 
     const attachSliderEvents = () => {
@@ -377,7 +545,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const fragment = document.createDocumentFragment();
 
-        reviews.forEach((review) => {
+        const reviewsSortedByLatest = [...reviews].sort(
+            (leftReview, rightReview) => getReviewTimestamp(rightReview) - getReviewTimestamp(leftReview)
+        );
+
+        let longestReview = null;
+        let longestReviewLength = -1;
+
+        reviewsSortedByLatest.forEach((review) => {
+            const reviewLength = getReviewContentLength(review);
+
+            if (reviewLength > longestReviewLength) {
+                longestReviewLength = reviewLength;
+                longestReview = review;
+            }
+        });
+
+        const reviewsForRender = longestReview
+            ? [longestReview, ...reviewsSortedByLatest.filter((review) => review !== longestReview)]
+            : reviewsSortedByLatest;
+
+        reviewsForRender.forEach((review) => {
             fragment.appendChild(createReviewTile(review));
         });
 
@@ -385,7 +573,9 @@ document.addEventListener('DOMContentLoaded', () => {
         track.appendChild(fragment);
 
         updateSlides();
+        setupEntranceAnimation();
         buildDots();
+        setupDotsReveal();
         scrollToSlide(0, 'auto');
         attachSliderEvents();
 
