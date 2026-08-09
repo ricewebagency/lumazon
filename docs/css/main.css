@@ -745,18 +745,6 @@ video {
   margin-top: 2rem;
 }
 
-.ms-3{
-  margin-inline-start: 0.75rem;
-}
-
-.-mt-4{
-  margin-top: -1rem;
-}
-
-.-mt-2{
-  margin-top: -0.5rem;
-}
-
 .block{
   display: block;
 }

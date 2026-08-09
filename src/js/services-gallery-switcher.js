@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const galleries = document.querySelectorAll('[data-service-gallery]');
+  const supportsIntersectionObserver = 'IntersectionObserver' in window;
 
   galleries.forEach((gallery) => {
     const mainWrap = gallery.querySelector('[data-service-gallery-main-wrap]');
@@ -13,6 +14,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let activeMedia = mainMedia;
     let incomingMedia = nextMainMedia;
+
+    const ensureVideoSource = (videoEl) => {
+      if (!videoEl || videoEl.tagName !== 'VIDEO') {
+        return;
+      }
+
+      const deferredSrc = videoEl.dataset.src;
+
+      if (!deferredSrc || videoEl.getAttribute('src') === deferredSrc) {
+        return;
+      }
+
+      videoEl.src = deferredSrc;
+      videoEl.load();
+    };
+
+    const loadInitialGalleryVideos = () => {
+      ensureVideoSource(mainMedia);
+
+      thumbnails.forEach((thumb) => {
+        const thumbVideo = thumb.querySelector('video[data-src]');
+        ensureVideoSource(thumbVideo);
+      });
+    };
 
     const setActiveThumb = (activeThumb) => {
       thumbnails.forEach((thumb) => {
@@ -88,6 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const applyMediaSource = (element, mediaConfig) => {
       if (element.tagName === 'VIDEO') {
         element.src = mediaConfig.src;
+        element.removeAttribute('data-src');
         element.load();
         element.play().catch(() => {});
         element.setAttribute('aria-label', mediaConfig.alt || element.getAttribute('aria-label') || '');
@@ -192,9 +218,32 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
+    if (supportsIntersectionObserver) {
+      const initialVideoObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) {
+              return;
+            }
+
+            loadInitialGalleryVideos();
+            observer.disconnect();
+          });
+        },
+        {
+          rootMargin: '250px 0px',
+          threshold: 0.01,
+        },
+      );
+
+      initialVideoObserver.observe(mainWrap);
+    } else {
+      loadInitialGalleryVideos();
+    }
+
     const defaultThumb = thumbnails.find((thumb) => {
       const mediaConfig = getMediaConfigFromThumb(thumb);
-      return mediaConfig?.src === mainMedia.getAttribute('src');
+      return mediaConfig?.src === (mainMedia.getAttribute('src') || mainMedia.dataset.src);
     });
 
     setActiveThumb(defaultThumb || thumbnails[0]);
