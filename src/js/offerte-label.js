@@ -61,8 +61,11 @@ document.addEventListener('DOMContentLoaded', () => {
     syncWithScroll();
   };
 
-  const resetSwipeVisualState = (label) => {
-    label.style.removeProperty('--tw-translate-y');
+  const resetSwipeVisualState = (label, { preserveVerticalOffset = false } = {}) => {
+    if (!preserveVerticalOffset) {
+      label.style.removeProperty('--tw-translate-y');
+    }
+
     label.style.removeProperty('opacity');
   };
 
@@ -75,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     state.dragging = false;
     state.pointerId = null;
 
-    resetSwipeVisualState(label);
+    resetSwipeVisualState(label, { preserveVerticalOffset: true });
     setHidden(label);
   };
 

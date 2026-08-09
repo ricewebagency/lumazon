@@ -2,6 +2,32 @@ document.addEventListener('DOMContentLoaded', () => {
   const galleries = document.querySelectorAll('[data-service-gallery]');
   const supportsIntersectionObserver = 'IntersectionObserver' in window;
 
+  const prepareVideoForAutoplay = (videoEl) => {
+    if (!videoEl || videoEl.tagName !== 'VIDEO') {
+      return;
+    }
+
+    videoEl.muted = true;
+    videoEl.defaultMuted = true;
+    videoEl.playsInline = true;
+    videoEl.autoplay = true;
+    videoEl.loop = true;
+    videoEl.setAttribute('muted', '');
+    videoEl.setAttribute('playsinline', '');
+    videoEl.setAttribute('webkit-playsinline', '');
+  };
+
+  const tryPlay = (videoEl) => {
+    if (!videoEl || videoEl.tagName !== 'VIDEO') {
+      return;
+    }
+
+    const playResult = videoEl.play();
+    if (playResult && typeof playResult.catch === 'function') {
+      playResult.catch(() => {});
+    }
+  };
+
   galleries.forEach((gallery) => {
     const mainWrap = gallery.querySelector('[data-service-gallery-main-wrap]');
     const mainMedia = gallery.querySelector('[data-service-gallery-main]');
@@ -20,14 +46,18 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
+      prepareVideoForAutoplay(videoEl);
+
       const deferredSrc = videoEl.dataset.src;
 
       if (!deferredSrc || videoEl.getAttribute('src') === deferredSrc) {
+        tryPlay(videoEl);
         return;
       }
 
       videoEl.src = deferredSrc;
       videoEl.load();
+      tryPlay(videoEl);
     };
 
     const loadInitialGalleryVideos = () => {
@@ -82,8 +112,10 @@ document.addEventListener('DOMContentLoaded', () => {
         element.setAttribute('loop', '');
         element.setAttribute('muted', '');
         element.setAttribute('playsinline', '');
+        element.setAttribute('webkit-playsinline', '');
         element.setAttribute('preload', 'metadata');
         element.setAttribute('aria-label', '');
+        prepareVideoForAutoplay(element);
       } else {
         element.setAttribute('loading', 'lazy');
         element.setAttribute('decoding', 'async');
@@ -112,10 +144,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const applyMediaSource = (element, mediaConfig) => {
       if (element.tagName === 'VIDEO') {
+        prepareVideoForAutoplay(element);
         element.src = mediaConfig.src;
         element.removeAttribute('data-src');
         element.load();
-        element.play().catch(() => {});
+        tryPlay(element);
         element.setAttribute('aria-label', mediaConfig.alt || element.getAttribute('aria-label') || '');
       } else {
         element.src = mediaConfig.src;
