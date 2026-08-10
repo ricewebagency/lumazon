@@ -5,27 +5,31 @@
     <div class="mx-auto w-full max-w-7xl">
         <div class="flex items-start justify-center">
             <div aria-hidden="true" class="shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.2" viewBox="0 0 137 137" width="137" height="137"
-                    class="h-4 w-4 scale-x-[-1] brightness-0">
-                    <defs>
-                        <image width="137" height="137" id="header-cap-left"
-                            href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIkAAACJAQMAAAAi6omKAAAAAXNSR0IB2cksfwAAAAZQTFRF////AAAAVcLTfgAAAAJ0Uk5T/wDltzBKAAABJElEQVR4nO3Sy20CQRAE0Flx4OgQHIpDY8mMUBwCRx8sbHamP1WFWhqJlbjAzU+4u7qGpT18Fvn7tJ6FPr+b0PGnKZ1Wpe1LQl8XpeXWlD6uD7QNZzr8NqXxf0R9H9NfU7JRSDYKyUYh2SggHwXUW2C696k0DiTy6UkxPSmmJ8X0JM8OFAuDxksQ5cKgXBiUC4NyYVAuDIoLg2ChEyx08tcBggxOkMEJMjhBBiPowQljGWEsI4xVEyY1wqRGmNQIkw6ipCVR+EEUfhAlHURJS6Lwgyh8SXRPJw5fEd/Tie+piE+siE/sxCdWxCdWxFcXJFcXJEUUJEUUJEUUJN3Mk9RVkNQ1T9LgNGmp06Q9P0P6GtOkD7Qz6TPuTPr+LyH9Lb0p6R+ipsyKFHh//QAAAABJRU5ErkJggg==" />
-                    </defs>
-                    <use href="#header-cap-left" x="0" y="0" />
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" version="1.1" id="svg1"
+                    width="182.66667" height="182.66667" viewBox="0 0 182.66667 182.66667" class="h-4 w-4 scale-x-[-1]">
+                    <defs id="defs1" />
+                    <g id="g1">
+                        <path style="fill:#2b2b2b;fill-opacity:1"
+                            d="M -0.94197245,90.798433 -1.1317634,-0.86823629 90.534905,-0.66312009 c 50.416665,0.1128139 85.966665,0.6282876 78.999995,1.1454972 C 79.284159,7.1826479 7.4945495,78.727162 0.30776355,169.13177 c -0.661133,8.31658 -1.131354,-21.15686 -1.249736,-78.333337 z"
+                            id="path1" />
+                    </g>
                 </svg>
             </div>
 
             <div
-                class="min-w-0 max-w-[600px] flex-1 bg-black rounded-bl-2xl rounded-br-2xl shadow-[0_12px_30px_rgba(231,171,1,0.05)]">
+                class="min-w-0 max-w-[600px] flex-1 bg-charcoal rounded-bl-2xl rounded-br-2xl shadow-[0_12px_30px_rgba(231,171,1,0.05)]">
 
-                <!-- Mobile menu -->
+                <!-- Desktop menu -->
                 <div class="mx-auto flex w-full items-center justify-between gap-3 px-2 py-1 sm:px-3">
-                    <a href="./" class="group flex min-w-0 items-center gap-2" aria-label="Ga naar home">
+                    <a href="./" class="group relative z-50 flex min-w-0 items-center gap-2" aria-label="Ga naar home"
+                        data-header-logo>
                         <img src="./assets/images/logos/lumazon-icon-wit-geel.png" alt="Lumazon"
-                            class="h-8 w-8 shrink-0 duration-[400ms] group-hover:opacity-90" decoding="async">
-                        <div class="flex flex-col text-center items-center leading-none">
+                            class="h-8 w-8 shrink-0 transition-[transform,opacity] duration-300 ease-out group-hover:opacity-90"
+                            decoding="async" data-header-logo-icon>
+                        <div class="flex flex-col text-center items-center leading-none transition-transform duration-300 ease-out"
+                            data-header-logo-text>
                             <span
-                                class="text-[16px] font-bold tracking-tight text-white font-inter transition-opacity duration-[400ms] group-hover:opacity-80">
+                                class="text-[16px] font-bold tracking-tight text-white font-inter transition-[transform,opacity] duration-300 ease-out group-hover:opacity-80">
                                 Lumazon
                             </span>
                         </div>
@@ -33,13 +37,13 @@
 
                     <nav class="hidden flex-1 items-center justify-evenly font-inter md:flex lg:gap-2"
                         aria-label="Hoofdnavigatie">
-                        <a class="rounded-full text-[13px] font-inter font-medium tracking-tight text-white/40 transition-colors duration-200 hover:bg-white/10 hover:text-white"
+                        <a class="rounded-full text-[13px] font-inter font-medium tracking-tight text-white/40 transition-colors duration-200 hover:text-white"
                             href="./">
                             Home
                         </a>
                         <div class="relative" data-desktop-services-menu>
                             <button type="button"
-                                class="inline-flex items-center gap-1 rounded-full px-2 py-1 text-[13px] font-inter font-medium tracking-tight text-white/40 transition-colors duration-200 hover:bg-white/10 hover:text-white"
+                                class="inline-flex items-center gap-1 rounded-full px-2 py-1 text-[13px] font-inter font-medium tracking-tight text-white/40 transition-colors duration-200 hover:text-white"
                                 aria-expanded="false" data-desktop-services-toggle>
                                 Diensten
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
@@ -50,41 +54,41 @@
                                         clip-rule="evenodd" />
                                 </svg>
                             </button>
-                            <div class="invisible pointer-events-none absolute left-1/2 top-full z-40 w-52 -translate-x-1/2 translate-y-2 rounded-xl border border-white/10 bg-black/95 p-2 opacity-0 shadow-[0_12px_30px_rgba(0,0,0,0.35)] transition-all duration-200"
+                            <div class="invisible pointer-events-none absolute left-1/2 top-full z-40 w-52 -translate-x-1/2 translate-y-2 rounded-xl border border-white/10 bg-charcoal p-2 opacity-0 shadow-[0_12px_30px_rgba(0,0,0,0.35)] transition-all duration-200"
                                 data-desktop-services-panel>
                                 <div class="flex flex-col gap-1">
-                                    <a class="rounded-lg px-2 py-1.5 text-[13px] font-inter font-medium text-white/50 transition-colors duration-200 hover:bg-white/10 hover:text-white"
+                                    <a class="rounded-lg px-2 py-1.5 text-[13px] font-inter font-medium text-white/50 transition-colors duration-200 hover:text-white"
                                         href="./diensten/rolluiken/">
                                         Rolluiken
                                     </a>
-                                    <a class="rounded-lg px-2 py-1.5 text-[13px] font-inter font-medium text-white/50 transition-colors duration-200 hover:bg-white/10 hover:text-white"
+                                    <a class="rounded-lg px-2 py-1.5 text-[13px] font-inter font-medium text-white/50 transition-colors duration-200 hover:text-white"
                                         href="./diensten/gordijnen/">
                                         Gordijnen
                                     </a>
-                                    <a class="rounded-lg px-2 py-1.5 text-[13px] font-inter font-medium text-white/50 transition-colors duration-200 hover:bg-white/10 hover:text-white"
+                                    <a class="rounded-lg px-2 py-1.5 text-[13px] font-inter font-medium text-white/50 transition-colors duration-200 hover:text-white"
                                         href="./diensten/jaloezieen/">
                                         Jaloezieën
                                     </a>
-                                    <a class="rounded-lg px-2 py-1.5 text-[13px] font-inter font-medium text-white/50 transition-colors duration-200 hover:bg-white/10 hover:text-white"
+                                    <a class="rounded-lg px-2 py-1.5 text-[13px] font-inter font-medium text-white/50 transition-colors duration-200 hover:text-white"
                                         href="./diensten/screens/">
                                         Screens
                                     </a>
-                                    <a class="rounded-lg px-2 py-1.5 text-[13px] font-inter font-medium text-white/50 transition-colors duration-200 hover:bg-white/10 hover:text-white"
+                                    <a class="rounded-lg px-2 py-1.5 text-[13px] font-inter font-medium text-white/50 transition-colors duration-200 hover:text-white"
                                         href="./diensten/zonneschermen/">
                                         Zonne-schermen
                                     </a>
-                                    <a class="rounded-lg px-2 py-1.5 text-[13px] font-inter font-medium text-white/50 transition-colors duration-200 hover:bg-white/10 hover:text-white"
+                                    <a class="rounded-lg px-2 py-1.5 text-[13px] font-inter font-medium text-white/50 transition-colors duration-200 hover:text-white"
                                         href="./diensten/overkappingen/">
                                         Overkappingen
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <a class="rounded-full text-[13px] font-inter font-medium tracking-tight text-white/40 transition-colors duration-200 hover:bg-white/10 hover:text-white"
+                        <a class="rounded-full text-[13px] font-inter font-medium tracking-tight text-white/40 transition-colors duration-200 hover:text-white"
                             href="./projecten/">
                             Projecten
                         </a>
-                        <a class="rounded-full text-[13px] font-inter font-medium tracking-tight text-white/40 transition-colors duration-200 hover:bg-white/10 hover:text-white"
+                        <a class="rounded-full text-[13px] font-inter font-medium tracking-tight text-white/40 transition-colors duration-200 hover:text-white"
                             href="./contact/">
                             Contact
                         </a>
@@ -92,7 +96,7 @@
 
                     <div class="flex flex-row items-center gap-2">
                         <a href="#download"
-                            class="group hidden gap-1 rounded-lg bg-white px-4 py-2 my-1 text-[12px] font-inter font-semibold tracking-tight text-nowrap text-black transition-colors duration-200 md:inline-flex">
+                            class="group relative z-30 hidden gap-1 rounded-lg bg-white px-4 py-2 my-1 text-[12px] font-inter font-semibold tracking-tight text-nowrap text-black transition-colors duration-200 md:inline-flex">
                             <span class="relative h-4 w-4 shrink-0">
                                 <img src="./assets/images/logos/lumazon-icon-zwart.png" alt="Lumazon"
                                     class="absolute inset-0 h-4 w-4 transition-opacity duration-[400ms] group-hover:opacity-0"
@@ -104,61 +108,86 @@
                             <span class="duration-[400ms] group-hover:!opacity-70">Offerte</span>
                         </a>
                         <button type="button"
-                            class="inline-flex h-10 w-10 items-center justify-center rounded-lg text-white/70 transition-colors duration-200 hover:text-white md:hidden"
+                            class="relative z-50 inline-flex h-10 w-10 items-center justify-center rounded-lg text-white/70 transition-colors duration-200 hover:text-white md:hidden"
                             aria-label="Open menu" aria-expanded="false" data-header-menu-toggle>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" class="h-6 w-6" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                                stroke="currentColor" stroke-width="2"
+                                class="h-6 w-6 transition-transform duration-300 ease-out" aria-hidden="true"
+                                data-header-menu-icon>
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16"
+                                    data-header-menu-icon-line-1
+                                    class="origin-center transition-all duration-300 ease-out" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16"
+                                    data-header-menu-icon-line-2
+                                    class="origin-center opacity-100 transition-opacity duration-300 ease-out" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 18h16"
+                                    data-header-menu-icon-line-3
+                                    class="origin-center transition-all duration-300 ease-out" />
                             </svg>
                         </button>
                     </div>
                 </div>
 
-                <!-- Desktop menu -->
-                <div class="hidden max-h-0 overflow-hidden border-t border-white/10 rounded-2xl bg-black/95 px-5 pt-6 pb-4 font-inter opacity-0 -translate-y-2 transition-[max-height,opacity,transform] duration-300 ease-out pointer-events-none md:hidden"
+                <!-- Mobile menu -->
+                <div class="fixed inset-x-0 top-0 z-40 hidden h-0 overflow-hidden rounded-2xl bg-charcoal px-5 pt-24 pb-6 font-inter opacity-0 -translate-y-2 transition-[height,opacity,transform,border-radius] duration-300 ease-out pointer-events-none md:hidden"
                     data-header-menu>
                     <div class="flex flex-col gap-5">
-                        <a class="translate-y-3 rounded-lg px-3 py-2 text-2xl font-inter tracking-tighter text-white/60 opacity-0 transition-all duration-300 ease-out hover:bg-white/10 hover:text-white"
+                        <a class="translate-y-3 rounded-lg px-3 py-2 text-2xl font-inter tracking-tighter text-white opacity-0 transition-all duration-300 ease-out hover:bg-white/10 hover:text-white"
                             data-header-menu-item href="./">
                             Home
                         </a>
-                        <a class="translate-y-3 rounded-lg px-3 py-2 text-2xl font-inter tracking-tighter text-white/60 opacity-0 transition-all duration-300 ease-out hover:bg-white/10 hover:text-white"
+                        <a class="translate-y-3 rounded-lg px-3 py-2 text-2xl font-inter tracking-tighter text-white opacity-0 transition-all duration-300 ease-out hover:bg-white/10 hover:text-white"
                             data-header-menu-item href="./projecten/">
                             Diensten
                         </a>
-                        <a class="translate-y-3 rounded-lg px-3 py-2 text-2xl font-inter tracking-tighter text-white/60 opacity-0 transition-all duration-300 ease-out hover:bg-white/10 hover:text-white"
+                        <a class="translate-y-3 rounded-lg px-3 py-2 text-2xl font-inter tracking-tighter text-white opacity-0 transition-all duration-300 ease-out hover:bg-white/10 hover:text-white"
                             data-header-menu-item href="./projecten/">
                             Projecten
                         </a>
-                        <a class="translate-y-3 rounded-lg px-3 py-2 text-2xl font-inter tracking-tighter text-white/60 opacity-0 transition-all duration-300 ease-out hover:bg-white/10 hover:text-white"
+                        <a class="translate-y-3 rounded-lg px-3 py-2 text-2xl font-inter tracking-tighter text-white opacity-0 transition-all duration-300 ease-out hover:bg-white/10 hover:text-white"
                             data-header-menu-item href="./contact/">
                             Contact
                         </a>
                     </div>
-                    <a href="./diensten/"
-                        class="mt-5 block w-full translate-y-3 rounded-lg bg-white px-[30px] py-[6px] text-center font-inter font-[600] tracking-tight text-[15.2px] text-white opacity-0 transition-all duration-300 ease-out hover:bg-[#db9200] lg:max-w-[270px]"
-                        data-header-menu-item>
-                        <div class="mx-auto flex items-center justify-center gap-1">
-                            <div>
-                                <img src="./assets/images/logos/lumazon-icon-zwart.png" alt="Lumazon" class="h-4 w-4"
-                                    decoding="async">
-                            </div>
-                            <div class="text-black font-inter font-[600] tracking-tight text-[12px]">
-                                Gratis offerte
-                            </div>
-                        </div>
+                    <a href="./offerte/" rel="noopener noreferrer" data-header-menu-cta
+                        class="btn-cta group relative isolate mt-8 inline-flex items-center gap-5 overflow-hidden rounded-full bg-white py-1.5 pl-6 pr-1.5 font-inter text-[16px] font-semibold tracking-tight text-charcoal/90 opacity-0 transition-[padding,transform,opacity,color] duration-700 ease-out hover:-translate-y-0.5 hover:text-charcoal"
+                        style="--btn-cta-accent:#f4a104;">
+                        <span aria-hidden="true"
+                            class="btn-cta__glow pointer-events-none absolute inset-0 z-0 rounded-full"></span>
+                        <span data-header-menu-cta-text
+                            class="relative z-10 transition-[opacity,transform] duration-700 ease-out group-hover:-translate-x-0.5 group-hover:opacity-85">Gratis Offerte</span>
+                        <span data-header-menu-cta-icon
+                            class="btn-cta__icon relative z-10 inline-flex h-10 w-10 items-center justify-center rounded-full transition-[opacity,transform] duration-700 ease-out group-hover:translate-x-0.5 group-hover:scale-[0.96]">
+                            <span aria-hidden="true" class="relative h-4 w-4 overflow-hidden">
+                                <svg viewBox="0 0 24 24"
+                                    class="absolute inset-0 h-4 w-4 transition-transform duration-700 ease-[cubic-bezier(0.74,0.36,0.41,0.61)] group-hover:translate-x-full"
+                                    fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M5 12h14" />
+                                    <path d="m13 6 6 6-6 6" />
+                                </svg>
+                                <svg viewBox="0 0 24 24"
+                                    class="absolute inset-0 h-4 w-4 -translate-x-full transition-transform duration-700 ease-[cubic-bezier(0.74,0.36,0.41,0.61)] group-hover:translate-x-0"
+                                    fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M5 12h14" />
+                                    <path d="m13 6 6 6-6 6" />
+                                </svg>
+                            </span>
+                        </span>
                     </a>
                 </div>
             </div>
 
             <div aria-hidden="true" class="shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.2" viewBox="0 0 137 137" width="137" height="137"
-                    class="h-4 w-4 brightness-0">
-                    <defs>
-                        <image width="137" height="137" id="header-cap-left"
-                            href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIkAAACJAQMAAAAi6omKAAAAAXNSR0IB2cksfwAAAAZQTFRF////AAAAVcLTfgAAAAJ0Uk5T/wDltzBKAAABJElEQVR4nO3Sy20CQRAE0Flx4OgQHIpDY8mMUBwCRx8sbHamP1WFWhqJlbjAzU+4u7qGpT18Fvn7tJ6FPr+b0PGnKZ1Wpe1LQl8XpeXWlD6uD7QNZzr8NqXxf0R9H9NfU7JRSDYKyUYh2SggHwXUW2C696k0DiTy6UkxPSmmJ8X0JM8OFAuDxksQ5cKgXBiUC4NyYVAuDIoLg2ChEyx08tcBggxOkMEJMjhBBiPowQljGWEsI4xVEyY1wqRGmNQIkw6ipCVR+EEUfhAlHURJS6Lwgyh8SXRPJw5fEd/Tie+piE+siE/sxCdWxCdWxFcXJFcXJEUUJEUUJEUUJN3Mk9RVkNQ1T9LgNGmp06Q9P0P6GtOkD7Qz6TPuTPr+LyH9Lb0p6R+ipsyKFHh//QAAAABJRU5ErkJggg==" />
-                    </defs>
-                    <use href="#header-cap-left" x="0" y="0" />
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" version="1.1" id="svg1"
+                    width="182.66667" height="182.66667" viewBox="0 0 182.66667 182.66667" class="h-4 w-4">
+                    <defs id="defs1" />
+                    <g id="g1">
+                        <path style="fill:#2b2b2b;fill-opacity:1"
+                            d="M -0.94197245,90.798433 -1.1317634,-0.86823629 90.534905,-0.66312009 c 50.416665,0.1128139 85.966665,0.6282876 78.999995,1.1454972 C 79.284159,7.1826479 7.4945495,78.727162 0.30776355,169.13177 c -0.661133,8.31658 -1.131354,-21.15686 -1.249736,-78.333337 z"
+                            id="path1" />
+                    </g>
                 </svg>
             </div>
         </div>

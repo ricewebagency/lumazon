@@ -26,7 +26,7 @@
     <script defer src="./js/services-gallery-switcher.js"></script>
     <script defer src="./js/offerte-label.js"></script>
     <script defer src="./js/whatsapp-float.js"></script>
-    <script defer src="./js/featurable-credit-hider.js"></script>
+    <script defer src="./js/year.js"></script>
 </head>
 
 <body class="text-charcoal antialiased">
@@ -37,27 +37,31 @@
     <div class="mx-auto w-full max-w-7xl">
         <div class="flex items-start justify-center">
             <div aria-hidden="true" class="shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.2" viewBox="0 0 137 137" width="137" height="137"
-                    class="h-4 w-4 scale-x-[-1] brightness-0">
-                    <defs>
-                        <image width="137" height="137" id="header-cap-left"
-                            href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIkAAACJAQMAAAAi6omKAAAAAXNSR0IB2cksfwAAAAZQTFRF////AAAAVcLTfgAAAAJ0Uk5T/wDltzBKAAABJElEQVR4nO3Sy20CQRAE0Flx4OgQHIpDY8mMUBwCRx8sbHamP1WFWhqJlbjAzU+4u7qGpT18Fvn7tJ6FPr+b0PGnKZ1Wpe1LQl8XpeXWlD6uD7QNZzr8NqXxf0R9H9NfU7JRSDYKyUYh2SggHwXUW2C696k0DiTy6UkxPSmmJ8X0JM8OFAuDxksQ5cKgXBiUC4NyYVAuDIoLg2ChEyx08tcBggxOkMEJMjhBBiPowQljGWEsI4xVEyY1wqRGmNQIkw6ipCVR+EEUfhAlHURJS6Lwgyh8SXRPJw5fEd/Tie+piE+siE/sxCdWxCdWxFcXJFcXJEUUJEUUJEUUJN3Mk9RVkNQ1T9LgNGmp06Q9P0P6GtOkD7Qz6TPuTPr+LyH9Lb0p6R+ipsyKFHh//QAAAABJRU5ErkJggg==" />
-                    </defs>
-                    <use href="#header-cap-left" x="0" y="0" />
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" version="1.1" id="svg1"
+                    width="182.66667" height="182.66667" viewBox="0 0 182.66667 182.66667" class="h-4 w-4 scale-x-[-1]">
+                    <defs id="defs1" />
+                    <g id="g1">
+                        <path style="fill:#2b2b2b;fill-opacity:1"
+                            d="M -0.94197245,90.798433 -1.1317634,-0.86823629 90.534905,-0.66312009 c 50.416665,0.1128139 85.966665,0.6282876 78.999995,1.1454972 C 79.284159,7.1826479 7.4945495,78.727162 0.30776355,169.13177 c -0.661133,8.31658 -1.131354,-21.15686 -1.249736,-78.333337 z"
+                            id="path1" />
+                    </g>
                 </svg>
             </div>
 
             <div
-                class="min-w-0 max-w-[600px] flex-1 bg-black rounded-bl-2xl rounded-br-2xl shadow-[0_12px_30px_rgba(231,171,1,0.05)]">
+                class="min-w-0 max-w-[600px] flex-1 bg-charcoal rounded-bl-2xl rounded-br-2xl shadow-[0_12px_30px_rgba(231,171,1,0.05)]">
 
-                <!-- Mobile menu -->
+                <!-- Desktop menu -->
                 <div class="mx-auto flex w-full items-center justify-between gap-3 px-2 py-1 sm:px-3">
-                    <a href="./" class="group flex min-w-0 items-center gap-2" aria-label="Ga naar home">
+                    <a href="./" class="group relative z-50 flex min-w-0 items-center gap-2" aria-label="Ga naar home"
+                        data-header-logo>
                         <img src="./assets/images/logos/lumazon-icon-wit-geel.png" alt="Lumazon"
-                            class="h-8 w-8 shrink-0 duration-[400ms] group-hover:opacity-90" decoding="async">
-                        <div class="flex flex-col text-center items-center leading-none">
+                            class="h-8 w-8 shrink-0 transition-[transform,opacity] duration-300 ease-out group-hover:opacity-90"
+                            decoding="async" data-header-logo-icon>
+                        <div class="flex flex-col text-center items-center leading-none transition-transform duration-300 ease-out"
+                            data-header-logo-text>
                             <span
-                                class="text-[16px] font-bold tracking-tight text-white font-inter transition-opacity duration-[400ms] group-hover:opacity-80">
+                                class="text-[16px] font-bold tracking-tight text-white font-inter transition-[transform,opacity] duration-300 ease-out group-hover:opacity-80">
                                 Lumazon
                             </span>
                         </div>
@@ -65,13 +69,13 @@
 
                     <nav class="hidden flex-1 items-center justify-evenly font-inter md:flex lg:gap-2"
                         aria-label="Hoofdnavigatie">
-                        <a class="rounded-full text-[13px] font-inter font-medium tracking-tight text-white/40 transition-colors duration-200 hover:bg-white/10 hover:text-white"
+                        <a class="rounded-full text-[13px] font-inter font-medium tracking-tight text-white/40 transition-colors duration-200 hover:text-white"
                             href="./">
                             Home
                         </a>
                         <div class="relative" data-desktop-services-menu>
                             <button type="button"
-                                class="inline-flex items-center gap-1 rounded-full px-2 py-1 text-[13px] font-inter font-medium tracking-tight text-white/40 transition-colors duration-200 hover:bg-white/10 hover:text-white"
+                                class="inline-flex items-center gap-1 rounded-full px-2 py-1 text-[13px] font-inter font-medium tracking-tight text-white/40 transition-colors duration-200 hover:text-white"
                                 aria-expanded="false" data-desktop-services-toggle>
                                 Diensten
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
@@ -82,41 +86,41 @@
                                         clip-rule="evenodd" />
                                 </svg>
                             </button>
-                            <div class="invisible pointer-events-none absolute left-1/2 top-full z-40 w-52 -translate-x-1/2 translate-y-2 rounded-xl border border-white/10 bg-black/95 p-2 opacity-0 shadow-[0_12px_30px_rgba(0,0,0,0.35)] transition-all duration-200"
+                            <div class="invisible pointer-events-none absolute left-1/2 top-full z-40 w-52 -translate-x-1/2 translate-y-2 rounded-xl border border-white/10 bg-charcoal p-2 opacity-0 shadow-[0_12px_30px_rgba(0,0,0,0.35)] transition-all duration-200"
                                 data-desktop-services-panel>
                                 <div class="flex flex-col gap-1">
-                                    <a class="rounded-lg px-2 py-1.5 text-[13px] font-inter font-medium text-white/50 transition-colors duration-200 hover:bg-white/10 hover:text-white"
+                                    <a class="rounded-lg px-2 py-1.5 text-[13px] font-inter font-medium text-white/50 transition-colors duration-200 hover:text-white"
                                         href="./diensten/rolluiken/">
                                         Rolluiken
                                     </a>
-                                    <a class="rounded-lg px-2 py-1.5 text-[13px] font-inter font-medium text-white/50 transition-colors duration-200 hover:bg-white/10 hover:text-white"
+                                    <a class="rounded-lg px-2 py-1.5 text-[13px] font-inter font-medium text-white/50 transition-colors duration-200 hover:text-white"
                                         href="./diensten/gordijnen/">
                                         Gordijnen
                                     </a>
-                                    <a class="rounded-lg px-2 py-1.5 text-[13px] font-inter font-medium text-white/50 transition-colors duration-200 hover:bg-white/10 hover:text-white"
+                                    <a class="rounded-lg px-2 py-1.5 text-[13px] font-inter font-medium text-white/50 transition-colors duration-200 hover:text-white"
                                         href="./diensten/jaloezieen/">
                                         Jaloezieën
                                     </a>
-                                    <a class="rounded-lg px-2 py-1.5 text-[13px] font-inter font-medium text-white/50 transition-colors duration-200 hover:bg-white/10 hover:text-white"
+                                    <a class="rounded-lg px-2 py-1.5 text-[13px] font-inter font-medium text-white/50 transition-colors duration-200 hover:text-white"
                                         href="./diensten/screens/">
                                         Screens
                                     </a>
-                                    <a class="rounded-lg px-2 py-1.5 text-[13px] font-inter font-medium text-white/50 transition-colors duration-200 hover:bg-white/10 hover:text-white"
+                                    <a class="rounded-lg px-2 py-1.5 text-[13px] font-inter font-medium text-white/50 transition-colors duration-200 hover:text-white"
                                         href="./diensten/zonneschermen/">
                                         Zonne-schermen
                                     </a>
-                                    <a class="rounded-lg px-2 py-1.5 text-[13px] font-inter font-medium text-white/50 transition-colors duration-200 hover:bg-white/10 hover:text-white"
+                                    <a class="rounded-lg px-2 py-1.5 text-[13px] font-inter font-medium text-white/50 transition-colors duration-200 hover:text-white"
                                         href="./diensten/overkappingen/">
                                         Overkappingen
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <a class="rounded-full text-[13px] font-inter font-medium tracking-tight text-white/40 transition-colors duration-200 hover:bg-white/10 hover:text-white"
+                        <a class="rounded-full text-[13px] font-inter font-medium tracking-tight text-white/40 transition-colors duration-200 hover:text-white"
                             href="./projecten/">
                             Projecten
                         </a>
-                        <a class="rounded-full text-[13px] font-inter font-medium tracking-tight text-white/40 transition-colors duration-200 hover:bg-white/10 hover:text-white"
+                        <a class="rounded-full text-[13px] font-inter font-medium tracking-tight text-white/40 transition-colors duration-200 hover:text-white"
                             href="./contact/">
                             Contact
                         </a>
@@ -124,7 +128,7 @@
 
                     <div class="flex flex-row items-center gap-2">
                         <a href="#download"
-                            class="group hidden gap-1 rounded-lg bg-white px-4 py-2 my-1 text-[12px] font-inter font-semibold tracking-tight text-nowrap text-black transition-colors duration-200 md:inline-flex">
+                            class="group relative z-30 hidden gap-1 rounded-lg bg-white px-4 py-2 my-1 text-[12px] font-inter font-semibold tracking-tight text-nowrap text-black transition-colors duration-200 md:inline-flex">
                             <span class="relative h-4 w-4 shrink-0">
                                 <img src="./assets/images/logos/lumazon-icon-zwart.png" alt="Lumazon"
                                     class="absolute inset-0 h-4 w-4 transition-opacity duration-[400ms] group-hover:opacity-0"
@@ -136,61 +140,86 @@
                             <span class="duration-[400ms] group-hover:!opacity-70">Offerte</span>
                         </a>
                         <button type="button"
-                            class="inline-flex h-10 w-10 items-center justify-center rounded-lg text-white/70 transition-colors duration-200 hover:text-white md:hidden"
+                            class="relative z-50 inline-flex h-10 w-10 items-center justify-center rounded-lg text-white/70 transition-colors duration-200 hover:text-white md:hidden"
                             aria-label="Open menu" aria-expanded="false" data-header-menu-toggle>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" class="h-6 w-6" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                                stroke="currentColor" stroke-width="2"
+                                class="h-6 w-6 transition-transform duration-300 ease-out" aria-hidden="true"
+                                data-header-menu-icon>
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16"
+                                    data-header-menu-icon-line-1
+                                    class="origin-center transition-all duration-300 ease-out" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16"
+                                    data-header-menu-icon-line-2
+                                    class="origin-center opacity-100 transition-opacity duration-300 ease-out" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 18h16"
+                                    data-header-menu-icon-line-3
+                                    class="origin-center transition-all duration-300 ease-out" />
                             </svg>
                         </button>
                     </div>
                 </div>
 
-                <!-- Desktop menu -->
-                <div class="hidden max-h-0 overflow-hidden border-t border-white/10 rounded-2xl bg-black/95 px-5 pt-6 pb-4 font-inter opacity-0 -translate-y-2 transition-[max-height,opacity,transform] duration-300 ease-out pointer-events-none md:hidden"
+                <!-- Mobile menu -->
+                <div class="fixed inset-x-0 top-0 z-40 hidden h-0 overflow-hidden rounded-2xl bg-charcoal px-5 pt-24 pb-6 font-inter opacity-0 -translate-y-2 transition-[height,opacity,transform,border-radius] duration-300 ease-out pointer-events-none md:hidden"
                     data-header-menu>
                     <div class="flex flex-col gap-5">
-                        <a class="translate-y-3 rounded-lg px-3 py-2 text-2xl font-inter tracking-tighter text-white/60 opacity-0 transition-all duration-300 ease-out hover:bg-white/10 hover:text-white"
+                        <a class="translate-y-3 rounded-lg px-3 py-2 text-2xl font-inter tracking-tighter text-white opacity-0 transition-all duration-300 ease-out hover:bg-white/10 hover:text-white"
                             data-header-menu-item href="./">
                             Home
                         </a>
-                        <a class="translate-y-3 rounded-lg px-3 py-2 text-2xl font-inter tracking-tighter text-white/60 opacity-0 transition-all duration-300 ease-out hover:bg-white/10 hover:text-white"
+                        <a class="translate-y-3 rounded-lg px-3 py-2 text-2xl font-inter tracking-tighter text-white opacity-0 transition-all duration-300 ease-out hover:bg-white/10 hover:text-white"
                             data-header-menu-item href="./projecten/">
                             Diensten
                         </a>
-                        <a class="translate-y-3 rounded-lg px-3 py-2 text-2xl font-inter tracking-tighter text-white/60 opacity-0 transition-all duration-300 ease-out hover:bg-white/10 hover:text-white"
+                        <a class="translate-y-3 rounded-lg px-3 py-2 text-2xl font-inter tracking-tighter text-white opacity-0 transition-all duration-300 ease-out hover:bg-white/10 hover:text-white"
                             data-header-menu-item href="./projecten/">
                             Projecten
                         </a>
-                        <a class="translate-y-3 rounded-lg px-3 py-2 text-2xl font-inter tracking-tighter text-white/60 opacity-0 transition-all duration-300 ease-out hover:bg-white/10 hover:text-white"
+                        <a class="translate-y-3 rounded-lg px-3 py-2 text-2xl font-inter tracking-tighter text-white opacity-0 transition-all duration-300 ease-out hover:bg-white/10 hover:text-white"
                             data-header-menu-item href="./contact/">
                             Contact
                         </a>
                     </div>
-                    <a href="./diensten/"
-                        class="mt-5 block w-full translate-y-3 rounded-lg bg-white px-[30px] py-[6px] text-center font-inter font-[600] tracking-tight text-[15.2px] text-white opacity-0 transition-all duration-300 ease-out hover:bg-[#db9200] lg:max-w-[270px]"
-                        data-header-menu-item>
-                        <div class="mx-auto flex items-center justify-center gap-1">
-                            <div>
-                                <img src="./assets/images/logos/lumazon-icon-zwart.png" alt="Lumazon" class="h-4 w-4"
-                                    decoding="async">
-                            </div>
-                            <div class="text-black font-inter font-[600] tracking-tight text-[12px]">
-                                Gratis offerte
-                            </div>
-                        </div>
+                    <a href="./offerte/" rel="noopener noreferrer" data-header-menu-cta
+                        class="btn-cta group relative isolate mt-8 inline-flex items-center gap-5 overflow-hidden rounded-full bg-white py-1.5 pl-6 pr-1.5 font-inter text-[16px] font-semibold tracking-tight text-charcoal/90 opacity-0 transition-[padding,transform,opacity,color] duration-700 ease-out hover:-translate-y-0.5 hover:text-charcoal"
+                        style="--btn-cta-accent:#f4a104;">
+                        <span aria-hidden="true"
+                            class="btn-cta__glow pointer-events-none absolute inset-0 z-0 rounded-full"></span>
+                        <span data-header-menu-cta-text
+                            class="relative z-10 transition-[opacity,transform] duration-700 ease-out group-hover:-translate-x-0.5 group-hover:opacity-85">Gratis Offerte</span>
+                        <span data-header-menu-cta-icon
+                            class="btn-cta__icon relative z-10 inline-flex h-10 w-10 items-center justify-center rounded-full transition-[opacity,transform] duration-700 ease-out group-hover:translate-x-0.5 group-hover:scale-[0.96]">
+                            <span aria-hidden="true" class="relative h-4 w-4 overflow-hidden">
+                                <svg viewBox="0 0 24 24"
+                                    class="absolute inset-0 h-4 w-4 transition-transform duration-700 ease-[cubic-bezier(0.74,0.36,0.41,0.61)] group-hover:translate-x-full"
+                                    fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M5 12h14" />
+                                    <path d="m13 6 6 6-6 6" />
+                                </svg>
+                                <svg viewBox="0 0 24 24"
+                                    class="absolute inset-0 h-4 w-4 -translate-x-full transition-transform duration-700 ease-[cubic-bezier(0.74,0.36,0.41,0.61)] group-hover:translate-x-0"
+                                    fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M5 12h14" />
+                                    <path d="m13 6 6 6-6 6" />
+                                </svg>
+                            </span>
+                        </span>
                     </a>
                 </div>
             </div>
 
             <div aria-hidden="true" class="shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.2" viewBox="0 0 137 137" width="137" height="137"
-                    class="h-4 w-4 brightness-0">
-                    <defs>
-                        <image width="137" height="137" id="header-cap-left"
-                            href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIkAAACJAQMAAAAi6omKAAAAAXNSR0IB2cksfwAAAAZQTFRF////AAAAVcLTfgAAAAJ0Uk5T/wDltzBKAAABJElEQVR4nO3Sy20CQRAE0Flx4OgQHIpDY8mMUBwCRx8sbHamP1WFWhqJlbjAzU+4u7qGpT18Fvn7tJ6FPr+b0PGnKZ1Wpe1LQl8XpeXWlD6uD7QNZzr8NqXxf0R9H9NfU7JRSDYKyUYh2SggHwXUW2C696k0DiTy6UkxPSmmJ8X0JM8OFAuDxksQ5cKgXBiUC4NyYVAuDIoLg2ChEyx08tcBggxOkMEJMjhBBiPowQljGWEsI4xVEyY1wqRGmNQIkw6ipCVR+EEUfhAlHURJS6Lwgyh8SXRPJw5fEd/Tie+piE+siE/sxCdWxCdWxFcXJFcXJEUUJEUUJEUUJN3Mk9RVkNQ1T9LgNGmp06Q9P0P6GtOkD7Qz6TPuTPr+LyH9Lb0p6R+ipsyKFHh//QAAAABJRU5ErkJggg==" />
-                    </defs>
-                    <use href="#header-cap-left" x="0" y="0" />
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" version="1.1" id="svg1"
+                    width="182.66667" height="182.66667" viewBox="0 0 182.66667 182.66667" class="h-4 w-4">
+                    <defs id="defs1" />
+                    <g id="g1">
+                        <path style="fill:#2b2b2b;fill-opacity:1"
+                            d="M -0.94197245,90.798433 -1.1317634,-0.86823629 90.534905,-0.66312009 c 50.416665,0.1128139 85.966665,0.6282876 78.999995,1.1454972 C 79.284159,7.1826479 7.4945495,78.727162 0.30776355,169.13177 c -0.661133,8.31658 -1.131354,-21.15686 -1.249736,-78.333337 z"
+                            id="path1" />
+                    </g>
                 </svg>
             </div>
         </div>
@@ -198,7 +227,7 @@
 </header>
 
     <a href="./offerte/" data-offerte-label
-        class="fixed right-0 top-1/2 z-[80] flex -translate-y-1/2 translate-x-full opacity-0 flex-col items-center gap-6 bg-black px-2 pt-2 pb-3 text-white shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition-[transform,opacity,background-color] duration-500 ease-out hover:bg-black/90 motion-reduce:translate-x-0 motion-reduce:opacity-100"
+        class="fixed right-0 top-1/2 z-[80] flex -translate-y-1/2 translate-x-full opacity-0 flex-col items-center gap-6 bg-charcoal px-2 pt-2 pb-3 text-white shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition-[transform,opacity,background-color] duration-500 ease-out hover:bg-black/90 motion-reduce:translate-x-0 motion-reduce:opacity-100"
         aria-label="Offerte aanvragen">
         <img src="./assets/images/logos/lumazon-icon-wit.png" alt="Lumazon" class="h-7 w-7" decoding="async">
         <span
@@ -207,7 +236,7 @@
         </span>
     </a>
 
-    <main class="relative pb-[400px]">
+    <main class="relative bg-charcoal">
 
         <section id="hero"
             class="relative isolate overflow-hidden flex justify-center items-center flex-col gap-20 lg:pb-[42px] xl:pb-[120px]">
@@ -332,7 +361,9 @@
         <section class="relative bg-white py-16 lg:py-24 lg:pb-32 overflow-hidden">
             <div class="pointer-events-none absolute inset-x-0 bottom-0 z-0">
                 <div class="mx-auto w-full max-w-[1920px]">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0" data-animate-stagger-reveal
+                        data-animate-delay="0" data-animate-stagger="120" data-animate-rise="28"
+                        data-animate-duration="900ms">
                         <img src="./assets/images/miscelaneous/zaanstreek.svg" alt="" aria-hidden="true"
                             class="pointer-events-none block w-full" decoding="async">
                         <img src="./assets/images/miscelaneous/zaanstreek.svg" alt="" aria-hidden="true"
@@ -491,26 +522,46 @@
                     </p>
                     <h2 class="mt-6 font-inter text-[21px] leading-[1.08] tracking-[0.02em] text-charcoal sm:text-[42px] lg:text-[48px]"
                         data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
-                        Zonwering op maat, afgestemd op uw woning en leefstijl
+                        Wij zijn een Zaanse installateur uit Assendelft die zonwering installaties verzorgt.
                     </h2>
                     <p
                         class="mt-7 max-w-[40ch] font-inter text-[19px] leading-[1.22] tracking-[-0.03em] text-charcoal/90 sm:text-[22px]">
-                        We kijken naar de bouwvorm, de ligging, het daglicht en hoe u de ruimte gebruikt. Zo kiezen
-                        wij een oplossing die comfortabel, energie&shy;zuinig en prettig in gebruik is.
+                        Elke Nederlandse woning is anders. Om die reden kijken wij eerst naar wat er
+                        nodig is. Waar komt de warmte binnen, en hoeveel ruimte is er beschikbaar?
                     </p>
-                    <a href="./contact/" data-animate-stagger-reveal data-animate-delay="0.1" data-animate-stagger="110"
-                        data-animate-rise="10" data-animate-duration="620ms"
-                        class="group mt-8 inline-flex items-center gap-5 rounded-full bg-[#222222] py-1.5 pl-6 pr-1.5 font-inter text-[16px] font-semibold tracking-tight text-white/90 transition-colors duration-200 hover:bg-black">
-                        <span>Contact</span>
+                    <p
+                        class="mt-7 max-w-[40ch] font-inter text-[19px] leading-[1.22] tracking-[-0.03em] text-charcoal/90 sm:text-[22px]">
+                        Geïnteresseerd? Neem vrij&shy;blijvend contact met ons op.
+                    </p>
+
+                    <a href="./contact/" rel="noopener noreferrer"
+                        class="group relative isolate mt-8 inline-flex items-center gap-5 overflow-hidden rounded-full bg-charcoal py-1.5 pl-6 pr-1.5 font-inter text-[16px] font-semibold tracking-tight text-white opacity-100 transition-[padding,transform,opacity,color] duration-700 ease-out hover:text-white [transform:translateZ(0)]"
+                        style="--btn-cta-accent:#f4a104;">
+                        <span aria-hidden="true"
+                            class="btn-cta__glow pointer-events-none absolute right-1.5 top-1/2 z-0 h-10 w-10 -translate-y-1/2 rounded-full transition-transform duration-500 ease-in group-hover:scale-[9]"></span>
                         <span
-                            class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#f4a104] text-charcoal transition-colors duration-200 group-hover:bg-[#db9200]">
-                            <svg viewBox="0 0 24 24" aria-hidden="true" class="h-4 w-4" fill="none"
-                                stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M5 12h14" />
-                                <path d="m13 6 6 6-6 6" />
-                            </svg>
+                            class="relative font-[500] z-10 transition-[opacity,transform,color] group-hover:text-[#2b2b2b] duration-700 ease-out">Contact</span>
+                        <span
+                            class="btn-cta__icon relative z-10 inline-flex h-10 w-10 items-center justify-center rounded-full transition-[opacity,transform] duration-700 ease-out group-hover:translate-x-0.5 group-hover:scale-[0.96]">
+                            <span aria-hidden="true" class="relative h-4 w-4 overflow-hidden">
+                                <svg viewBox="0 0 24 24"
+                                    class="absolute inset-0 h-4 w-4 transition-transform duration-700 ease-[cubic-bezier(0.74,0.36,0.41,0.61)] group-hover:translate-x-full"
+                                    fill="none" stroke="#2b2b2b" stroke-width="2.1" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M5 12h14" />
+                                    <path d="m13 6 6 6-6 6" />
+                                </svg>
+                                <svg viewBox="0 0 24 24"
+                                    class="absolute inset-0 h-4 w-4 -translate-x-full transition-transform duration-700 ease-[cubic-bezier(0.74,0.36,0.41,0.61)] group-hover:translate-x-0"
+                                    fill="none" stroke="#2b2b2b" stroke-width="2.1" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M5 12h14" />
+                                    <path d="m13 6 6 6-6 6" />
+                                </svg>
+                            </span>
                         </span>
                     </a>
+
                 </div>
             </div>
         </section>
@@ -527,9 +578,9 @@
                                 <span class="h-[7px] w-[7px] bg-charcoal"></span>
                                 Zonwering
                             </p>
-                            <p class="mt-6 font-inter text-[28px] leading-[1.12] tracking-[0.02em] text-charcoal sm:text-[42px] lg:text-[48px]"
-                                data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
-                                Zonwering moet slim meebewegen met uw woning
+                            <p class="mt-6 font-inter text-[28px] leading-[1.08] tracking-[0.02em] text-charcoal sm:text-[42px] lg:text-[48px]"
+                                data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0" data-scroll-drift="20">
+                                Onze zonwering beweegt slim mee met uw woning.
                             </p>
                             <p
                                 class="mt-7 max-w-[40ch] font-inter text-[19px] leading-[1.22] tracking-[-0.03em] text-charcoal/90 sm:text-[22px]">
@@ -541,7 +592,7 @@
             </div>
         </section>
 
-        <!-- Recente projecten -->
+        <!-- Onze diensten -->
         <section class="relative overflow-hidden bg-gray-100 py-16 lg:py-24">
             <div class="mx-auto max-w-3xl relative z-10" data-project-carousel>
                 <div
@@ -550,7 +601,7 @@
                         <p
                             class="inline-flex items-center gap-2 font-mono uppercase text-[12px] font-semibold tracking-[0.01em] text-charcoal/75">
                             <span class="h-[7px] w-[7px] bg-charcoal"></span>
-                            Onze projecten
+                            Onze diensten
                         </p>
 
                         <div class="flex items-center gap-2 self-end md:self-auto">
@@ -581,7 +632,7 @@
 
                         <!-- Project artikel 1 -->
                         <a href="./diensten/zonneschermen/" data-project-carousel-card
-                            class="group relative flex shrink-0 snap-center snap-always basis-[calc(100%-2.5rem)] overflow-hidden rounded-[10px] aspect-[3/4]"
+                            class="group relative flex shrink-0 snap-center snap-always basis-[calc(100%-2.5rem)] overflow-hidden rounded-[22px] aspect-[3/4]"
                             aria-label="Lees meer over dit project: breed knikarmscherm voor schaduwdekking over het gehele terras">
 
                             <img src="./assets/images/diensten/zonnescherm/project-02-01.jpg" alt="Zonneschermen"
@@ -596,12 +647,12 @@
                                 <span class="block w-full border-t border-white/60"></span>
                                 <h3 class="font-inter text-[22px] font-bold leading-[1.15] tracking-[-0.03em] text-white"
                                     data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
-                                    Breed knikarmscherm voor schaduw&shy;dekking over het gehele terras
+                                    Zonneschermen
                                 </h3>
                                 <p class="font-inter text-[13px] leading-[1.5] tracking-[-0.02em] text-white/80"
                                     data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
-                                    Het knikarmscherm houdt de woning koel, blokkeert fel licht en heeft een
-                                    afwerking gekregen die helemaal past bij het terras van deze klant.
+                                    Met onze zonneschermen houdt u de zon buiten en de warmte binnen. Zo blijft uw
+                                    woning koel en comfortabel, zelfs op de warmste dagen.
                                 </p>
                                 <span class="mt-1 block w-full border-t border-white/45"></span>
                             </div>
@@ -609,7 +660,7 @@
 
                         <!-- Project artikel 2 -->
                         <a href="./diensten/rolluiken/" data-project-carousel-card
-                            class="group relative flex shrink-0 snap-center snap-always basis-[calc(100%-2.5rem)] overflow-hidden rounded-[10px] aspect-[3/4]"
+                            class="group relative flex shrink-0 snap-center snap-always basis-[calc(100%-2.5rem)] overflow-hidden rounded-[22px] aspect-[3/4]"
                             aria-label="Lees meer over dit project: elektrische rolluiken voor een vrijstaande woning met grote raampartijen">
 
                             <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop"
@@ -625,11 +676,11 @@
                                 <span class="block w-full border-t border-white/60"></span>
                                 <h3
                                     class="font-inter text-[22px] font-bold leading-[1.15] tracking-[-0.03em] text-white">
-                                    Elektrische rolluiken voor een vrijstaande woning met grote raampartijen
+                                    Rolluiken
                                 </h3>
                                 <p class="font-inter text-[13px] leading-[1.5] tracking-[-0.02em] text-white/80">
-                                    Rolluiken die warmte, inkijk en geluid weren. Bediend via een schakelaar of
-                                    smartphone, en naadloos geïntegreerd in de gevel.
+                                    Met onze rolluiken zorgt u voor extra veiligheid, privacy en isolatie. Elektrische
+                                    bediening en strakke afwerking zijn gegarandeerd.
                                 </p>
                                 <span class="mt-1 block w-full border-t border-white/45"></span>
                             </div>
@@ -637,7 +688,7 @@
 
                         <!-- Project artikel 3 -->
                         <a href="./diensten/screens/" data-project-carousel-card
-                            class="group relative flex shrink-0 snap-center snap-always basis-[calc(100%-2.5rem)] overflow-hidden rounded-[10px] aspect-[3/4]"
+                            class="group relative flex shrink-0 snap-center snap-always basis-[calc(100%-2.5rem)] overflow-hidden rounded-[22px] aspect-[3/4]"
                             aria-label="Lees meer over dit project: buitenscreens rondom een overdekt terras voor windbeschutting het hele jaar">
 
                             <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop"
@@ -653,11 +704,11 @@
                                 <span class="block w-full border-t border-white/60"></span>
                                 <h3
                                     class="font-inter text-[22px] font-bold leading-[1.15] tracking-[-0.03em] text-white">
-                                    Buitenscreens rondom een overdekt terras voor wind&shy;beschutting het hele jaar
+                                    Buitenscreens
                                 </h3>
                                 <p class="font-inter text-[13px] leading-[1.5] tracking-[-0.02em] text-white/80">
-                                    Screens die zon, wind en inkijk tegenhouden zonder het zicht te blokkeren.
-                                    Strak oogende oplossing voor een modern tuinterras.
+                                    Met onze buitenscreens kunt u genieten van een overdekt terras, zonder dat u last
+                                    heeft van wind of regen.
                                 </p>
                                 <span class="mt-1 block w-full border-t border-white/45"></span>
                             </div>
@@ -665,7 +716,7 @@
 
                         <!-- Project artikel 4 -->
                         <a href="./diensten/rolgordijnen/" data-project-carousel-card
-                            class="group relative flex shrink-0 snap-center snap-always basis-[calc(100%-2.5rem)] overflow-hidden rounded-[10px] aspect-[3/4]"
+                            class="group relative flex shrink-0 snap-center snap-always basis-[calc(100%-2.5rem)] overflow-hidden rounded-[22px] aspect-[3/4]"
                             aria-label="Lees meer over dit project: rolgordijnen op maat voor een lichte woonkamer met dakramen">
 
                             <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop"
@@ -681,11 +732,11 @@
                                 <span class="block w-full border-t border-white/60"></span>
                                 <h3
                                     class="font-inter text-[22px] font-bold leading-[1.15] tracking-[-0.03em] text-white">
-                                    Rolgordijnen op maat voor een lichte woonkamer met dakramen
+                                    Rolgordijnen
                                 </h3>
                                 <p class="font-inter text-[13px] leading-[1.5] tracking-[-0.02em] text-white/80">
-                                    Strakke, op maat gemaakte rolgordijnen die verblinding weren en de sfeer in huis
-                                    verbeteren. Rustige bediening, passende kleur, nette afwerking.
+                                    Met onze rolgordijnen kunt u de lichtinval in uw woning eenvoudig regelen, terwijl u
+                                    geniet van een strak en modern interieur.
                                 </p>
                                 <span class="mt-1 block w-full border-t border-white/45"></span>
                             </div>
@@ -708,29 +759,43 @@
                             <p
                                 class="inline-flex items-center gap-2 font-mono uppercase text-[12px] font-semibold tracking-[0.01em] text-charcoal/75">
                                 <span class="h-[7px] w-[7px] bg-charcoal"></span>
-                                Diensten
+                                Projecten
                             </p>
                             <h2 class="mt-6 font-inter text-[28px] leading-[1.08] tracking-[0.02em] text-charcoal sm:text-[42px] lg:text-[48px]"
                                 data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
-                                Zonwering op maat, afgestemd op uw woning en leefstijl
+                                Dankzij onze ervaring kunnen wij echt vakmanschap beloven.
                             </h2>
                             <p
                                 class="mt-7 max-w-[40ch] font-inter text-[19px] leading-[1.22] tracking-[-0.03em] text-charcoal/90 sm:text-[22px]">
-                                We kijken naar de bouwvorm, de ligging, het daglicht en hoe u de ruimte gebruikt. Zo
-                                kiezen wij een oplossing die comfortabel, energiezuinig en prettig in gebruik is.
+                                We kijken naar de bouwvorm, de ligging, het daglicht en hoe u de ruimte gebruikt. Daarna
+                                adviseren we een oplossing die comfortabel, energie&shy;zuinig en prettig in gebruik is.
                             </p>
-                            <a href="./diensten/" data-animate-stagger-reveal data-animate-delay="0.1"
-                                data-animate-stagger="110" data-animate-rise="10" data-animate-duration="620ms"
-                                class="group mt-8 inline-flex items-center gap-5 rounded-full bg-[#222222] py-1.5 pl-6 pr-1.5 font-inter text-[16px] font-semibold tracking-tight text-white/90 transition-colors duration-200 hover:bg-black">
-                                <span>Onze diensten</span>
+                            <a href="./diensten/" rel="noopener noreferrer"
+                                class="group relative isolate mt-8 inline-flex items-center gap-5 overflow-hidden rounded-full bg-charcoal py-1.5 pl-6 pr-1.5 font-inter text-[16px] font-semibold tracking-tight text-white opacity-100 transition-[padding,transform,opacity,color] duration-700 ease-out hover:text-white [transform:translateZ(0)]"
+                                style="--btn-cta-accent:#f4a104;">
+                                <span aria-hidden="true"
+                                    class="btn-cta__glow pointer-events-none absolute right-1.5 top-1/2 z-0 h-10 w-10 -translate-y-1/2 rounded-full transition-transform duration-500 ease-in group-hover:scale-[9]"></span>
                                 <span
-                                    class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#f4a104] text-charcoal transition-colors duration-200 group-hover:bg-[#db9200]">
-                                    <svg viewBox="0 0 24 24" aria-hidden="true" class="h-4 w-4" fill="none"
-                                        stroke="currentColor" stroke-width="2.1" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <path d="M5 12h14" />
-                                        <path d="m13 6 6 6-6 6" />
-                                    </svg>
+                                    class="relative font-[500] z-10 transition-[opacity,transform,color] group-hover:text-[#2b2b2b] duration-700 ease-out">Onze
+                                    diensten</span>
+                                <span
+                                    class="btn-cta__icon relative z-10 inline-flex h-10 w-10 items-center justify-center rounded-full transition-[opacity,transform] duration-700 ease-out group-hover:translate-x-0.5 group-hover:scale-[0.96]">
+                                    <span aria-hidden="true" class="relative h-4 w-4 overflow-hidden">
+                                        <svg viewBox="0 0 24 24"
+                                            class="absolute inset-0 h-4 w-4 transition-transform duration-700 ease-[cubic-bezier(0.74,0.36,0.41,0.61)] group-hover:translate-x-full"
+                                            fill="none" stroke="#2b2b2b" stroke-width="2.1" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path d="M5 12h14" />
+                                            <path d="m13 6 6 6-6 6" />
+                                        </svg>
+                                        <svg viewBox="0 0 24 24"
+                                            class="absolute inset-0 h-4 w-4 -translate-x-full transition-transform duration-700 ease-[cubic-bezier(0.74,0.36,0.41,0.61)] group-hover:translate-x-0"
+                                            fill="none" stroke="#2b2b2b" stroke-width="2.1" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path d="M5 12h14" />
+                                            <path d="m13 6 6 6-6 6" />
+                                        </svg>
+                                    </span>
                                 </span>
                             </a>
                         </div>
@@ -756,20 +821,17 @@
                                         <div class="relative h-full overflow-hidden rounded-[22px]"
                                             data-service-gallery-main-wrap>
                                             <video data-src="./assets/images/diensten/zonnescherm/project-04-01.mp4"
-                                                data-service-gallery-main
-                                                data-service-gallery-object-position="50% 50%"
+                                                data-service-gallery-main data-service-gallery-object-position="50% 50%"
                                                 class="absolute inset-0 h-full w-full object-cover [overflow-clip-margin:unset] opacity-100"
                                                 autoplay loop muted playsinline preload="none"
                                                 aria-label="Video luifel opening tegen blauwe hemel op zonnige dag"
                                                 data-service-gallery-main-mask>
                                             </video>
 
-                                            <video
-                                                data-service-gallery-main-next
+                                            <video data-service-gallery-main-next
                                                 data-service-gallery-object-position="50% 50%"
                                                 class="pointer-events-none absolute inset-0 h-full w-full object-cover [overflow-clip-margin:unset] opacity-0"
-                                                autoplay loop muted playsinline preload="metadata"
-                                                aria-label="">
+                                                autoplay loop muted playsinline preload="metadata" aria-label="">
                                             </video>
                                         </div>
 
@@ -778,57 +840,55 @@
                                             <button type="button" data-service-gallery-thumb
                                                 data-video-src="./assets/images/diensten/zonnescherm/project-04-01.mp4"
                                                 data-video-alt="Video van screens voor raampartij"
-                                                class="group overflow-hidden rounded-[10px] ring-1 ring-black/10 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f4a104]">
+                                                class="group overflow-hidden rounded-[10px] ring-1 ring-black/10 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#222]">
                                                 <video data-src="./assets/images/diensten/zonnescherm/project-04-01.mp4"
                                                     autoplay loop muted playsinline preload="none"
                                                     class="h-full w-full object-cover [overflow-clip-margin:unset]"></video>
                                             </button>
 
-                                            <button type="button" data-service-gallery-thumb
-                                                data-media-type="image"
+                                            <button type="button" data-service-gallery-thumb data-media-type="image"
                                                 data-media-src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=640&h=640&fit=crop"
                                                 data-media-alt="Afbeelding van rolluik detail"
-                                                class="group overflow-hidden rounded-[10px] ring-1 ring-black/10 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f4a104]">
+                                                class="group overflow-hidden rounded-[10px] ring-1 ring-black/10 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#222]">
                                                 <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=640&h=640&fit=crop"
                                                     alt="Afbeelding van rolluik detail" loading="lazy" decoding="async"
                                                     class="h-full w-full object-cover [overflow-clip-margin:unset]">
                                             </button>
 
-                                            <button type="button" data-service-gallery-thumb
-                                                data-media-type="image"
+                                            <button type="button" data-service-gallery-thumb data-media-type="image"
                                                 data-media-src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=640&h=640&fit=crop"
                                                 data-media-alt="Afbeelding van zonnescherm gemonteerd"
-                                                class="group overflow-hidden rounded-[10px] ring-1 ring-black/10 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f4a104]">
+                                                class="group overflow-hidden rounded-[10px] ring-1 ring-black/10 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#222]">
                                                 <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=640&h=640&fit=crop"
-                                                    alt="Afbeelding van zonnescherm gemonteerd" loading="lazy" decoding="async"
+                                                    alt="Afbeelding van zonnescherm gemonteerd" loading="lazy"
+                                                    decoding="async"
                                                     class="h-full w-full object-cover [overflow-clip-margin:unset]">
                                             </button>
 
-                                            <button type="button" data-service-gallery-thumb
-                                                data-media-type="image"
+                                            <button type="button" data-service-gallery-thumb data-media-type="image"
                                                 data-media-src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=640&h=640&fit=crop"
                                                 data-media-alt="Afbeelding van gevel met zonwering"
-                                                class="group overflow-hidden rounded-[10px] ring-1 ring-black/10 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f4a104]">
+                                                class="group overflow-hidden rounded-[10px] ring-1 ring-black/10 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#222]">
                                                 <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=640&h=640&fit=crop"
-                                                    alt="Afbeelding van gevel met zonwering" loading="lazy" decoding="async"
+                                                    alt="Afbeelding van gevel met zonwering" loading="lazy"
+                                                    decoding="async"
                                                     class="h-full w-full object-cover [overflow-clip-margin:unset]">
                                             </button>
 
-                                            <button type="button" data-service-gallery-thumb
-                                                data-media-type="image"
+                                            <button type="button" data-service-gallery-thumb data-media-type="image"
                                                 data-media-src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=640&h=640&fit=crop"
                                                 data-media-alt="Afbeelding van zonwering doekstructuur"
-                                                class="group overflow-hidden rounded-[10px] ring-1 ring-black/10 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f4a104]">
+                                                class="group overflow-hidden rounded-[10px] ring-1 ring-black/10 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#222]">
                                                 <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=640&h=640&fit=crop"
-                                                    alt="Afbeelding van zonwering doekstructuur" loading="lazy" decoding="async"
+                                                    alt="Afbeelding van zonwering doekstructuur" loading="lazy"
+                                                    decoding="async"
                                                     class="h-full w-full object-cover [overflow-clip-margin:unset]">
                                             </button>
 
-                                            <button type="button" data-service-gallery-thumb
-                                                data-media-type="image"
+                                            <button type="button" data-service-gallery-thumb data-media-type="image"
                                                 data-media-src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=640&h=640&fit=crop"
                                                 data-media-alt="Afbeelding van moderne screens"
-                                                class="group overflow-hidden rounded-[10px] ring-1 ring-black/10 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f4a104]">
+                                                class="group overflow-hidden rounded-[10px] ring-1 ring-black/10 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#222]">
                                                 <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=640&h=640&fit=crop"
                                                     alt="Afbeelding van moderne screens" loading="lazy" decoding="async"
                                                     class="h-full w-full object-cover [overflow-clip-margin:unset]">
@@ -843,19 +903,20 @@
             </div>
         </section>
 
-        <section id="reviews" class="bg-white py-16 lg:py-24">
+        <section id="reviews" class="bg-charcoal py-16 lg:py-24">
+
             <div class="mx-auto flex flex-col w-full max-w-6xl px-5">
                 <div class="w-full">
                     <p
-                        class="inline-flex items-center gap-2 font-mono uppercase text-[12px] font-semibold tracking-[0.01em] text-charcoal/75">
-                        <span class="h-[7px] w-[7px] bg-charcoal"></span>
+                        class="inline-flex items-center gap-2 font-mono uppercase text-[12px] font-semibold tracking-[0.01em] text-white/75">
+                        <span class="h-[7px] w-[7px] bg-white"></span>
                         Reviews
                     </p>
                     <h2
-                        class="mt-6 font-inter text-[21px] leading-[1.08] tracking-[0.02em] text-charcoal sm:text-[42px] lg:text-[48px]">
-                        Wat zeggen onze klanten over Lumazon als installatie&shy;partner?
+                        class="mt-6 font-inter text-[28px] leading-[1.08] tracking-[0.02em] text-white sm:text-[42px] lg:text-[48px]">
+                        Wat zeggen klanten over Lumazon als installatie&shy;partner?
                     </h2>
-                    <p class="mt-7 font-inter text-[19px] leading-[1.22] tracking-[-0.03em] text-charcoal/90 sm:text-[22px]"
+                    <p class="mt-7 font-inter text-[19px] leading-[1.22] tracking-[-0.03em] text-white/90 sm:text-[22px]"
                         data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
                         Wij zijn trots op ons werk, en die waardering is terug te zien in de reacties die wij ontvangen.
                     </p>
@@ -864,7 +925,7 @@
                 <div class="mt-10" data-reviews-slider>
                     <div class="mb-6 flex items-center justify-end gap-2">
                         <button type="button"
-                            class="inline-flex h-11 w-11 items-center justify-center text-charcoal transition-colors duration-200 hover:text-black focus-visible:outline-none focus-visible:text-black"
+                            class="inline-flex h-11 w-11 items-center justify-center text-white transition-colors duration-200 hover:text-white/70 focus-visible:outline-none focus-visible:text-black"
                             data-reviews-prev aria-label="Vorige review">
                             <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6" fill="none"
                                 stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
@@ -873,7 +934,7 @@
                         </button>
 
                         <button type="button"
-                            class="inline-flex h-11 w-11 items-center justify-center text-charcoal transition-colors duration-200 hover:text-black focus-visible:outline-none focus-visible:text-black"
+                            class="inline-flex h-11 w-11 items-center justify-center text-white transition-colors duration-200 hover:text-white/70 focus-visible:outline-none focus-visible:text-black"
                             data-reviews-next aria-label="Volgende review">
                             <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6" fill="none"
                                 stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
@@ -894,8 +955,83 @@
         </section>
 
         <!-- Zonwering quote -->
-        <section class="bg-white">
+        <section class="relative bg-charcoal pb-16">
             <div class="mx-auto max-w-3xl px-5">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="md:col-span-2 lg:col-span-4">
+                        <div class="w-full max-w-[560px] my-4">
+                            <p
+                                class="inline-flex items-center gap-2 font-mono uppercase text-[12px] font-semibold tracking-[0.01em] text-white/75">
+                                <span class="h-[7px] w-[7px] bg-white"></span>
+                                Hittebelasting
+                            </p>
+                            <div class="mt-6 flex items-start gap-3">
+                                <span aria-hidden="true"
+                                    class="mt-1 font-inter text-[34px] leading-none text-white/40 sm:text-[46px] lg:text-[54px]">
+                                    “
+                                </span>
+                                <p class="font-inter text-[26px] leading-[1.12] tracking-[0.02em] text-white sm:text-[42px] lg:text-[48px]"
+                                    data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
+                                    Zonder goede zon&shy;wering is glas op het zuiden juist het meest bepalend voor
+                                    hittebelasting.
+                                </p>
+                            </div>
+                            <p
+                                class="mt-7 max-w-[40ch] font-inter text-[16px] leading-[1.22] tracking-[-0.03em] text-white/90 sm:text-[22px]">
+                                — RIVM, GGD-richtlijn Hitte en gezond&shy;heid
+                            </p>
+                            <a href="https://www.rivm.nl/ggd-richtlijn-mmk-hitte-gezondheid" target="_blank"
+                                rel="noopener noreferrer"
+                                class="group relative isolate mt-8 inline-flex items-center gap-5 overflow-hidden rounded-full bg-white py-1.5 pl-6 pr-1.5 font-inter text-[16px] font-semibold tracking-tight text-charcoal opacity-100 transition-[padding,transform,opacity,color] duration-700 ease-out hover:text-white [transform:translateZ(0)]"
+                                style="--btn-cta-accent:#f4a104;">
+                                <span aria-hidden="true"
+                                    class="btn-cta__glow pointer-events-none absolute right-1.5 top-1/2 z-0 h-10 w-10 -translate-y-1/2 rounded-full transition-transform duration-500 ease-in group-hover:scale-[9]"></span>
+                                <span
+                                    class="relative font-[500] z-10 transition-[opacity,transform,color] group-hover:text-white duration-700 ease-out">Lees
+                                    meer</span>
+                                <span
+                                    class="btn-cta__icon relative z-10 inline-flex h-10 w-10 items-center justify-center rounded-full transition-[opacity,transform] duration-700 ease-out group-hover:translate-x-0.5 group-hover:scale-[0.96]">
+                                    <span aria-hidden="true" class="relative h-4 w-4 overflow-hidden">
+                                        <svg viewBox="0 0 24 24"
+                                            class="absolute inset-0 h-4 w-4 transition-transform duration-700 ease-[cubic-bezier(0.74,0.36,0.41,0.61)] group-hover:translate-x-full group-hover:text-white"
+                                            fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path d="M5 12h14" />
+                                            <path d="m13 6 6 6-6 6" />
+                                        </svg>
+                                        <svg viewBox="0 0 24 24"
+                                            class="absolute inset-0 h-4 w-4 -translate-x-full transition-transform duration-700 ease-[cubic-bezier(0.74,0.36,0.41,0.61)] group-hover:translate-x-0 group-hover:text-white"
+                                            fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path d="M5 12h14" />
+                                            <path d="m13 6 6 6-6 6" />
+                                        </svg>
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wave divider -->
+            <div class="absolute bottom-[-39px] left-0 w-full pointer-events-none z-[5]">
+                <svg viewBox="0 0 1440 90" preserveAspectRatio="none" class="block sm:hidden w-full h-[100px]">
+                    <path d="M0,40 C120,80 360,0 720,30 1080,60 1320,20 1440,10 L1440,90 L0,90 Z" fill="#ffffff"></path>
+                </svg>
+                <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="hidden sm:block w-full h-[100px]">
+                    <path d="M0,95
+         C240,35 480,35 720,65
+         960,95 1200,95 1440,65
+         L1440,140 L0,140 Z" fill="#ffffff"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Klimazon groep -->
+        <section class="relative overflow-visible bg-white pt-8 lg:pt-16">
+            <div class="relative z-10 mx-auto max-w-3xl px-5">
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <div class="md:col-span-2 lg:col-span-4">
@@ -903,36 +1039,55 @@
                             <p
                                 class="inline-flex items-center gap-2 font-mono uppercase text-[12px] font-semibold tracking-[0.01em] text-charcoal/75">
                                 <span class="h-[7px] w-[7px] bg-charcoal"></span>
-                                Hittebelasting
+                                Klimaat- en zontechniek
                             </p>
-                            <div class="mt-6 flex items-start gap-3">
-                                <span aria-hidden="true"
-                                    class="mt-1 font-inter text-[34px] leading-none text-charcoal/40 sm:text-[46px] lg:text-[54px]">
-                                    “
-                                </span>
-                                <p class="font-inter text-[26px] leading-[1.12] tracking-[0.02em] text-charcoal sm:text-[42px] lg:text-[48px]"
-                                    data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
-                                    Zonder goede zon&shy;wering is glas op het zuiden juist het meest bepalend voor
-                                    hittebelasting.
-                                </p>
+                            <h2
+                                class="mt-6 font-inter text-[28px] leading-[1.08] tracking-[0.02em] text-charcoal sm:text-[42px] lg:text-[48px]">
+                                Experts in klimaat- en zontechniek.
+                            </h2>
+                            <p class="mt-7 font-inter text-[19px] leading-[1.22] tracking-[-0.03em] text-charcoal/90 sm:text-[22px]"
+                                data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
+                                Lumazon is onderdeel van de Klimazon™ groep, specialisten op het gebied van klimaat- en
+                                zontechniek.
+                            </p>
+                            <p class="mt-7 font-inter text-[19px] leading-[1.22] tracking-[-0.03em] text-charcoal/90 sm:text-[22px]"
+                                data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
+                                Dit betekent dat wij ook een bak aan kennis en ervaring op het gebied van klimaat- en
+                                zontechniek hebben. Wij kijken hierdoor ook bijvoorbeeld naar verduurzaming,
+                                energie&shy;besparing en extra comfort.
+                            </p>
+                            <div
+                                class="mt-8 overflow-hidden rounded-[22px] border border-charcoal/10 shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+                                <img src="https://klimazon.nl/assets/images-new/projects/aircos/project-6-1.jpg"
+                                    alt="Zonwering installatie in een moderne woning"
+                                    class="h-[280px] w-full object-cover sm:h-[320px]" loading="lazy" decoding="async">
                             </div>
-                            <p
-                                class="mt-7 max-w-[40ch] font-inter text-[16px] leading-[1.22] tracking-[-0.03em] text-charcoal/90 sm:text-[22px]">
-                                — RIVM, GGD-richtlijn Hitte en gezond&shy;heid
-                            </p>
-                            <a href="https://www.rivm.nl/ggd-richtlijn-mmk-hitte-gezondheid" target="_blank"
-                                rel="noopener noreferrer" data-animate-stagger-reveal data-animate-delay="0.1"
-                                data-animate-stagger="110" data-animate-rise="10" data-animate-duration="620ms"
-                                class="group mt-8 inline-flex items-center gap-5 rounded-full bg-[#222222] py-1.5 pl-6 pr-1.5 font-inter text-[16px] font-semibold tracking-tight text-white/90 transition-colors duration-200 hover:bg-black">
-                                <span>Lees meer</span>
+                            <a href="https://klimazon.nl/" target="_blank" rel="noopener noreferrer"
+                                class="group relative isolate mt-8 inline-flex items-center gap-5 overflow-hidden rounded-full bg-charcoal py-1.5 pl-6 pr-1.5 font-inter text-[16px] font-semibold tracking-tight text-white opacity-100 transition-[padding,transform,opacity,color] duration-700 ease-out hover:text-white [transform:translateZ(0)]"
+                                style="--btn-cta-accent:#f4a104;">
+                                <span aria-hidden="true"
+                                    class="btn-cta__glow pointer-events-none absolute right-1.5 top-1/2 z-0 h-10 w-10 -translate-y-1/2 rounded-full transition-transform duration-500 ease-in group-hover:scale-[10]"></span>
                                 <span
-                                    class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#f4a104] text-charcoal transition-colors duration-200 group-hover:bg-[#db9200]">
-                                    <svg viewBox="0 0 24 24" aria-hidden="true" class="h-4 w-4" fill="none"
-                                        stroke="currentColor" stroke-width="2.1" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <path d="M5 12h14" />
-                                        <path d="m13 6 6 6-6 6" />
-                                    </svg>
+                                    class="relative font-[500] z-10 transition-[opacity,transform,color] group-hover:text-[#2b2b2b] duration-700 ease-out">Ontdek
+                                    Klimazon</span>
+                                <span
+                                    class="btn-cta__icon relative z-10 inline-flex h-10 w-10 items-center justify-center rounded-full transition-[opacity,transform] duration-700 ease-out group-hover:translate-x-0.5 group-hover:scale-[0.96]">
+                                    <span aria-hidden="true" class="relative h-4 w-4 overflow-hidden">
+                                        <svg viewBox="0 0 24 24"
+                                            class="absolute inset-0 h-4 w-4 transition-transform duration-700 ease-[cubic-bezier(0.74,0.36,0.41,0.61)] group-hover:translate-x-full"
+                                            fill="none" stroke="#2b2b2b" stroke-width="2.1" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path d="M5 12h14" />
+                                            <path d="m13 6 6 6-6 6" />
+                                        </svg>
+                                        <svg viewBox="0 0 24 24"
+                                            class="absolute inset-0 h-4 w-4 -translate-x-full transition-transform duration-700 ease-[cubic-bezier(0.74,0.36,0.41,0.61)] group-hover:translate-x-0"
+                                            fill="none" stroke="#2b2b2b" stroke-width="2.1" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path d="M5 12h14" />
+                                            <path d="m13 6 6 6-6 6" />
+                                        </svg>
+                                    </span>
                                 </span>
                             </a>
                         </div>
@@ -940,7 +1095,255 @@
                 </div>
             </div>
         </section>
+
     </main>
+
+    <footer class="relative bg-charcoal text-white overflow-hidden">
+        <!-- Footer decoration (Wave) -->
+<div class="absolute top-0 left-0 w-full pointer-events-none z-0 -translate-y-px">
+    <!-- Mobile -->
+    <svg viewBox="0 0 1440 90" preserveAspectRatio="none" class="block sm:hidden w-full h-[100px]">
+        <path d="M0,60 C120,20 360,90 720,55 1080,20 1320,50 1440,40 L1440,0 L0,0 Z" fill="#ffffff" />
+    </svg>
+
+    <!-- Desktop -->
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="hidden sm:block w-full h-[100px]">
+        <path d="M0,85 C240,25 480,25 720,55 960,85 1200,85 1440,55 L1440,0 L0,0 Z" fill="#ffffff" />
+    </svg>
+</div>
+<div class="mx-auto max-w-7xl px-6 pt-28 pb-4 font-inter">
+
+    <div class="relative z-10">
+        <!-- Hero band -->
+        <div class="grid gap-8 lg:grid-cols-12 lg:gap-10">
+            <div class="lg:col-span-7">
+                <p
+                    class="inline-flex items-center gap-2 font-mono uppercase text-[12px] font-semibold tracking-[0.01em] text-white/75">
+                    <span class="h-[7px] w-[7px] bg-white"></span>
+                    Lumazon
+                </p>
+                <h2 class="mt-6 text-2xl leading-tight text-white sm:text-4xl">
+                    Duurzame installaties, helder advies en vakkundige montage.
+                </h2>
+                <p class="mt-4 text-[16px] font-medium leading-relaxed text-white/80 max-w-2xl">
+                    Lokale expert in duurzame installaties uit de Zaanstreek met focus op kwaliteit en service.
+                    Met ervaren monteurs plaatsen en onderhouden wij slimme installaties zoals zonneschermen, rolluiken,
+                    rolgordijnen en screens voor zowel particulieren als bedrijven.
+                </p>
+                <div class="mt-4 flex items-center gap-3">
+                    <!-- Google -->
+                    <a href="https://www.google.com/search?q=reviews+voor+lumazon" target="_blank"
+                        rel="noopener noreferrer"
+                        class="flex items-center justify-center w-9 h-9 rounded-full bg-white shadow-lg"
+                        aria-label="Open Google"> <svg class="w-8 h-8" viewBox="0 0 48 48"
+                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path fill="#FFC107"
+                                d="M43.611 20.083H42V20H24v8h11.303C33.653 32.659 29.194 36 24 36c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.047 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z" />
+                            <path fill="#FF3D00"
+                                d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.047 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z" />
+                            <path fill="#4CAF50"
+                                d="M24 44c5.092 0 9.78-1.949 13.314-5.121l-6.159-5.214C29.107 35.091 26.715 36 24 36c-5.174 0-9.62-3.317-11.284-7.946l-6.521 5.023C9.518 39.556 16.227 44 24 44z" />
+                            <path fill="#1976D2"
+                                d="M43.611 20.083H42V20H24v8h11.303c-.793 2.239-2.231 4.166-4.148 5.665l.003-.002 6.159 5.214C36.889 39.27 44 34 44 24c0-1.341-.138-2.65-.389-3.917z" />
+                        </svg> </a>
+                    <!-- Homedeal -->
+                    <a href="https://www.homedeal.nl/pro/EzdwD/klimazon/" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center justify-center w-10 h-10 rounded-full bg-white/0"
+                        aria-label="Homedeal">
+                        <img src="./assets/images/logos/homedeal-logo.png" alt="Homedeal"
+                            class="w-10 h-10 rounded-full bg-[#19bd5e] p-1" loading="lazy" decoding="async" />
+                    </a>
+                    <!-- Klimazon -->
+                    <a href="https://klimazon.nl/" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center justify-center w-10 h-10 rounded-full bg-white/0"
+                        aria-label="Klimazon">
+                        <img src="./assets/images/logos/klimazon-logo.png" alt="Klimazon"
+                            class="w-10 h-10 rounded-full bg-white p-[0.4rem]" loading="lazy" decoding="async" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5">
+                <div class="rounded-[10px] lg:rounded-2xl lg:p-6">
+                    <h3 class="text-lg font-semibold text-white">Wilt u advies?</h3>
+                    <p class="mt-2 text-sm font-medium text-white/80">
+                        Wij reageren vrijwel altijd binnen 1 werkdag. Vrijblijvend en afgestemd op uw aanvraag.
+                    </p>
+                    <div class="mt-5 flex flex-wrap gap-3">
+                        <a href="./offerte/"
+                            class="inline-flex items-center justify-center rounded-[5px] bg-white px-4 py-2 text-sm font-bold text-charcoal">
+                            Offerte aanvragen
+                        </a>
+                        <a href="./contact/"
+                            class="inline-flex items-center justify-center rounded-[5px] border border-white/30 px-4 py-2 text-sm font-semibold text-white/90">
+                            Contact opnemen
+                        </a>
+                    </div>
+                    <div class="mt-5 flex items-center gap-3">
+                        <a href="tel:+31654216787" class="text-sm font-semibold text-white/90">
+                            Bellen? +31 6 54 21 67 87
+                        </a>
+                    </div>
+                    <div class="mt-4 flex items-center gap-3">
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/31654216787" target="_blank" rel="noopener noreferrer"
+                            class="flex items-center justify-center w-10 h-10 rounded-full bg-white/0"
+                            aria-label="Chat via WhatsApp">
+                            <svg class="w-10 h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175.216 175.552">
+                                <defs>
+                                    <linearGradient id="b" x1="85.915" x2="86.535" y1="32.567" y2="137.092"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop offset="0" stop-color="#57d163" />
+                                        <stop offset="1" stop-color="#23b33a" />
+                                    </linearGradient>
+                                    <filter id="a" width="1.115" height="1.114" x="-.057" y="-.057"
+                                        color-interpolation-filters="sRGB">
+                                        <feGaussianBlur stdDeviation="3.531" />
+                                    </filter>
+                                </defs>
+                                <path fill="#b3b3b3"
+                                    d="m54.532 138.45 2.235 1.324c9.387 5.571 20.15 8.518 31.126 8.523h.023c33.707 0 61.139-27.426 61.153-61.135.006-16.335-6.349-31.696-17.895-43.251A60.75 60.75 0 0 0 87.94 25.983c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535l1.455 2.312-6.179 22.558zm-40.811 23.544L24.16 123.88c-6.438-11.154-9.825-23.808-9.821-36.772.017-40.556 33.021-73.55 73.578-73.55 19.681.01 38.154 7.669 52.047 21.572s21.537 32.383 21.53 52.037c-.018 40.553-33.027 73.553-73.578 73.553h-.032c-12.313-.005-24.412-3.094-35.159-8.954zm0 0"
+                                    filter="url(#a)" />
+                                <path fill="#fff"
+                                    d="m12.966 161.238 10.439-38.114a73.42 73.42 0 0 1-9.821-36.772c.017-40.556 33.021-73.55 73.578-73.55 19.681.01 38.154 7.669 52.047 21.572s21.537 32.383 21.53 52.037c-.018 40.553-33.027 73.553-73.578 73.553h-.032c-12.313-.005-24.412-3.094-35.159-8.954z" />
+                                <path fill="url(#linearGradient1780)"
+                                    d="M87.184 25.227c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535l1.455 2.312-6.179 22.559 23.146-6.069 2.235 1.324c9.387 5.571 20.15 8.518 31.126 8.524h.023c33.707 0 61.14-27.426 61.153-61.135a60.75 60.75 0 0 0-17.895-43.251 60.75 60.75 0 0 0-43.235-17.929z" />
+                                <path fill="url(#b)"
+                                    d="M87.184 25.227c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535l1.455 2.313-6.179 22.558 23.146-6.069 2.235 1.324c9.387 5.571 20.15 8.517 31.126 8.523h.023c33.707 0 61.14-27.426 61.153-61.135a60.75 60.75 0 0 0-17.895-43.251 60.75 60.75 0 0 0-43.235-17.928z" />
+                                <path fill="#fff" fill-rule="evenodd"
+                                    d="M68.772 55.603c-1.378-3.061-2.828-3.123-4.137-3.176l-3.524-.043c-1.226 0-3.218.46-4.902 2.3s-6.435 6.287-6.435 15.332 6.588 17.785 7.506 19.013 12.718 20.381 31.405 27.75c15.529 6.124 18.689 4.906 22.061 4.6s10.877-4.447 12.408-8.74 1.532-7.971 1.073-8.74-1.685-1.226-3.525-2.146-10.877-5.367-12.562-5.981-2.91-.919-4.137.921-4.746 5.979-5.819 7.206-2.144 1.381-3.984.462-7.76-2.861-14.784-9.124c-5.465-4.873-9.154-10.891-10.228-12.73s-.114-2.835.808-3.751c.825-.824 1.838-2.147 2.759-3.22s1.224-1.84 1.836-3.065.307-2.301-.153-3.22-4.032-10.011-5.666-13.647" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content cards -->
+        <div class="mt-10 grid gap-10 lg:grid-cols-12">
+            <nav aria-label="Footer diensten" class="lg:col-span-4 rounded-xl">
+                <h3 class="mb-4 text-base font-semibold tracking-wide text-white/95">Diensten</h3>
+                <ul class="space-y-2 text-sm font-medium text-white/90 max-w-[250px]">
+                    <li>
+                        <a href="./diensten/zonneschermen" class="flex items-center justify-between rounded-md py-1">
+                            <span class="truncate">Zonneschermen</span>
+                            <span class="text-xl leading-none opacity-80">→</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./diensten/rolluiken" class="flex items-center justify-between rounded-md py-1">
+                            <span class="truncate">Rolluiken</span>
+                            <span class="text-xl leading-none opacity-80">→</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./diensten/screens" class="flex items-center justify-between rounded-md py-1">
+                            <span class="truncate">Screens</span>
+                            <span class="text-xl leading-none opacity-80">→</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./diensten/rolgordijnen" class="flex items-center justify-between rounded-md py-1">
+                            <span class="truncate">Rolgordijnen</span>
+                            <span class="text-xl leading-none opacity-80">→</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./diensten" class="flex items-center justify-between rounded-md py-1">
+                            <span class="truncate">Alle diensten</span>
+                            <span class="text-xl leading-none opacity-80">→</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="lg:col-span-4 rounded-[10px] flex flex-col">
+                <h3 class="mb-4 text-sm font-bold uppercase tracking-wide italic text-white/90">Contact</h3>
+
+                <ul class="space-y-2 text-sm font-medium text-white/90 max-w-[250px]">
+                    <li>
+                        <a href="tel:+31654216787" class="flex items-center gap-3">
+                            <span class="text-2xl leading-none">•</span><span class="text-nowrap">+31 6 54 21 67
+                                87</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:info@lumazon.nl" class="flex items-center gap-3">
+                            <span class="text-2xl leading-none">•</span><span>info@lumazon.nl</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="pt-4 text-xs font-medium uppercase tracking-wide text-white/60 break-words leading-relaxed">
+                    Geopend: Ma - Vr 08:00 - 18:00
+                </div>
+            </div>
+
+
+            <div class="lg:col-span-4 rounded-[10px] flex flex-col">
+                <h3 class="mb-4 text-sm font-bold uppercase tracking-wide italic text-white/90">
+                    Bedrijfsinformatie
+                </h3>
+                <p class="flex text-sm font-medium text-white/90 leading-relaxed">
+                    <span class="w-32 shrink-0">KVK-nummer:</span>
+                    <span>93441630</span>
+                </p>
+                <p class="mt-2 flex text-sm font-medium text-white/90 leading-relaxed">
+                    <span class="w-32 shrink-0">BTW-nummer:</span>
+                    <span>NL005019133B97</span>
+                </p>
+                <div class="pt-4 text-xs font-medium uppercase tracking-wide text-white/60 break-words leading-relaxed">
+                    Zonwering & Buitenleven, Zaanstreek
+                </div>
+            </div>
+        </div>
+
+        <!-- Werkgebied -->
+        <div class="mt-8 rounded-[10px]">
+            <div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+                <div>
+                    <h3 class="mb-3 text-sm font-bold uppercase tracking-wide italic text-white/90">Werkgebied</h3>
+                    <p class="text-sm font-medium text-white/70 leading-relaxed max-w-3xl">
+                        Actief in de Zaanstreek en Noord-Holland, waaronder Assendelft, Zaandam, Wormer, Wormerveer,
+                        Krommenie, Koog aan de Zaan, Westzaan, Oostzaan, Beverwijk, Heemskerk, Velsen, IJmuiden,
+                        Haarlem, Haarlemmermeer, Alkmaar en omliggende regio’s.
+                    </p>
+                </div>
+                <a href="https://share.google/IPHFPOaC3nfe0ucKF" target="_blank"
+                    class="inline-flex w-max items-center gap-3 rounded-[10px] border border-black/10 bg-white px-4 py-2 shadow-sm">
+                    <div class="w-max rounded-[5px] px-2 py-1 bg-white">
+                        <img src="./assets/images/logos/google-logo.png" alt="Google reviews" class="h-4" loading="lazy"
+                            decoding="async" />
+                    </div>
+                    <span class="text-yellow-400 text-sm">★★★★★</span>
+                    <span class="text-sm text-slate-500">|</span>
+                    <span class="text-sm text-slate-500 text-nowrap">50+ reviews</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Onderbalk -->
+    <div class="mt-10 border-t border-white/20 pt-6 font-medium
+                flex flex-col sm:flex-row gap-2
+                items-center justify-between text-xs text-white/70">
+
+        <span class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-center">
+            <span>© <span id="year"></span> Lumazon</span>
+            Zonwering & Buitenleven
+        </span>
+
+        <div class="flex gap-4">
+            <a href="./privacy">Privacy</a>
+            <a href="./voorwaarden">Voorwaarden</a>
+        </div>
+
+        <a href="https://riceweb.nl/" target="_blank">
+            Website via <span class="text-white/90">Rice Web</span>
+        </a>
+    </div>
+</div>
+    </footer>
 </body>
 
 </html>

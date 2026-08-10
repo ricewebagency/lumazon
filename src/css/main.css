@@ -11,6 +11,11 @@
 		text-shadow: 0 0 0.7px rgba(255, 255, 255, 0.3);
 	}
 
+	/* Accent glow color is set via --btn-cta-accent on the element */
+	.btn-cta__glow {
+		background-color: var(--btn-cta-accent, #f4a104);
+	}
+
 	.font-instrument-serif {
 		text-rendering: optimizeLegibility;
 		font-synthesis: none;

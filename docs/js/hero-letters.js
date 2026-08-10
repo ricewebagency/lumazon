@@ -5,6 +5,52 @@ document.addEventListener('DOMContentLoaded', () => {
   const noBlurRevealTargets = document.querySelectorAll('[data-animate-reveal-up][data-animate-no-blur], [data-animate-reveal-down][data-animate-no-blur]');
   const lazySlideUpTargets = document.querySelectorAll('[data-animate-lazy-slide-up][data-animate-pending]');
   const staggerRevealTargets = document.querySelectorAll('[data-animate-stagger-reveal]');
+  const driftTargets = document.querySelectorAll('[data-scroll-drift]');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const applyDrift = (target) => {
+    const maxOffset = Number.parseFloat(target.getAttribute('data-scroll-drift') || '8');
+
+    if (!Number.isFinite(maxOffset)) {
+      target.style.transform = 'translate3d(0, 0, 0) scale(1)';
+      return;
+    }
+
+    const rect = target.getBoundingClientRect();
+    const viewportHeight = window.innerHeight || 1;
+    const elementCenter = rect.top + rect.height / 2;
+    const viewportCenter = viewportHeight / 2;
+    const rawProgress = (viewportCenter - elementCenter) / (viewportHeight * 0.8);
+    const progress = Math.max(-1, Math.min(1, rawProgress));
+    const easedProgress = Math.sign(progress) * Math.pow(Math.abs(progress), 1.25);
+    const x = easedProgress * maxOffset * 0.78;
+    const y = -easedProgress * maxOffset * 0.16;
+    const scale = 1 + Math.abs(easedProgress) * 0.002;
+
+    target.style.transform = `translate3d(${x}px, ${y}px, 0) scale(${scale.toFixed(3)})`;
+    target.style.willChange = 'transform';
+  };
+
+  const updateDriftTargets = () => {
+    driftTargets.forEach((target) => {
+      applyDrift(target);
+    });
+  };
+
+  driftTargets.forEach((target) => {
+    target.style.transition = 'transform 180ms cubic-bezier(0.22, 1, 0.36, 1)';
+    target.style.transform = 'translate3d(0, 0, 0) scale(1)';
+  });
+
+  if (!prefersReducedMotion) {
+    updateDriftTargets();
+    window.addEventListener('scroll', () => {
+      window.requestAnimationFrame(updateDriftTargets);
+    }, { passive: true });
+    window.addEventListener('resize', () => {
+      window.requestAnimationFrame(updateDriftTargets);
+    });
+  }
 
   targets.forEach((target) => {
     const text = target.textContent;
@@ -81,15 +127,68 @@ document.addEventListener('DOMContentLoaded', () => {
   lazySlideUpTargets.forEach((target) => {
     const configuredDelay = Number.parseFloat(target.getAttribute('data-animate-delay') || '0.8');
     const delayMs = Number.isFinite(configuredDelay) ? configuredDelay * 1000 : 0;
+    let hasStarted = false;
 
-    const revealTarget = () => {
-      target.classList.remove('invisible');
-      target.classList.remove('translate-y-[140px]');
-      target.classList.add('translate-y-0');
-      target.removeAttribute('data-animate-pending');
+    const revealTarget = (withDelay = false) => {
+      if (hasStarted) {
+        return;
+      }
+
+      hasStarted = true;
+
+      const runReveal = () => {
+        target.classList.remove('invisible');
+        target.classList.remove('translate-y-[140px]');
+        target.classList.add('translate-y-0');
+        target.removeAttribute('data-animate-pending');
+      };
+
+      if (withDelay && delayMs > 0) {
+        window.setTimeout(runReveal, delayMs);
+        return;
+      }
+
+      runReveal();
     };
 
-    window.setTimeout(revealTarget, delayMs);
+    const isInViewport = () => {
+      const rect = target.getBoundingClientRect();
+      return rect.bottom > 0 && rect.top < window.innerHeight;
+    };
+
+    const startWhenVisible = () => {
+      if (isInViewport()) {
+        revealTarget(true);
+        return;
+      }
+
+      if (!('IntersectionObserver' in window)) {
+        revealTarget(false);
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting || hasStarted) {
+              return;
+            }
+
+            revealTarget(false);
+            observer.unobserve(target);
+          });
+        },
+        {
+          root: null,
+          threshold: 0.1,
+          rootMargin: '0px 0px -5% 0px',
+        }
+      );
+
+      observer.observe(target);
+    };
+
+    window.requestAnimationFrame(startWhenVisible);
   });
 
   staggerRevealTargets.forEach((target) => {

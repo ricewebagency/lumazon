@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         thumb.setAttribute('aria-pressed', isActive ? 'true' : 'false');
         thumb.classList.toggle('ring-2', isActive);
-        thumb.classList.toggle('ring-[#f4a104]', isActive);
+        thumb.classList.toggle('ring-[#222]', isActive);
         thumb.classList.toggle('ring-black/10', !isActive);
       });
     };

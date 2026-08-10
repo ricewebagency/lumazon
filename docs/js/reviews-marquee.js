@@ -142,9 +142,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const ratingValue = Number.isFinite(review?.rating) ? review.rating : 0;
 
-        const menu = document.createElement('span');
+        const menu = document.createElement('a');
         menu.className = 'shrink-0 select-none px-1 text-[20px] leading-none text-[#5f6368]';
-        menu.setAttribute('aria-hidden', 'true');
+        menu.href = 'https://www.google.com/search?q=reviews+voor+lumazon';
+        menu.target = '_blank';
+        menu.rel = 'noreferrer noopener';
+        menu.setAttribute('aria-label', 'Bekijk reviews voor Lumazon op Google');
         menu.textContent = '⋮';
 
         userBlock.append(avatar, nameWrap);
@@ -287,8 +290,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const dotIndex = Number.parseInt(dotButton.getAttribute('data-reviews-dot') || '0', 10);
             const isActive = dotIndex === currentSlideIndex;
 
-            dotButton.classList.toggle('bg-charcoal', isActive);
-            dotButton.classList.toggle('bg-gray-300', !isActive);
+            dotButton.classList.toggle('bg-white', isActive);
+            dotButton.classList.toggle('bg-white/30', !isActive);
             dotButton.setAttribute('aria-current', isActive ? 'true' : 'false');
         });
     };
