@@ -10,6 +10,11 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/logos/lumazon-icon-zwart-geel.png" />
     <link rel="mask-icon" href="./assets/images/logos/lumazon-icon-zwart-geel.svg" color="#0033c4" />
     <meta name="theme-color" content="#0033c4" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Almarai:wght@300;400;700;800&family=Georama:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&family=Bebas+Neue&display=swap" as="style" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Almarai:wght@300;400;700;800&family=Georama:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&family=Bebas+Neue&display=swap" />
+    <link rel="preload" as="image" href="./assets/images/miscelaneous/hills.png" fetchpriority="high" />
     <link rel="stylesheet" href="./css/main.css" />
     <!-- <script defer src="./js/topbar.js"></script> -->
     <!-- <script defer src="./js/smooth-scroll.js"></script> -->
@@ -152,11 +157,11 @@
 
             <img src="./assets/images/miscelaneous/hills.png" alt="Hills"
                 class="hero-hill absolute bottom-[0px] min-[410px]:max-[640px]:bottom-[-38px] min-[700px]:bottom-[-72px] lg:bottom-[-120px] xl:bottom-[-210px] min-[1866px]:bottom-[-380px] left-0 w-full min-w-full h-auto z-0 opacity-70 scale-x-[1.25]"
-                data-parallax-depth="0" data-parallax-scale="0.26">
+                data-parallax-depth="0" data-parallax-scale="0.26" loading="eager" decoding="async" fetchpriority="high" width="1920" height="720">
 
             <img src="./assets/images/miscelaneous/hills.png" alt="Hills"
                 class="hero-hill absolute bottom-[-10px] min-[410px]:max-[640px]:bottom-[-60px] min-[700px]:bottom-[-98px] lg:bottom-[-160px] xl:bottom-[-245px] min-[1866px]:bottom-[-380px] left-0 w-full min-w-full h-auto z-20"
-                data-parallax-depth="0.35" data-parallax-scale="0.12">
+                data-parallax-depth="0.35" data-parallax-scale="0.12" loading="eager" decoding="async" fetchpriority="high" width="1920" height="720">
 
             <div
                 class="pointer-events-none absolute inset-x-0 bottom-0 z-[30] h-[110px] bg-gradient-to-b from-white/0 via-white/45 to-white">
@@ -181,14 +186,14 @@
             </div>
 
             <div class="relative z-10 mx-auto max-w-3xl px-5">
-                <h2 class="text-center max-w-2xl text-[38px] font-bold font-inter leading-[35px] tracking-[-0.045em] text-charcoal mb-4 lg:text-6xl"
-                    data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
+                <h2
+                    class="text-center max-w-2xl text-[38px] font-bold font-inter leading-[35px] tracking-[-0.045em] text-charcoal mb-4 lg:text-6xl">
                     Uw zonwering, waar u die nodig heeft
                 </h2>
-                <p
-                    class="text-center font-inter tracking-[-0.045em] text-gray-600 mb-12 max-w-2xl mx-auto text-[15px] lg:text-lg">
+                <p class="text-center font-inter tracking-[-0.045em] text-gray-600 mb-12 max-w-2xl mx-auto text-[15px] lg:text-lg"
+                    data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
                     Met betrouwbare monteurs, bekende merken en de juiste partners zorgen wij ervoor dat u perfect
-                    wordt geholpen met het vinden van de juiste zonwering en buitenleven&shy;oplossingen voor uw
+                    wordt geholpen met het vinden van de juiste zonwering en buitenleven&shy; oplossingen voor uw
                     situatie.
                 </p>
                 <div class="mb-12">
@@ -385,7 +390,7 @@
                                 Zonwering
                             </p>
                             <p class="mt-6 font-inter text-[28px] leading-[1.08] tracking-[0.02em] text-charcoal sm:text-[42px] lg:text-[48px]"
-                                data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0" data-scroll-drift="20">
+                                data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
                                 Onze zonwering beweegt slim mee met uw woning.
                             </p>
                             <p
@@ -442,25 +447,25 @@
                             aria-label="Lees meer over dit project: breed knikarmscherm voor schaduwdekking over het gehele terras">
 
                             <img src="./assets/images/diensten/zonnescherm/project-02-01.jpg" alt="Zonneschermen"
-                                class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                                class="absolute inset-0 h-full w-full object-cover"
                                 decoding="async">
 
                             <div
-                                class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/5 via-black/20 to-black/80">
+                                class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/5 via-black/20 to-black/80 opacity-50 transition-opacity duration-500 group-hover:from-black/50 group-hover:via-black/60 group-hover:to-black/70 group-hover:opacity-100">
                             </div>
 
-                            <div class="relative z-10 flex h-full flex-col justify-end gap-4 p-6">
-                                <span class="block w-full border-t border-white/60"></span>
-                                <h3 class="font-inter text-[22px] font-bold leading-[1.15] tracking-[-0.03em] text-white"
+                            <div class="relative z-10 flex h-full flex-col justify-end gap-4 p-6 transition-transform duration-500 group-hover:-translate-y-2">
+                                <span class="block w-full border-t border-white/60 transition-transform duration-500 group-hover:-translate-y-1"></span>
+                                <h3 class="font-inter text-[22px] font-bold leading-[1.15] tracking-[-0.03em] text-white transition-transform duration-500 group-hover:-translate-y-1"
                                     data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
                                     Zonneschermen
                                 </h3>
-                                <p class="font-inter text-[13px] leading-[1.5] tracking-[-0.02em] text-white/80"
+                                <p class="font-inter text-[13px] leading-[1.5] tracking-[-0.02em] text-white/80 transition-transform duration-500 group-hover:-translate-y-1"
                                     data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
                                     Met onze zonneschermen houdt u de zon buiten en de warmte binnen. Zo blijft uw
                                     woning koel en comfortabel, zelfs op de warmste dagen.
                                 </p>
-                                <span class="mt-1 block w-full border-t border-white/45"></span>
+                                <span class="mt-1 block w-full border-t border-white/45 transition-transform duration-500 group-hover:-translate-y-1"></span>
                             </div>
                         </a>
 
@@ -471,24 +476,26 @@
 
                             <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop"
                                 alt="Rolluiken"
-                                class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                                class="absolute inset-0 h-full w-full object-cover"
                                 loading="lazy" decoding="async">
 
                             <div
-                                class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/5 via-black/20 to-black/80">
+                                class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/5 via-black/20 to-black/80 opacity-50 transition-opacity duration-500 group-hover:from-black/50 group-hover:via-black/60 group-hover:to-black/70 group-hover:opacity-100">
                             </div>
 
-                            <div class="relative z-10 flex h-full flex-col justify-end gap-4 p-6">
-                                <span class="block w-full border-t border-white/60"></span>
+                            <div class="relative z-10 flex h-full flex-col justify-end gap-4 p-6 transition-transform duration-500 group-hover:-translate-y-2">
+                                <span class="block w-full border-t border-white/60 transition-transform duration-500 group-hover:-translate-y-1"></span>
                                 <h3
-                                    class="font-inter text-[22px] font-bold leading-[1.15] tracking-[-0.03em] text-white">
+                                    class="font-inter text-[22px] font-bold leading-[1.15] tracking-[-0.03em] text-white transition-transform duration-500 group-hover:-translate-y-1"
+                                    data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
                                     Rolluiken
                                 </h3>
-                                <p class="font-inter text-[13px] leading-[1.5] tracking-[-0.02em] text-white/80">
+                                <p class="font-inter text-[13px] leading-[1.5] tracking-[-0.02em] text-white/80 transition-transform duration-500 group-hover:-translate-y-1"
+                                    data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
                                     Met onze rolluiken zorgt u voor extra veiligheid, privacy en isolatie. Elektrische
                                     bediening en strakke afwerking zijn gegarandeerd.
                                 </p>
-                                <span class="mt-1 block w-full border-t border-white/45"></span>
+                                <span class="mt-1 block w-full border-t border-white/45 transition-transform duration-500 group-hover:-translate-y-1"></span>
                             </div>
                         </a>
 
@@ -499,24 +506,26 @@
 
                             <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop"
                                 alt="Screens"
-                                class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                                class="absolute inset-0 h-full w-full object-cover"
                                 loading="lazy" decoding="async">
 
                             <div
-                                class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/5 via-black/20 to-black/80">
+                                class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/5 via-black/20 to-black/80 opacity-50 transition-opacity duration-500 group-hover:from-black/50 group-hover:via-black/60 group-hover:to-black/70 group-hover:opacity-100">
                             </div>
 
-                            <div class="relative z-10 flex h-full flex-col justify-end gap-4 p-6">
-                                <span class="block w-full border-t border-white/60"></span>
+                            <div class="relative z-10 flex h-full flex-col justify-end gap-4 p-6 transition-transform duration-500 group-hover:-translate-y-2">
+                                <span class="block w-full border-t border-white/60 transition-transform duration-500 group-hover:-translate-y-1"></span>
                                 <h3
-                                    class="font-inter text-[22px] font-bold leading-[1.15] tracking-[-0.03em] text-white">
+                                    class="font-inter text-[22px] font-bold leading-[1.15] tracking-[-0.03em] text-white transition-transform duration-500 group-hover:-translate-y-1"
+                                    data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
                                     Buitenscreens
                                 </h3>
-                                <p class="font-inter text-[13px] leading-[1.5] tracking-[-0.02em] text-white/80">
+                                <p class="font-inter text-[13px] leading-[1.5] tracking-[-0.02em] text-white/80 transition-transform duration-500 group-hover:-translate-y-1"
+                                    data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
                                     Met onze buitenscreens kunt u genieten van een overdekt terras, zonder dat u last
                                     heeft van wind of regen.
                                 </p>
-                                <span class="mt-1 block w-full border-t border-white/45"></span>
+                                <span class="mt-1 block w-full border-t border-white/45 transition-transform duration-500 group-hover:-translate-y-1"></span>
                             </div>
                         </a>
 
@@ -527,24 +536,26 @@
 
                             <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop"
                                 alt="Rolgordijnen"
-                                class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                                class="absolute inset-0 h-full w-full object-cover"
                                 loading="lazy" decoding="async">
 
                             <div
-                                class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/5 via-black/20 to-black/80">
+                                class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/5 via-black/20 to-black/80 opacity-50 transition-opacity duration-500 group-hover:from-black/50 group-hover:via-black/60 group-hover:to-black/70 group-hover:opacity-100">
                             </div>
 
-                            <div class="relative z-10 flex h-full flex-col justify-end gap-4 p-6">
-                                <span class="block w-full border-t border-white/60"></span>
+                            <div class="relative z-10 flex h-full flex-col justify-end gap-4 p-6 transition-transform duration-500 group-hover:-translate-y-2">
+                                <span class="block w-full border-t border-white/60 transition-transform duration-500 group-hover:-translate-y-1"></span>
                                 <h3
-                                    class="font-inter text-[22px] font-bold leading-[1.15] tracking-[-0.03em] text-white">
+                                    class="font-inter text-[22px] font-bold leading-[1.15] tracking-[-0.03em] text-white transition-transform duration-500 group-hover:-translate-y-1"
+                                    data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
                                     Rolgordijnen
                                 </h3>
-                                <p class="font-inter text-[13px] leading-[1.5] tracking-[-0.02em] text-white/80">
+                                <p class="font-inter text-[13px] leading-[1.5] tracking-[-0.02em] text-white/80 transition-transform duration-500 group-hover:-translate-y-1"
+                                    data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
                                     Met onze rolgordijnen kunt u de lichtinval in uw woning eenvoudig regelen, terwijl u
                                     geniet van een strak en modern interieur.
                                 </p>
-                                <span class="mt-1 block w-full border-t border-white/45"></span>
+                                <span class="mt-1 block w-full border-t border-white/45 transition-transform duration-500 group-hover:-translate-y-1"></span>
                             </div>
                         </a>
 
@@ -849,7 +860,7 @@
                             </p>
                             <h2
                                 class="mt-6 font-inter text-[28px] leading-[1.08] tracking-[0.02em] text-charcoal sm:text-[42px] lg:text-[48px]">
-                                Experts in klimaat- en zontechniek.
+                                Specialist in klimaat- en zon&shy;techniek.
                             </h2>
                             <p class="mt-7 font-inter text-[19px] leading-[1.22] tracking-[-0.03em] text-charcoal/90 sm:text-[22px]"
                                 data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
@@ -858,9 +869,9 @@
                             </p>
                             <p class="mt-7 font-inter text-[19px] leading-[1.22] tracking-[-0.03em] text-charcoal/90 sm:text-[22px]"
                                 data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
-                                Dit betekent dat wij ook een bak aan kennis en ervaring op het gebied van klimaat- en
-                                zontechniek hebben. Wij kijken hierdoor ook bijvoorbeeld naar verduurzaming,
-                                energie&shy;besparing en extra comfort.
+                                Dit betekent dat wij ook ruime kennis en ervaring hebben op het gebied van klimaat- en
+                                zontechniek. Wij kijken hierdoor ook naar verduurzaming, energie&shy;besparing en extra
+                                comfort.
                             </p>
                             <div
                                 class="mt-8 overflow-hidden rounded-[22px] border border-charcoal/10 shadow-[0_10px_30px_rgba(0,0,0,0.08)]">

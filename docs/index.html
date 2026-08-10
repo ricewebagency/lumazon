@@ -10,6 +10,11 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/logos/lumazon-icon-zwart-geel.png" />
     <link rel="mask-icon" href="./assets/images/logos/lumazon-icon-zwart-geel.svg" color="#0033c4" />
     <meta name="theme-color" content="#0033c4" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Almarai:wght@300;400;700;800&family=Georama:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&family=Bebas+Neue&display=swap" as="style" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Almarai:wght@300;400;700;800&family=Georama:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&family=Bebas+Neue&display=swap" />
+    <link rel="preload" as="image" href="./assets/images/miscelaneous/hills.png" fetchpriority="high" />
     <link rel="stylesheet" href="./css/main.css" />
     <!-- <script defer src="./js/topbar.js"></script> -->
     <!-- <script defer src="./js/smooth-scroll.js"></script> -->
@@ -181,25 +186,26 @@
                             Contact
                         </a>
                     </div>
-                    <a href="./offerte/" rel="noopener noreferrer" data-header-menu-cta
-                        class="btn-cta group relative isolate mt-8 inline-flex items-center gap-5 overflow-hidden rounded-full bg-white py-1.5 pl-6 pr-1.5 font-inter text-[16px] font-semibold tracking-tight text-charcoal/90 opacity-0 transition-[padding,transform,opacity,color] duration-700 ease-out hover:-translate-y-0.5 hover:text-charcoal"
+                    <a href="./offerte/" target="_blank"
+                        rel="noopener noreferrer"
+                        class="group relative isolate mt-8 inline-flex items-center gap-5 overflow-hidden rounded-full bg-white py-1.5 pl-6 pr-1.5 font-inter text-[16px] font-semibold tracking-tight text-charcoal opacity-100 transition-[padding,transform,opacity,color] duration-700 ease-out hover:text-white [transform:translateZ(0)]"
                         style="--btn-cta-accent:#f4a104;">
                         <span aria-hidden="true"
-                            class="btn-cta__glow pointer-events-none absolute inset-0 z-0 rounded-full"></span>
-                        <span data-header-menu-cta-text
-                            class="relative z-10 transition-[opacity,transform] duration-700 ease-out group-hover:-translate-x-0.5 group-hover:opacity-85">Gratis Offerte</span>
-                        <span data-header-menu-cta-icon
+                            class="btn-cta__glow pointer-events-none absolute right-1.5 top-1/2 z-0 h-10 w-10 -translate-y-1/2 rounded-full transition-transform duration-500 ease-in group-hover:scale-[9]"></span>
+                        <span
+                            class="relative font-[500] z-10 transition-[opacity,transform,color] group-hover:text-white duration-700 ease-out">Gratis Offerte</span>
+                        <span
                             class="btn-cta__icon relative z-10 inline-flex h-10 w-10 items-center justify-center rounded-full transition-[opacity,transform] duration-700 ease-out group-hover:translate-x-0.5 group-hover:scale-[0.96]">
                             <span aria-hidden="true" class="relative h-4 w-4 overflow-hidden">
                                 <svg viewBox="0 0 24 24"
-                                    class="absolute inset-0 h-4 w-4 transition-transform duration-700 ease-[cubic-bezier(0.74,0.36,0.41,0.61)] group-hover:translate-x-full"
+                                    class="absolute inset-0 h-4 w-4 transition-transform duration-700 ease-[cubic-bezier(0.74,0.36,0.41,0.61)] group-hover:translate-x-full group-hover:text-white"
                                     fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"
                                     stroke-linejoin="round">
                                     <path d="M5 12h14" />
                                     <path d="m13 6 6 6-6 6" />
                                 </svg>
                                 <svg viewBox="0 0 24 24"
-                                    class="absolute inset-0 h-4 w-4 -translate-x-full transition-transform duration-700 ease-[cubic-bezier(0.74,0.36,0.41,0.61)] group-hover:translate-x-0"
+                                    class="absolute inset-0 h-4 w-4 -translate-x-full transition-transform duration-700 ease-[cubic-bezier(0.74,0.36,0.41,0.61)] group-hover:translate-x-0 group-hover:text-white"
                                     fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"
                                     stroke-linejoin="round">
                                     <path d="M5 12h14" />
@@ -346,11 +352,11 @@
 
             <img src="./assets/images/miscelaneous/hills.png" alt="Hills"
                 class="hero-hill absolute bottom-[0px] min-[410px]:max-[640px]:bottom-[-38px] min-[700px]:bottom-[-72px] lg:bottom-[-120px] xl:bottom-[-210px] min-[1866px]:bottom-[-380px] left-0 w-full min-w-full h-auto z-0 opacity-70 scale-x-[1.25]"
-                data-parallax-depth="0" data-parallax-scale="0.26">
+                data-parallax-depth="0" data-parallax-scale="0.26" loading="eager" decoding="async" fetchpriority="high" width="1920" height="720">
 
             <img src="./assets/images/miscelaneous/hills.png" alt="Hills"
                 class="hero-hill absolute bottom-[-10px] min-[410px]:max-[640px]:bottom-[-60px] min-[700px]:bottom-[-98px] lg:bottom-[-160px] xl:bottom-[-245px] min-[1866px]:bottom-[-380px] left-0 w-full min-w-full h-auto z-20"
-                data-parallax-depth="0.35" data-parallax-scale="0.12">
+                data-parallax-depth="0.35" data-parallax-scale="0.12" loading="eager" decoding="async" fetchpriority="high" width="1920" height="720">
 
             <div
                 class="pointer-events-none absolute inset-x-0 bottom-0 z-[30] h-[110px] bg-gradient-to-b from-white/0 via-white/45 to-white">
@@ -375,14 +381,14 @@
             </div>
 
             <div class="relative z-10 mx-auto max-w-3xl px-5">
-                <h2 class="text-center max-w-2xl text-[38px] font-bold font-inter leading-[35px] tracking-[-0.045em] text-charcoal mb-4 lg:text-6xl"
-                    data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
+                <h2
+                    class="text-center max-w-2xl text-[38px] font-bold font-inter leading-[35px] tracking-[-0.045em] text-charcoal mb-4 lg:text-6xl">
                     Uw zonwering, waar u die nodig heeft
                 </h2>
-                <p
-                    class="text-center font-inter tracking-[-0.045em] text-gray-600 mb-12 max-w-2xl mx-auto text-[15px] lg:text-lg">
+                <p class="text-center font-inter tracking-[-0.045em] text-gray-600 mb-12 max-w-2xl mx-auto text-[15px] lg:text-lg"
+                    data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
                     Met betrouwbare monteurs, bekende merken en de juiste partners zorgen wij ervoor dat u perfect
-                    wordt geholpen met het vinden van de juiste zonwering en buitenleven&shy;oplossingen voor uw
+                    wordt geholpen met het vinden van de juiste zonwering en buitenleven&shy; oplossingen voor uw
                     situatie.
                 </p>
                 <div class="mb-12">
@@ -579,7 +585,7 @@
                                 Zonwering
                             </p>
                             <p class="mt-6 font-inter text-[28px] leading-[1.08] tracking-[0.02em] text-charcoal sm:text-[42px] lg:text-[48px]"
-                                data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0" data-scroll-drift="20">
+                                data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
                                 Onze zonwering beweegt slim mee met uw woning.
                             </p>
                             <p
@@ -636,25 +642,25 @@
                             aria-label="Lees meer over dit project: breed knikarmscherm voor schaduwdekking over het gehele terras">
 
                             <img src="./assets/images/diensten/zonnescherm/project-02-01.jpg" alt="Zonneschermen"
-                                class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                                class="absolute inset-0 h-full w-full object-cover"
                                 decoding="async">
 
                             <div
-                                class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/5 via-black/20 to-black/80">
+                                class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/5 via-black/20 to-black/80 opacity-50 transition-opacity duration-500 group-hover:from-black/50 group-hover:via-black/60 group-hover:to-black/70 group-hover:opacity-100">
                             </div>
 
-                            <div class="relative z-10 flex h-full flex-col justify-end gap-4 p-6">
-                                <span class="block w-full border-t border-white/60"></span>
-                                <h3 class="font-inter text-[22px] font-bold leading-[1.15] tracking-[-0.03em] text-white"
+                            <div class="relative z-10 flex h-full flex-col justify-end gap-4 p-6 transition-transform duration-500 group-hover:-translate-y-2">
+                                <span class="block w-full border-t border-white/60 transition-transform duration-500 group-hover:-translate-y-1"></span>
+                                <h3 class="font-inter text-[22px] font-bold leading-[1.15] tracking-[-0.03em] text-white transition-transform duration-500 group-hover:-translate-y-1"
                                     data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
                                     Zonneschermen
                                 </h3>
-                                <p class="font-inter text-[13px] leading-[1.5] tracking-[-0.02em] text-white/80"
+                                <p class="font-inter text-[13px] leading-[1.5] tracking-[-0.02em] text-white/80 transition-transform duration-500 group-hover:-translate-y-1"
                                     data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
                                     Met onze zonneschermen houdt u de zon buiten en de warmte binnen. Zo blijft uw
                                     woning koel en comfortabel, zelfs op de warmste dagen.
                                 </p>
-                                <span class="mt-1 block w-full border-t border-white/45"></span>
+                                <span class="mt-1 block w-full border-t border-white/45 transition-transform duration-500 group-hover:-translate-y-1"></span>
                             </div>
                         </a>
 
@@ -665,24 +671,26 @@
 
                             <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop"
                                 alt="Rolluiken"
-                                class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                                class="absolute inset-0 h-full w-full object-cover"
                                 loading="lazy" decoding="async">
 
                             <div
-                                class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/5 via-black/20 to-black/80">
+                                class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/5 via-black/20 to-black/80 opacity-50 transition-opacity duration-500 group-hover:from-black/50 group-hover:via-black/60 group-hover:to-black/70 group-hover:opacity-100">
                             </div>
 
-                            <div class="relative z-10 flex h-full flex-col justify-end gap-4 p-6">
-                                <span class="block w-full border-t border-white/60"></span>
+                            <div class="relative z-10 flex h-full flex-col justify-end gap-4 p-6 transition-transform duration-500 group-hover:-translate-y-2">
+                                <span class="block w-full border-t border-white/60 transition-transform duration-500 group-hover:-translate-y-1"></span>
                                 <h3
-                                    class="font-inter text-[22px] font-bold leading-[1.15] tracking-[-0.03em] text-white">
+                                    class="font-inter text-[22px] font-bold leading-[1.15] tracking-[-0.03em] text-white transition-transform duration-500 group-hover:-translate-y-1"
+                                    data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
                                     Rolluiken
                                 </h3>
-                                <p class="font-inter text-[13px] leading-[1.5] tracking-[-0.02em] text-white/80">
+                                <p class="font-inter text-[13px] leading-[1.5] tracking-[-0.02em] text-white/80 transition-transform duration-500 group-hover:-translate-y-1"
+                                    data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
                                     Met onze rolluiken zorgt u voor extra veiligheid, privacy en isolatie. Elektrische
                                     bediening en strakke afwerking zijn gegarandeerd.
                                 </p>
-                                <span class="mt-1 block w-full border-t border-white/45"></span>
+                                <span class="mt-1 block w-full border-t border-white/45 transition-transform duration-500 group-hover:-translate-y-1"></span>
                             </div>
                         </a>
 
@@ -693,24 +701,26 @@
 
                             <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop"
                                 alt="Screens"
-                                class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                                class="absolute inset-0 h-full w-full object-cover"
                                 loading="lazy" decoding="async">
 
                             <div
-                                class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/5 via-black/20 to-black/80">
+                                class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/5 via-black/20 to-black/80 opacity-50 transition-opacity duration-500 group-hover:from-black/50 group-hover:via-black/60 group-hover:to-black/70 group-hover:opacity-100">
                             </div>
 
-                            <div class="relative z-10 flex h-full flex-col justify-end gap-4 p-6">
-                                <span class="block w-full border-t border-white/60"></span>
+                            <div class="relative z-10 flex h-full flex-col justify-end gap-4 p-6 transition-transform duration-500 group-hover:-translate-y-2">
+                                <span class="block w-full border-t border-white/60 transition-transform duration-500 group-hover:-translate-y-1"></span>
                                 <h3
-                                    class="font-inter text-[22px] font-bold leading-[1.15] tracking-[-0.03em] text-white">
+                                    class="font-inter text-[22px] font-bold leading-[1.15] tracking-[-0.03em] text-white transition-transform duration-500 group-hover:-translate-y-1"
+                                    data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
                                     Buitenscreens
                                 </h3>
-                                <p class="font-inter text-[13px] leading-[1.5] tracking-[-0.02em] text-white/80">
+                                <p class="font-inter text-[13px] leading-[1.5] tracking-[-0.02em] text-white/80 transition-transform duration-500 group-hover:-translate-y-1"
+                                    data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
                                     Met onze buitenscreens kunt u genieten van een overdekt terras, zonder dat u last
                                     heeft van wind of regen.
                                 </p>
-                                <span class="mt-1 block w-full border-t border-white/45"></span>
+                                <span class="mt-1 block w-full border-t border-white/45 transition-transform duration-500 group-hover:-translate-y-1"></span>
                             </div>
                         </a>
 
@@ -721,24 +731,26 @@
 
                             <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop"
                                 alt="Rolgordijnen"
-                                class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                                class="absolute inset-0 h-full w-full object-cover"
                                 loading="lazy" decoding="async">
 
                             <div
-                                class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/5 via-black/20 to-black/80">
+                                class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/5 via-black/20 to-black/80 opacity-50 transition-opacity duration-500 group-hover:from-black/50 group-hover:via-black/60 group-hover:to-black/70 group-hover:opacity-100">
                             </div>
 
-                            <div class="relative z-10 flex h-full flex-col justify-end gap-4 p-6">
-                                <span class="block w-full border-t border-white/60"></span>
+                            <div class="relative z-10 flex h-full flex-col justify-end gap-4 p-6 transition-transform duration-500 group-hover:-translate-y-2">
+                                <span class="block w-full border-t border-white/60 transition-transform duration-500 group-hover:-translate-y-1"></span>
                                 <h3
-                                    class="font-inter text-[22px] font-bold leading-[1.15] tracking-[-0.03em] text-white">
+                                    class="font-inter text-[22px] font-bold leading-[1.15] tracking-[-0.03em] text-white transition-transform duration-500 group-hover:-translate-y-1"
+                                    data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
                                     Rolgordijnen
                                 </h3>
-                                <p class="font-inter text-[13px] leading-[1.5] tracking-[-0.02em] text-white/80">
+                                <p class="font-inter text-[13px] leading-[1.5] tracking-[-0.02em] text-white/80 transition-transform duration-500 group-hover:-translate-y-1"
+                                    data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
                                     Met onze rolgordijnen kunt u de lichtinval in uw woning eenvoudig regelen, terwijl u
                                     geniet van een strak en modern interieur.
                                 </p>
-                                <span class="mt-1 block w-full border-t border-white/45"></span>
+                                <span class="mt-1 block w-full border-t border-white/45 transition-transform duration-500 group-hover:-translate-y-1"></span>
                             </div>
                         </a>
 
@@ -1043,7 +1055,7 @@
                             </p>
                             <h2
                                 class="mt-6 font-inter text-[28px] leading-[1.08] tracking-[0.02em] text-charcoal sm:text-[42px] lg:text-[48px]">
-                                Experts in klimaat- en zontechniek.
+                                Specialist in klimaat- en zon&shy;techniek.
                             </h2>
                             <p class="mt-7 font-inter text-[19px] leading-[1.22] tracking-[-0.03em] text-charcoal/90 sm:text-[22px]"
                                 data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
@@ -1052,9 +1064,9 @@
                             </p>
                             <p class="mt-7 font-inter text-[19px] leading-[1.22] tracking-[-0.03em] text-charcoal/90 sm:text-[22px]"
                                 data-line-reveal data-line-reveal-stagger="100" data-line-reveal-delay="0">
-                                Dit betekent dat wij ook een bak aan kennis en ervaring op het gebied van klimaat- en
-                                zontechniek hebben. Wij kijken hierdoor ook bijvoorbeeld naar verduurzaming,
-                                energie&shy;besparing en extra comfort.
+                                Dit betekent dat wij ook ruime kennis en ervaring hebben op het gebied van klimaat- en
+                                zontechniek. Wij kijken hierdoor ook naar verduurzaming, energie&shy;besparing en extra
+                                comfort.
                             </p>
                             <div
                                 class="mt-8 overflow-hidden rounded-[22px] border border-charcoal/10 shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
@@ -1123,7 +1135,7 @@
                     Lumazon
                 </p>
                 <h2 class="mt-6 text-2xl leading-tight text-white sm:text-4xl">
-                    Duurzame installaties, helder advies en vakkundige montage.
+                    Vakkundig, duurzaam en helder. Onze focus ligt op de beste service.
                 </h2>
                 <p class="mt-4 text-[16px] font-medium leading-relaxed text-white/80 max-w-2xl">
                     Lokale expert in duurzame installaties uit de Zaanstreek met focus op kwaliteit en service.
@@ -1131,6 +1143,19 @@
                     rolgordijnen en screens voor zowel particulieren als bedrijven.
                 </p>
                 <div class="mt-4 flex items-center gap-3">
+                    <!-- Klimazon -->
+                    <a href="https://klimazon.nl/" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center justify-center w-10 h-10 rounded-full bg-white/0"
+                        aria-label="Klimazon">
+                        <img src="./assets/images/logos/klimazon-logo.png" alt="Klimazon"
+                            class="w-10 h-10 rounded-full bg-white p-[0.4rem]" loading="lazy" decoding="async" />
+                    </a>
+                    <!-- Lumazon -->
+                    <a href="https://lumazon.nl/"
+                        class="flex items-center justify-center w-10 h-10 rounded-full bg-white/0" aria-label="Lumazon">
+                        <img src="./assets/images/logos/lumazon-icon-zwart-geel.png" alt="Lumazon"
+                            class="w-10 h-10 rounded-full bg-white p-[0.4rem]" loading="lazy" decoding="async" />
+                    </a>
                     <!-- Google -->
                     <a href="https://www.google.com/search?q=reviews+voor+lumazon" target="_blank"
                         rel="noopener noreferrer"
@@ -1153,66 +1178,46 @@
                         <img src="./assets/images/logos/homedeal-logo.png" alt="Homedeal"
                             class="w-10 h-10 rounded-full bg-[#19bd5e] p-1" loading="lazy" decoding="async" />
                     </a>
-                    <!-- Klimazon -->
-                    <a href="https://klimazon.nl/" target="_blank" rel="noopener noreferrer"
-                        class="flex items-center justify-center w-10 h-10 rounded-full bg-white/0"
-                        aria-label="Klimazon">
-                        <img src="./assets/images/logos/klimazon-logo.png" alt="Klimazon"
-                            class="w-10 h-10 rounded-full bg-white p-[0.4rem]" loading="lazy" decoding="async" />
-                    </a>
                 </div>
             </div>
 
             <div class="lg:col-span-5">
                 <div class="rounded-[10px] lg:rounded-2xl lg:p-6">
-                    <h3 class="text-lg font-semibold text-white">Wilt u advies?</h3>
-                    <p class="mt-2 text-sm font-medium text-white/80">
+                    <p
+                        class="inline-flex items-center gap-2 font-mono uppercase text-[12px] font-semibold tracking-[0.01em] text-white/75">
+                        <span class="h-[7px] w-[7px] bg-white"></span>
+                        Advies & Contact
+                    </p>
+                    <p class="mt-6 text-[16px] font-medium leading-relaxed text-white/80">
                         Wij reageren vrijwel altijd binnen 1 werkdag. Vrijblijvend en afgestemd op uw aanvraag.
                     </p>
-                    <div class="mt-5 flex flex-wrap gap-3">
-                        <a href="./offerte/"
-                            class="inline-flex items-center justify-center rounded-[5px] bg-white px-4 py-2 text-sm font-bold text-charcoal">
-                            Offerte aanvragen
-                        </a>
-                        <a href="./contact/"
-                            class="inline-flex items-center justify-center rounded-[5px] border border-white/30 px-4 py-2 text-sm font-semibold text-white/90">
-                            Contact opnemen
-                        </a>
-                    </div>
-                    <div class="mt-5 flex items-center gap-3">
-                        <a href="tel:+31654216787" class="text-sm font-semibold text-white/90">
-                            Bellen? +31 6 54 21 67 87
-                        </a>
-                    </div>
-                    <div class="mt-4 flex items-center gap-3">
-                        <!-- WhatsApp -->
-                        <a href="https://wa.me/31654216787" target="_blank" rel="noopener noreferrer"
-                            class="flex items-center justify-center w-10 h-10 rounded-full bg-white/0"
-                            aria-label="Chat via WhatsApp">
-                            <svg class="w-10 h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175.216 175.552">
-                                <defs>
-                                    <linearGradient id="b" x1="85.915" x2="86.535" y1="32.567" y2="137.092"
-                                        gradientUnits="userSpaceOnUse">
-                                        <stop offset="0" stop-color="#57d163" />
-                                        <stop offset="1" stop-color="#23b33a" />
-                                    </linearGradient>
-                                    <filter id="a" width="1.115" height="1.114" x="-.057" y="-.057"
-                                        color-interpolation-filters="sRGB">
-                                        <feGaussianBlur stdDeviation="3.531" />
-                                    </filter>
-                                </defs>
-                                <path fill="#b3b3b3"
-                                    d="m54.532 138.45 2.235 1.324c9.387 5.571 20.15 8.518 31.126 8.523h.023c33.707 0 61.139-27.426 61.153-61.135.006-16.335-6.349-31.696-17.895-43.251A60.75 60.75 0 0 0 87.94 25.983c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535l1.455 2.312-6.179 22.558zm-40.811 23.544L24.16 123.88c-6.438-11.154-9.825-23.808-9.821-36.772.017-40.556 33.021-73.55 73.578-73.55 19.681.01 38.154 7.669 52.047 21.572s21.537 32.383 21.53 52.037c-.018 40.553-33.027 73.553-73.578 73.553h-.032c-12.313-.005-24.412-3.094-35.159-8.954zm0 0"
-                                    filter="url(#a)" />
-                                <path fill="#fff"
-                                    d="m12.966 161.238 10.439-38.114a73.42 73.42 0 0 1-9.821-36.772c.017-40.556 33.021-73.55 73.578-73.55 19.681.01 38.154 7.669 52.047 21.572s21.537 32.383 21.53 52.037c-.018 40.553-33.027 73.553-73.578 73.553h-.032c-12.313-.005-24.412-3.094-35.159-8.954z" />
-                                <path fill="url(#linearGradient1780)"
-                                    d="M87.184 25.227c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535l1.455 2.312-6.179 22.559 23.146-6.069 2.235 1.324c9.387 5.571 20.15 8.518 31.126 8.524h.023c33.707 0 61.14-27.426 61.153-61.135a60.75 60.75 0 0 0-17.895-43.251 60.75 60.75 0 0 0-43.235-17.929z" />
-                                <path fill="url(#b)"
-                                    d="M87.184 25.227c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535l1.455 2.313-6.179 22.558 23.146-6.069 2.235 1.324c9.387 5.571 20.15 8.517 31.126 8.523h.023c33.707 0 61.14-27.426 61.153-61.135a60.75 60.75 0 0 0-17.895-43.251 60.75 60.75 0 0 0-43.235-17.928z" />
-                                <path fill="#fff" fill-rule="evenodd"
-                                    d="M68.772 55.603c-1.378-3.061-2.828-3.123-4.137-3.176l-3.524-.043c-1.226 0-3.218.46-4.902 2.3s-6.435 6.287-6.435 15.332 6.588 17.785 7.506 19.013 12.718 20.381 31.405 27.75c15.529 6.124 18.689 4.906 22.061 4.6s10.877-4.447 12.408-8.74 1.532-7.971 1.073-8.74-1.685-1.226-3.525-2.146-10.877-5.367-12.562-5.981-2.91-.919-4.137.921-4.746 5.979-5.819 7.206-2.144 1.381-3.984.462-7.76-2.861-14.784-9.124c-5.465-4.873-9.154-10.891-10.228-12.73s-.114-2.835.808-3.751c.825-.824 1.838-2.147 2.759-3.22s1.224-1.84 1.836-3.065.307-2.301-.153-3.22-4.032-10.011-5.666-13.647" />
-                            </svg>
+                    <div class="mt-5 flex flex-wrap items-center gap-3">
+                        <a href="./contact/" rel="noopener noreferrer"
+                            class="group relative isolate inline-flex items-center gap-5 overflow-hidden rounded-full bg-white py-1.5 pl-6 pr-1.5 font-inter text-[16px] font-semibold tracking-tight text-charcoal opacity-100 transition-[padding,transform,opacity,color] duration-700 ease-out hover:text-charcoal [transform:translateZ(0)]"
+                            style="--btn-cta-accent:#f4a104;">
+                            <span aria-hidden="true"
+                                class="btn-cta__glow pointer-events-none absolute right-1.5 top-1/2 z-0 h-10 w-10 -translate-y-1/2 rounded-full transition-transform duration-500 ease-in group-hover:scale-[9]"></span>
+                            <span
+                                class="relative font-[500] z-10 transition-[opacity,transform,color] group-hover:text-white duration-700 ease-out">Contact</span>
+                            <span
+                                class="btn-cta__icon relative z-10 inline-flex h-10 w-10 items-center justify-center rounded-full transition-[opacity,transform] duration-700 ease-out group-hover:translate-x-0.5 group-hover:scale-[0.96]">
+                                <span aria-hidden="true" class="relative h-4 w-4 overflow-hidden">
+                                    <svg viewBox="0 0 24 24"
+                                        class="absolute inset-0 h-4 w-4 transition-transform duration-700 ease-[cubic-bezier(0.74,0.36,0.41,0.61)] group-hover:translate-x-full"
+                                        fill="none" stroke="#2b2b2b" stroke-width="2.1" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M5 12h14" />
+                                        <path d="m13 6 6 6-6 6" />
+                                    </svg>
+                                    <svg viewBox="0 0 24 24"
+                                        class="absolute inset-0 h-4 w-4 -translate-x-full transition-transform duration-700 ease-[cubic-bezier(0.74,0.36,0.41,0.61)] group-hover:translate-x-0"
+                                        fill="none" stroke="#2b2b2b" stroke-width="2.1" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M5 12h14" />
+                                        <path d="m13 6 6 6-6 6" />
+                                    </svg>
+                                </span>
+                            </span>
                         </a>
                     </div>
                 </div>
@@ -1222,35 +1227,45 @@
         <!-- Content cards -->
         <div class="mt-10 grid gap-10 lg:grid-cols-12">
             <nav aria-label="Footer diensten" class="lg:col-span-4 rounded-xl">
-                <h3 class="mb-4 text-base font-semibold tracking-wide text-white/95">Diensten</h3>
-                <ul class="space-y-2 text-sm font-medium text-white/90 max-w-[250px]">
+                <p
+                    class="inline-flex items-center gap-2 font-mono uppercase text-[12px] font-semibold tracking-[0.01em] text-white/75">
+                    <span class="h-[7px] w-[7px] bg-white"></span>
+                    Navigatie
+                </p>
+                <ul class="mt-8 space-y-2 text-sm font-medium text-white/90 max-w-[250px]">
                     <li>
-                        <a href="./diensten/zonneschermen" class="flex items-center justify-between rounded-md py-1">
+                        <a href="./diensten/zonneschermen/" class="flex items-center justify-between rounded-md py-1">
                             <span class="truncate">Zonneschermen</span>
                             <span class="text-xl leading-none opacity-80">→</span>
                         </a>
                     </li>
                     <li>
-                        <a href="./diensten/rolluiken" class="flex items-center justify-between rounded-md py-1">
+                        <a href="./diensten/rolluiken/" class="flex items-center justify-between rounded-md py-1">
                             <span class="truncate">Rolluiken</span>
                             <span class="text-xl leading-none opacity-80">→</span>
                         </a>
                     </li>
                     <li>
-                        <a href="./diensten/screens" class="flex items-center justify-between rounded-md py-1">
+                        <a href="./diensten/screens/" class="flex items-center justify-between rounded-md py-1">
                             <span class="truncate">Screens</span>
                             <span class="text-xl leading-none opacity-80">→</span>
                         </a>
                     </li>
                     <li>
-                        <a href="./diensten/rolgordijnen" class="flex items-center justify-between rounded-md py-1">
+                        <a href="./diensten/rolgordijnen/" class="flex items-center justify-between rounded-md py-1">
                             <span class="truncate">Rolgordijnen</span>
                             <span class="text-xl leading-none opacity-80">→</span>
                         </a>
                     </li>
                     <li>
-                        <a href="./diensten" class="flex items-center justify-between rounded-md py-1">
-                            <span class="truncate">Alle diensten</span>
+                        <a href="./diensten/" class="flex items-center justify-between rounded-md py-1">
+                            <span class="truncate">Diensten</span>
+                            <span class="text-xl leading-none opacity-80">→</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./projecten/" class="flex items-center justify-between rounded-md py-1">
+                            <span class="truncate">Projecten</span>
                             <span class="text-xl leading-none opacity-80">→</span>
                         </a>
                     </li>
@@ -1258,9 +1273,13 @@
             </nav>
 
             <div class="lg:col-span-4 rounded-[10px] flex flex-col">
-                <h3 class="mb-4 text-sm font-bold uppercase tracking-wide italic text-white/90">Contact</h3>
+                <p
+                    class="inline-flex items-center gap-2 font-mono uppercase text-[12px] font-semibold tracking-[0.01em] text-white/75">
+                    <span class="h-[7px] w-[7px] bg-white"></span>
+                    Contact
+                </p>
 
-                <ul class="space-y-2 text-sm font-medium text-white/90 max-w-[250px]">
+                <ul class="mt-8 space-y-2 text-sm font-medium text-white/90 max-w-[250px]">
                     <li>
                         <a href="tel:+31654216787" class="flex items-center gap-3">
                             <span class="text-2xl leading-none">•</span><span class="text-nowrap">+31 6 54 21 67
@@ -1281,10 +1300,12 @@
 
 
             <div class="lg:col-span-4 rounded-[10px] flex flex-col">
-                <h3 class="mb-4 text-sm font-bold uppercase tracking-wide italic text-white/90">
-                    Bedrijfsinformatie
-                </h3>
-                <p class="flex text-sm font-medium text-white/90 leading-relaxed">
+                <p
+                    class="inline-flex items-center gap-2 font-mono uppercase text-[12px] font-semibold tracking-[0.01em] text-white/75">
+                    <span class="h-[7px] w-[7px] bg-white"></span>
+                    Navigatie
+                </p>
+                <p class="flex mt-8 text-sm font-medium text-white/90 leading-relaxed">
                     <span class="w-32 shrink-0">KVK-nummer:</span>
                     <span>93441630</span>
                 </p>
@@ -1302,14 +1323,18 @@
         <div class="mt-8 rounded-[10px]">
             <div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
                 <div>
-                    <h3 class="mb-3 text-sm font-bold uppercase tracking-wide italic text-white/90">Werkgebied</h3>
-                    <p class="text-sm font-medium text-white/70 leading-relaxed max-w-3xl">
+                    <p
+                        class="inline-flex items-center gap-2 font-mono uppercase text-[12px] font-semibold tracking-[0.01em] text-white/75">
+                        <span class="h-[7px] w-[7px] bg-white"></span>
+                        Werkgebied
+                    </p>
+                    <p class="mt-8 text-sm font-medium text-white/70 leading-relaxed max-w-3xl">
                         Actief in de Zaanstreek en Noord-Holland, waaronder Assendelft, Zaandam, Wormer, Wormerveer,
                         Krommenie, Koog aan de Zaan, Westzaan, Oostzaan, Beverwijk, Heemskerk, Velsen, IJmuiden,
                         Haarlem, Haarlemmermeer, Alkmaar en omliggende regio’s.
                     </p>
                 </div>
-                <a href="https://share.google/IPHFPOaC3nfe0ucKF" target="_blank"
+                <a href="https://www.google.com/search?q=reviews+voor+lumazon" target="_blank"
                     class="inline-flex w-max items-center gap-3 rounded-[10px] border border-black/10 bg-white px-4 py-2 shadow-sm">
                     <div class="w-max rounded-[5px] px-2 py-1 bg-white">
                         <img src="./assets/images/logos/google-logo.png" alt="Google reviews" class="h-4" loading="lazy"
@@ -1317,7 +1342,7 @@
                     </div>
                     <span class="text-yellow-400 text-sm">★★★★★</span>
                     <span class="text-sm text-slate-500">|</span>
-                    <span class="text-sm text-slate-500 text-nowrap">50+ reviews</span>
+                    <span class="text-sm text-slate-500 text-nowrap">Bekijk reviews</span>
                 </a>
             </div>
         </div>
