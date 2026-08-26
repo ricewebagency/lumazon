@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const createReviewTile = (review) => {
         const card = document.createElement('article');
         card.className =
-            'flex w-[min(88vw,380px)] snap-start shrink-0 flex-col gap-3 self-start rounded-[22px] border border-charcoal/20 bg-white p-4';
+            'flex w-[min(88vw,380px)] snap-start shrink-0 flex-col gap-3 self-start rounded-[22px] border border-charcoal/20 bg-white p-4 md:w-[calc((100%-1rem)/2)] lg:w-[calc((100%-2rem)/3)] xl:w-[calc((100%-3rem)/4)]';
 
         const header = document.createElement('div');
         header.className = 'flex items-start justify-between gap-2';
@@ -327,7 +327,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const dot = document.createElement('button');
             dot.type = 'button';
             dot.className =
-                'h-0.5 w-8 rounded-full bg-gray-300 transition-colors duration-200 hover:bg-charcoal/60';
+                'h-0.5 w-8 rounded-full bg-gray-300 transition-colors duration-200 hover:bg-white/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal';
             dot.setAttribute('data-reviews-dot', `${index}`);
             dot.setAttribute('aria-label', `Ga naar review ${index + 1}`);
             dot.setAttribute('aria-current', 'false');

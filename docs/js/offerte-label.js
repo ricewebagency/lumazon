@@ -95,9 +95,29 @@ document.addEventListener('DOMContentLoaded', () => {
     labelState.set(label, state);
     label.style.touchAction = 'none';
 
+    const releaseIfCaptured = (pointerId) => {
+      if (pointerId === null || pointerId === undefined) {
+        return;
+      }
+
+      if (label.hasPointerCapture(pointerId)) {
+        label.releasePointerCapture(pointerId);
+      }
+    };
+
+    const resetPointerState = () => {
+      releaseIfCaptured(state.pointerId);
+      state.dragging = false;
+      state.dragOffsetY = 0;
+      state.pointerId = null;
+      resetSwipeVisualState(label);
+    };
+
     label.addEventListener('pointerdown', (event) => {
       if (state.dismissed) return;
-      if (event.pointerType === 'mouse' && event.button !== 0) return;
+      if (event.pointerType === 'mouse') return;
+      if (event.pointerType !== 'touch' && event.pointerType !== 'pen') return;
+      if (event.button !== 0) return;
 
       state.pointerId = event.pointerId;
       state.startY = event.clientY;
@@ -145,14 +165,24 @@ document.addEventListener('DOMContentLoaded', () => {
       state.dragging = false;
       state.dragOffsetY = 0;
       state.pointerId = null;
-
-      if (label.hasPointerCapture(event.pointerId)) {
-        label.releasePointerCapture(event.pointerId);
-      }
+      releaseIfCaptured(event.pointerId);
     };
 
     label.addEventListener('pointerup', finishSwipe);
     label.addEventListener('pointercancel', finishSwipe);
+    label.addEventListener('lostpointercapture', () => {
+      state.pointerId = null;
+      state.dragging = false;
+      state.dragOffsetY = 0;
+      resetSwipeVisualState(label);
+    });
+
+    window.addEventListener('blur', resetPointerState);
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState !== 'visible') {
+        resetPointerState();
+      }
+    });
 
     label.addEventListener('click', (event) => {
       if (state.dismissed || state.suppressClick) {

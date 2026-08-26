@@ -5,302 +5,78 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  const track = carousel.querySelector('[data-project-carousel-track]');
-  const scrollContainer = carousel.querySelector('[data-project-carousel-scroll]') || carousel;
+  const scrollContainer = carousel.querySelector('[data-project-carousel-scroll]');
   const prevButton = carousel.querySelector('[data-project-carousel-prev]');
   const nextButton = carousel.querySelector('[data-project-carousel-next]');
   const cards = Array.from(carousel.querySelectorAll('[data-project-carousel-card]'));
-  const reduceMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const firstArticleTitle = carousel.querySelector('[data-project-first-article-title]');
-  const firstArticleCopy = carousel.querySelector('[data-project-first-article-copy]');
 
-  if (!track || !prevButton || !nextButton || cards.length < 2) {
+  if (!scrollContainer || !prevButton || !nextButton || cards.length < 1) {
     return;
   }
 
-  const setupFirstArticleStagger = () => {
-    const firstArticleItems = [firstArticleTitle, firstArticleCopy].filter(Boolean);
+  const reduceMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-    if (!firstArticleItems.length) {
-      return;
-    }
-
-    if (reduceMotionQuery.matches) {
-      firstArticleItems.forEach((item) => {
-        item.style.opacity = '1';
-        item.style.transform = 'translate3d(0, 0, 0)';
-      });
-      return;
-    }
-
-    firstArticleItems.forEach((item, index) => {
-      item.style.opacity = '0';
-      item.style.transform = 'translate3d(0, 12px, 0)';
-      item.style.willChange = 'opacity, transform';
-      item.style.transitionProperty = 'opacity, transform';
-      item.style.transitionDuration = '700ms';
-      item.style.transitionTimingFunction = 'cubic-bezier(0.22, 1, 0.36, 1)';
-      item.style.transitionDelay = `${140 + index * 140}ms`;
-    });
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) {
-            return;
-          }
-
-          window.requestAnimationFrame(() => {
-            firstArticleItems.forEach((item) => {
-              item.style.opacity = '1';
-              item.style.transform = 'translate3d(0, 0, 0)';
-            });
-          });
-
-          observer.unobserve(entry.target);
-        });
-      },
-      {
-        root: null,
-        threshold: 0.35,
-        rootMargin: '0px 0px -8% 0px',
-      }
-    );
-
-    observer.observe(carousel);
-  };
-
-  const createClone = (card) => {
-    const clone = card.cloneNode(true);
-
-    clone.setAttribute('aria-hidden', 'true');
-    clone.removeAttribute('data-project-carousel-card');
-
-    clone.querySelectorAll('a, button, input, select, textarea, [tabindex]').forEach((element) => {
-      element.tabIndex = -1;
-    });
-
-    return clone;
-  };
-
-  const appendCloneRow = () => {
-    const fragment = document.createDocumentFragment();
-
-    cards.forEach((card) => {
-      fragment.appendChild(createClone(card));
-    });
-
-    track.appendChild(fragment);
-  };
-
-  appendCloneRow();
-  appendCloneRow();
-
-  const allCards = Array.from(track.children).filter((element) => element instanceof HTMLElement);
-
-  let step = 0;
-  let groupWidth = 0;
-  let isWrapping = false;
-  let activeUpdateFrame = 0;
-  let autoScrollTimer = 0;
-  let programmaticScrollTimeout = 0;
-  let isProgrammaticScroll = false;
-  let hasManualScroll = false;
-
-  allCards.forEach((card) => {
-    card.style.transformOrigin = 'center center';
-    card.style.transition = 'transform 450ms ease, opacity 450ms ease';
-    card.style.willChange = 'transform';
-    card.style.transform = 'scale(0.965)';
-    card.style.opacity = '0.92';
-  });
-
-  const setActiveCard = () => {
-    if (!allCards.length) {
-      return;
-    }
-
-    const scrollBounds = scrollContainer.getBoundingClientRect();
-    const viewportCenter = scrollBounds.left + scrollBounds.width / 2;
-    let activeCard = null;
-    let minDistance = Number.POSITIVE_INFINITY;
-
-    allCards.forEach((card) => {
-      const cardBounds = card.getBoundingClientRect();
-      const cardCenter = cardBounds.left + cardBounds.width / 2;
-      const distance = Math.abs(cardCenter - viewportCenter);
-
-      if (distance < minDistance) {
-        minDistance = distance;
-        activeCard = card;
-      }
-    });
-
-    allCards.forEach((card) => {
-      if (card === activeCard) {
-        card.style.transform = 'scale(1)';
-        card.style.opacity = '1';
-        card.style.zIndex = '1';
-        return;
-      }
-
-      card.style.transform = 'scale(0.965)';
-      card.style.opacity = '0.92';
-      card.style.zIndex = '0';
-    });
-  };
-
-  const scheduleActiveCardUpdate = () => {
-    if (activeUpdateFrame) {
-      return;
-    }
-
-    activeUpdateFrame = window.requestAnimationFrame(() => {
-      activeUpdateFrame = 0;
-      setActiveCard();
-    });
-  };
-
-  const stopAutoScroll = () => {
-    if (!autoScrollTimer) {
-      return;
-    }
-
-    window.clearInterval(autoScrollTimer);
-    autoScrollTimer = 0;
-  };
-
-  const markProgrammaticScroll = (duration = 750) => {
-    isProgrammaticScroll = true;
-    window.clearTimeout(programmaticScrollTimeout);
-    programmaticScrollTimeout = window.setTimeout(() => {
-      isProgrammaticScroll = false;
-    }, duration);
-  };
-
-  const startAutoScroll = () => {
-    if (autoScrollTimer || hasManualScroll || reduceMotionQuery.matches) {
-      return;
-    }
-
-    autoScrollTimer = window.setInterval(() => {
-      if (hasManualScroll) {
-        stopAutoScroll();
-        return;
-      }
-
-      scrollToIndex(getCurrentIndex() + 1);
-    }, 4500);
-  };
-
-  const getStep = () => {
+  const getCurrentCardIndex = () => {
     const firstCard = cards[0];
 
     if (!firstCard) {
-      return carousel.clientWidth || 0;
+      return 0;
     }
 
     const cardWidth = firstCard.getBoundingClientRect().width;
-    const trackStyle = window.getComputedStyle(track);
+    const trackStyle = window.getComputedStyle(scrollContainer.querySelector('[data-project-carousel-track]'));
     const gap = Number.parseFloat(trackStyle.columnGap || trackStyle.gap || '0');
+    const step = cardWidth + (Number.isFinite(gap) ? gap : 0);
 
-    return cardWidth + (Number.isFinite(gap) ? gap : 0);
-  };
-
-  const measure = () => {
-    step = getStep();
-    groupWidth = step * cards.length;
-  };
-
-  const getCurrentIndex = () => {
     if (!step) {
       return 0;
     }
 
-    return Math.round(scrollContainer.scrollLeft / step);
+    return Math.max(0, Math.min(cards.length - 1, Math.round(scrollContainer.scrollLeft / step)));
   };
 
-  const scrollToIndex = (index) => {
-    const totalPages = cards.length * 3;
+  const updateButtonState = () => {
+    const maxScrollLeft = Math.max(0, scrollContainer.scrollWidth - scrollContainer.clientWidth - 1);
+    const atStart = scrollContainer.scrollLeft <= 0;
+    const atEnd = scrollContainer.scrollLeft >= maxScrollLeft;
 
-    if (!step || !totalPages) {
+    prevButton.disabled = atStart;
+    nextButton.disabled = atEnd;
+    prevButton.setAttribute('aria-disabled', String(atStart));
+    nextButton.setAttribute('aria-disabled', String(atEnd));
+  };
+
+  const scrollToCard = (index) => {
+    const targetIndex = Math.max(0, Math.min(index, cards.length - 1));
+    const targetCard = cards[targetIndex];
+
+    if (!targetCard) {
       return;
     }
 
-    const targetIndex = ((index % totalPages) + totalPages) % totalPages;
-    const targetLeft = targetIndex * step;
-
-    markProgrammaticScroll();
-    scrollContainer.scrollTo({
-      left: targetLeft,
+    targetCard.scrollIntoView({
       behavior: reduceMotionQuery.matches ? 'auto' : 'smooth',
+      block: 'nearest',
+      inline: 'start',
     });
   };
 
-  const wrapIfNeeded = () => {
-    if (isWrapping || !step || !groupWidth) {
-      return;
-    }
-
-    const leftThreshold = step / 2;
-    const rightThreshold = groupWidth * 2 - step / 2;
-
-    if (scrollContainer.scrollLeft <= leftThreshold) {
-      isWrapping = true;
-      markProgrammaticScroll(100);
-      scrollContainer.scrollLeft += groupWidth;
-      requestAnimationFrame(() => {
-        isWrapping = false;
-        scheduleActiveCardUpdate();
-      });
-      return;
-    }
-
-    if (scrollContainer.scrollLeft >= rightThreshold) {
-      isWrapping = true;
-      markProgrammaticScroll(100);
-      scrollContainer.scrollLeft -= groupWidth;
-      requestAnimationFrame(() => {
-        isWrapping = false;
-        scheduleActiveCardUpdate();
-      });
-    }
-  };
-
-  measure();
-  scrollContainer.scrollLeft = groupWidth;
-  scheduleActiveCardUpdate();
-  setupFirstArticleStagger();
-
   prevButton.addEventListener('click', () => {
-    scrollToIndex(getCurrentIndex() - 1);
+    scrollToCard(getCurrentCardIndex() - 1);
   });
 
   nextButton.addEventListener('click', () => {
-    scrollToIndex(getCurrentIndex() + 1);
+    scrollToCard(getCurrentCardIndex() + 1);
   });
 
   scrollContainer.addEventListener(
     'scroll',
     () => {
-      if (!isProgrammaticScroll) {
-        hasManualScroll = true;
-        stopAutoScroll();
-      }
-
-      wrapIfNeeded();
-      scheduleActiveCardUpdate();
+      window.requestAnimationFrame(updateButtonState);
     },
     { passive: true }
   );
 
-  window.addEventListener('resize', () => {
-    const currentIndex = getCurrentIndex();
-
-    measure();
-    scrollToIndex(currentIndex);
-    scheduleActiveCardUpdate();
-  });
-
-  startAutoScroll();
+  window.addEventListener('resize', updateButtonState);
+  updateButtonState();
 });

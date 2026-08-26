@@ -15,6 +15,7 @@ module.exports = {
         display: ['"Bebas Neue"', "sans-serif"],
         sans: ['"Montserrat"', "sans-serif"],
         inter: ['"Inter"', "sans-serif"],
+        geist: ['"Geist"', "sans-serif"],
         'instrument-serif': ['"Instrument Serif"', '"Instrument Serif Placeholder"', "serif"],
         montserrat: ['"Montserrat"', "sans-serif"],
         playfair: ['"Playfair Display"', "Georgia", '"Times New Roman"', "serif"],
