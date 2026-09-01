@@ -1,4 +1,63 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const header = document.querySelector('#header');
+  const headerColorStart = [0x2b, 0x2b, 0x2b];
+  const headerColorEnd = [0x48, 0x3b, 0x29];
+  const headerColorDistance = 1000;
+  const currentScript =
+    document.currentScript || document.querySelector('script[src*="header-menu.js"]');
+  const headerColorOverride = currentScript?.dataset.headerColor?.trim();
+
+  const channelToHex = (value) => value.toString(16).padStart(2, '0');
+
+  const mixChannel = (start, end, progress) => Math.round(start + (end - start) * progress);
+
+  const normalizeHexColor = (value) => {
+    if (!value) {
+      return null;
+    }
+
+    const hexMatch = value.match(/^#([\da-f]{3}|[\da-f]{6})$/i);
+    if (!hexMatch) {
+      return null;
+    }
+
+    const hexValue = hexMatch[1];
+    if (hexValue.length === 3) {
+      return `#${hexValue
+        .split('')
+        .map((char) => `${char}${char}`)
+        .join('')
+        .toLowerCase()}`;
+    }
+
+    return `#${hexValue.toLowerCase()}`;
+  };
+
+  const syncHeaderColorWithScroll = () => {
+    if (!header) {
+      return;
+    }
+
+    const progress = Math.max(0, Math.min(window.scrollY / headerColorDistance, 1));
+    const mixed = [
+      mixChannel(headerColorStart[0], headerColorEnd[0], progress),
+      mixChannel(headerColorStart[1], headerColorEnd[1], progress),
+      mixChannel(headerColorStart[2], headerColorEnd[2], progress)
+    ];
+
+    const nextColor = `#${channelToHex(mixed[0])}${channelToHex(mixed[1])}${channelToHex(mixed[2])}`;
+    header.style.setProperty('--header-brand', nextColor);
+  };
+
+  const normalizedHeaderColorOverride = normalizeHexColor(headerColorOverride);
+
+  if (header && normalizedHeaderColorOverride) {
+    header.style.setProperty('--header-brand', normalizedHeaderColorOverride);
+  } else {
+    syncHeaderColorWithScroll();
+    window.addEventListener('scroll', syncHeaderColorWithScroll, { passive: true });
+  }
+
   const toggleButton = document.querySelector('[data-header-menu-toggle]');
   const menu = document.querySelector('[data-header-menu]');
   const headerSurface = document.querySelector('[data-header-surface]');
@@ -14,10 +73,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuCta = menu.querySelector('[data-header-menu-cta]');
     const menuCtaText = menu.querySelector('[data-header-menu-cta-text]');
     const menuCtaIcon = menu.querySelector('[data-header-menu-cta-icon]');
+    const mobileServicesToggle = menu.querySelector('[data-mobile-services-toggle]');
+    const mobileServicesPanel = menu.querySelector('[data-mobile-services-panel]');
+    const mobileServicesIcon = menu.querySelector('[data-mobile-services-icon]');
+    const mobileServicesItems = Array.from(menu.querySelectorAll('[data-mobile-services-item]'));
     let closeTimeout;
     let openFrameId = null;
     let menuTransitionToken = 0;
     let isMenuOpen = false;
+    let mobileServicesCloseTimeout;
+    let isMobileServicesOpen = false;
 
     const cancelPendingOpenFrame = () => {
       if (openFrameId === null) {
@@ -129,12 +194,80 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     };
 
+    const setMobileServicesItemsState = (isOpen) => {
+      if (!mobileServicesItems.length) {
+        return;
+      }
+
+      mobileServicesItems.forEach((item, index) => {
+        const delay = isOpen ? `${50 + index * 40}ms` : `${(mobileServicesItems.length - index - 1) * 30}ms`;
+
+        item.style.transitionDelay = delay;
+        item.style.opacity = isOpen ? '1' : '0';
+        item.style.transform = isOpen ? 'translateY(0)' : 'translateY(-4px)';
+      });
+    };
+
+    const closeMobileServicesMenu = ({ immediate = false } = {}) => {
+      if (!mobileServicesToggle || !mobileServicesPanel || !mobileServicesIcon) {
+        return;
+      }
+
+      window.clearTimeout(mobileServicesCloseTimeout);
+      const currentHeight = mobileServicesPanel.scrollHeight;
+
+      mobileServicesPanel.style.height = `${currentHeight}px`;
+
+      window.requestAnimationFrame(() => {
+        mobileServicesPanel.style.transitionDuration = immediate ? '0ms' : '260ms';
+        mobileServicesPanel.style.height = '0px';
+        mobileServicesPanel.style.opacity = '0';
+        mobileServicesPanel.style.transform = 'translateY(-4px)';
+      });
+
+      mobileServicesCloseTimeout = window.setTimeout(() => {
+        mobileServicesPanel.classList.add('pointer-events-none');
+      }, immediate ? 0 : 260);
+
+      mobileServicesToggle.setAttribute('aria-expanded', 'false');
+      mobileServicesIcon.classList.remove('rotate-180');
+      setMobileServicesItemsState(false);
+      isMobileServicesOpen = false;
+    };
+
+    const openMobileServicesMenu = () => {
+      if (!mobileServicesToggle || !mobileServicesPanel || !mobileServicesIcon) {
+        return;
+      }
+
+      window.clearTimeout(mobileServicesCloseTimeout);
+      mobileServicesPanel.classList.remove('pointer-events-none');
+      mobileServicesPanel.style.transitionDuration = '320ms';
+      mobileServicesPanel.style.height = `${mobileServicesPanel.scrollHeight}px`;
+      mobileServicesPanel.style.opacity = '1';
+      mobileServicesPanel.style.transform = 'translateY(0)';
+
+      mobileServicesToggle.setAttribute('aria-expanded', 'true');
+      mobileServicesIcon.classList.add('rotate-180');
+      setMobileServicesItemsState(true);
+      isMobileServicesOpen = true;
+    };
+
+    const syncMobileServicesHeight = () => {
+      if (!isMobileServicesOpen || !mobileServicesPanel) {
+        return;
+      }
+
+      mobileServicesPanel.style.height = `${mobileServicesPanel.scrollHeight}px`;
+    };
+
     const closeMobileMenu = () => {
       menuTransitionToken += 1;
       const transitionToken = menuTransitionToken;
 
       clearTimeout(closeTimeout);
       cancelPendingOpenFrame();
+      closeMobileServicesMenu({ immediate: true });
       setMenuItemsState(false);
       setMenuCtaState(false);
 
@@ -179,6 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setMenuSurfaceState(true);
         setMenuItemsState(true);
         setMenuCtaState(true);
+        syncMobileServicesHeight();
       });
 
       toggleButton.setAttribute('aria-expanded', 'true');
@@ -189,6 +323,24 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     setMenuCtaState(false);
+    setMobileServicesItemsState(false);
+
+    if (mobileServicesToggle) {
+      mobileServicesToggle.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+
+        if (isMobileServicesOpen) {
+          closeMobileServicesMenu();
+        } else {
+          openMobileServicesMenu();
+        }
+
+        if (isMenuOpen) {
+          setMenuHeight(true);
+        }
+      });
+    }
 
     toggleButton.addEventListener('click', () => {
       if (isMenuOpen) {
@@ -221,6 +373,7 @@ document.addEventListener('DOMContentLoaded', () => {
         closeMobileMenu();
       } else if (isMenuOpen) {
         setMenuHeight(true);
+        syncMobileServicesHeight();
       }
     });
   }

@@ -1,5 +1,5 @@
-<header id="header" class="fixed inset-x-0 top-0 z-50" data-animate-reveal-down data-animate-no-blur
-    data-animate-delay="2.00">
+<header id="header" class="fixed inset-x-0 top-0 z-50" style="--header-brand:#2b2b2b;" data-animate-reveal-down
+    data-animate-no-blur data-animate-delay="2.00">
 
     <!-- Header menu bar -->
     <div class="mx-auto w-full max-w-7xl">
@@ -9,27 +9,32 @@
                     width="182.66667" height="182.66667" viewBox="0 0 182.66667 182.66667" class="h-4 w-4 scale-x-[-1]">
                     <defs id="defs1" />
                     <g id="g1">
-                        <path style="fill:#2b2b2b;fill-opacity:1"
+                        <path style="fill:var(--header-brand);fill-opacity:1"
                             d="M -0.94197245,90.798433 -1.1317634,-0.86823629 90.534905,-0.66312009 c 50.416665,0.1128139 85.966665,0.6282876 78.999995,1.1454972 C 79.284159,7.1826479 7.4945495,78.727162 0.30776355,169.13177 c -0.661133,8.31658 -1.131354,-21.15686 -1.249736,-78.333337 z"
                             id="path1" />
                     </g>
                 </svg>
             </div>
 
-            <div
-                class="min-w-0 max-w-[600px] flex-1 bg-charcoal rounded-bl-2xl rounded-br-2xl shadow-[0_12px_30px_rgba(231,171,1,0.05)]">
+            <div class="min-w-0 max-w-[600px] flex-1 bg-[var(--header-brand)] rounded-bl-2xl rounded-br-2xl shadow-[0_12px_30px_rgba(231,171,1,0.05)] transition-colors duration-300"
+                data-header-brand-bg>
 
                 <!-- Desktop menu -->
                 <div class="mx-auto flex w-full items-center justify-between gap-3 px-2 py-1 sm:px-3">
                     <a href="./" class="group relative z-50 flex min-w-0 items-center gap-2" aria-label="Ga naar home"
                         data-header-logo>
-                        <img src="./assets/images/logos/lumazon-icon-wit-geel.png" alt="Lumazon"
-                            class="h-8 w-8 shrink-0 transition-[transform,opacity] duration-300 ease-out group-hover:opacity-90"
-                            decoding="async" data-header-logo-icon>
-                        <div class="flex flex-col text-center items-center leading-none transition-transform duration-300 ease-out"
+                        <span class="relative h-8 w-8 shrink-0 transition-transform duration-900 ease-out"
+                            aria-hidden="true" data-header-logo-icon>
+                            <img src="./assets/images/logos/lumazon-icon-wit-geel.png" alt="Lumazon"
+                                class="absolute inset-0 h-8 w-8 transition-opacity duration-[400ms] ease-out"
+                                decoding="async">
+                            <img src="./assets/images/logos/lumazon-icon-zwart.png" alt="Lumazon"
+                                class="absolute inset-0 h-8 w-8 opacity-0 transition-opacity duration-[400ms] ease-out group-hover:opacity-100"
+                                style="filter: brightness(0) invert(1);" decoding="async">
+                        </span>
+                        <div class="flex flex-col text-center items-center leading-none transition-transform duration-900 ease-out"
                             data-header-logo-text>
-                            <span
-                                class="text-[16px] font-bold tracking-tight text-white font-inter transition-[transform,opacity] duration-300 ease-out group-hover:opacity-80">
+                            <span class="text-[16px] font-bold tracking-tight text-white font-inter">
                                 Lumazon
                             </span>
                         </div>
@@ -54,7 +59,7 @@
                                         clip-rule="evenodd" />
                                 </svg>
                             </button>
-                            <div class="invisible pointer-events-none absolute left-1/2 top-full z-40 w-52 -translate-x-1/2 translate-y-2 rounded-xl border border-white/10 bg-charcoal p-2 opacity-0 shadow-[0_12px_30px_rgba(0,0,0,0.35)] transition-all duration-200"
+                            <div class="invisible pointer-events-none absolute left-1/2 top-full z-40 w-52 -translate-x-1/2 translate-y-2 rounded-xl border border-white/10 bg-[var(--header-brand)] p-2 opacity-0 shadow-[0_12px_30px_rgba(0,0,0,0.35)] transition-all duration-200"
                                 data-desktop-services-panel>
                                 <div class="flex flex-col gap-1">
                                     <a class="rounded-lg px-2 py-1.5 text-[13px] font-inter font-medium text-white/50 transition-colors duration-200 hover:text-white"
@@ -85,8 +90,8 @@
                             </div>
                         </div>
                         <a class="rounded-full text-[13px] font-inter font-medium tracking-tight text-white/40 transition-colors duration-200 hover:text-white"
-                            href="./projecten/">
-                            Projecten
+                            href="./offerte/">
+                            Offerte
                         </a>
                         <a class="rounded-full text-[13px] font-inter font-medium tracking-tight text-white/40 transition-colors duration-200 hover:text-white"
                             href="./contact/">
@@ -129,34 +134,65 @@
                 </div>
 
                 <!-- Mobile menu -->
-                <div class="fixed inset-x-0 top-0 z-40 hidden h-0 overflow-hidden rounded-2xl bg-charcoal px-5 pt-24 pb-6 font-inter opacity-0 -translate-y-2 transition-[height,opacity,transform,border-radius] duration-300 ease-out pointer-events-none md:hidden"
+                <div class="fixed inset-x-0 top-0 z-40 hidden h-0 overflow-hidden rounded-2xl bg-[var(--header-brand)] px-5 pt-24 pb-6 font-inter opacity-0 -translate-y-2 transition-[height,opacity,transform,border-radius,background-color] duration-300 ease-out pointer-events-none md:hidden"
                     data-header-menu>
                     <div class="flex flex-col gap-5">
                         <a class="translate-y-3 rounded-lg px-3 py-2 text-2xl font-inter tracking-tighter text-white opacity-0 transition-all duration-300 ease-out hover:bg-white/10 hover:text-white"
                             data-header-menu-item href="./">
                             Home
                         </a>
+                        <div class="translate-y-3 opacity-0 transition-all duration-300 ease-out" data-header-menu-item>
+                            <button type="button"
+                                class="flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-2xl font-inter tracking-tighter text-white transition-colors duration-200 hover:bg-white/10 hover:text-white"
+                                aria-expanded="false" data-mobile-services-toggle>
+                                <span>Diensten</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                    class="h-5 w-5 shrink-0 text-white/70 transition-transform duration-300 ease-out"
+                                    aria-hidden="true" data-mobile-services-icon>
+                                    <path fill-rule="evenodd"
+                                        d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                            <div class="pointer-events-none overflow-hidden pl-3 pr-1 opacity-0 -translate-y-1 transition-[height,opacity,transform] duration-300 ease-out"
+                                data-mobile-services-panel style="height: 0px;">
+                                <div class="mt-2 flex flex-col gap-1.5 pb-1">
+                                    <a class="translate-y-1 rounded-lg px-2 py-1.5 text-base font-medium tracking-tight text-white/65 opacity-0 transition-all duration-200 ease-out hover:bg-white/10 hover:text-white"
+                                        data-mobile-services-item href="./diensten/rolluiken/">
+                                        Rolluiken
+                                    </a>
+                                    <a class="translate-y-1 rounded-lg px-2 py-1.5 text-base font-medium tracking-tight text-white/65 opacity-0 transition-all duration-200 ease-out hover:bg-white/10 hover:text-white"
+                                        data-mobile-services-item href="./diensten/zonneschermen/">
+                                        Zonneschermen
+                                    </a>
+                                    <a class="translate-y-1 rounded-lg px-2 py-1.5 text-base font-medium tracking-tight text-white/65 opacity-0 transition-all duration-200 ease-out hover:bg-white/10 hover:text-white"
+                                        data-mobile-services-item href="./diensten/gordijnen/">
+                                        Gordijnen
+                                    </a>
+                                    <a class="translate-y-1 rounded-lg px-2 py-1.5 text-base font-medium tracking-tight text-white/65 opacity-0 transition-all duration-200 ease-out hover:bg-white/10 hover:text-white"
+                                        data-mobile-services-item href="./diensten/screens/">
+                                        Screens
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                         <a class="translate-y-3 rounded-lg px-3 py-2 text-2xl font-inter tracking-tighter text-white opacity-0 transition-all duration-300 ease-out hover:bg-white/10 hover:text-white"
-                            data-header-menu-item href="./projecten/">
-                            Diensten
-                        </a>
-                        <a class="translate-y-3 rounded-lg px-3 py-2 text-2xl font-inter tracking-tighter text-white opacity-0 transition-all duration-300 ease-out hover:bg-white/10 hover:text-white"
-                            data-header-menu-item href="./projecten/">
-                            Projecten
+                            data-header-menu-item href="./offerte/">
+                            Offerte
                         </a>
                         <a class="translate-y-3 rounded-lg px-3 py-2 text-2xl font-inter tracking-tighter text-white opacity-0 transition-all duration-300 ease-out hover:bg-white/10 hover:text-white"
                             data-header-menu-item href="./contact/">
                             Contact
                         </a>
                     </div>
-                    <a href="./offerte/" target="_blank"
-                        rel="noopener noreferrer"
-                        class="group relative isolate mt-8 inline-flex items-center gap-5 overflow-hidden rounded-full bg-white py-1.5 pl-6 pr-1.5 font-inter text-[16px] font-semibold tracking-tight text-charcoal opacity-100 transition-[padding,transform,opacity,color] duration-700 ease-out hover:text-white [transform:translateZ(0)]"
-                        style="--btn-cta-accent:#f4a104;">
+                    <a href="./offerte/" target="_blank" rel="noopener noreferrer"
+                        class="group relative isolate mt-8 inline-flex items-center gap-5 overflow-hidden rounded-full bg-white py-1.5 pl-6 pr-1.5 font-inter text-[16px] font-semibold tracking-tight text-[var(--header-brand)] opacity-100 transition-[padding,transform,opacity,color] duration-700 ease-out hover:text-white [transform:translateZ(0)]"
+                        style="--btn-cta-accent:#e29f21;">
                         <span aria-hidden="true"
                             class="btn-cta__glow pointer-events-none absolute right-1.5 top-1/2 z-0 h-10 w-10 -translate-y-1/2 rounded-full transition-transform duration-500 ease-in group-hover:scale-[9]"></span>
                         <span
-                            class="relative font-[500] z-10 transition-[opacity,transform,color] group-hover:text-white duration-700 ease-out">Gratis Offerte</span>
+                            class="relative font-[500] z-10 transition-[opacity,transform,color] group-hover:text-white duration-700 ease-out">Gratis
+                            Offerte</span>
                         <span
                             class="btn-cta__icon relative z-10 inline-flex h-10 w-10 items-center justify-center rounded-full transition-[opacity,transform] duration-700 ease-out group-hover:translate-x-0.5 group-hover:scale-[0.96]">
                             <span aria-hidden="true" class="relative h-4 w-4 overflow-hidden">
@@ -185,7 +221,7 @@
                     width="182.66667" height="182.66667" viewBox="0 0 182.66667 182.66667" class="h-4 w-4">
                     <defs id="defs1" />
                     <g id="g1">
-                        <path style="fill:#2b2b2b;fill-opacity:1"
+                        <path style="fill:var(--header-brand);fill-opacity:1"
                             d="M -0.94197245,90.798433 -1.1317634,-0.86823629 90.534905,-0.66312009 c 50.416665,0.1128139 85.966665,0.6282876 78.999995,1.1454972 C 79.284159,7.1826479 7.4945495,78.727162 0.30776355,169.13177 c -0.661133,8.31658 -1.131354,-21.15686 -1.249736,-78.333337 z"
                             id="path1" />
                     </g>

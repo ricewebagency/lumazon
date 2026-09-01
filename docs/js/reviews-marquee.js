@@ -289,9 +289,13 @@ document.addEventListener('DOMContentLoaded', () => {
         dotButtons.forEach((dotButton) => {
             const dotIndex = Number.parseInt(dotButton.getAttribute('data-reviews-dot') || '0', 10);
             const isActive = dotIndex === currentSlideIndex;
+            const dotBar = dotButton.querySelector('[data-reviews-dot-bar]');
 
-            dotButton.classList.toggle('bg-white', isActive);
-            dotButton.classList.toggle('bg-white/30', !isActive);
+            if (dotBar) {
+                dotBar.classList.toggle('bg-white', isActive);
+                dotBar.classList.toggle('bg-white/30', !isActive);
+            }
+
             dotButton.setAttribute('aria-current', isActive ? 'true' : 'false');
         });
     };
@@ -325,17 +329,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
         slideElements.forEach((_slide, index) => {
             const dot = document.createElement('button');
+            const dotBar = document.createElement('span');
+
             dot.type = 'button';
             dot.className =
-                'h-0.5 w-8 rounded-full bg-gray-300 transition-colors duration-200 hover:bg-white/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal';
+                'inline-flex h-4 w-8 shrink-0 items-center justify-center rounded-full transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal';
             dot.setAttribute('data-reviews-dot', `${index}`);
             dot.setAttribute('aria-label', `Ga naar review ${index + 1}`);
             dot.setAttribute('aria-current', 'false');
+
+            dotBar.className = 'block h-0.5 w-8 max-w-full shrink-0 rounded-full bg-white/30 transition-colors duration-200';
+            dotBar.setAttribute('data-reviews-dot-bar', '');
 
             dot.addEventListener('click', () => {
                 scrollToSlide(index);
             });
 
+            dot.appendChild(dotBar);
             dotsFragment.appendChild(dot);
         });
 

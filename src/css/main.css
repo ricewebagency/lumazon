@@ -13,7 +13,7 @@
 
 	/* Accent glow color is set via --btn-cta-accent on the element */
 	.btn-cta__glow {
-		background-color: var(--btn-cta-accent, #f4a104);
+		background-color: var(--btn-cta-accent, #e29f21);
 	}
 
 	.font-instrument-serif {

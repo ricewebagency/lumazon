@@ -25,6 +25,43 @@ function writeFileWithRetry(filePath, content, encoding = "utf8") {
 const SRC = "src";
 const DOCS = "docs";
 
+function getPageAssetBasePath(sourceFilePath) {
+  const docsRoot = path.resolve(DOCS);
+  const sourceDocsPath = path.resolve(toDocsPath(sourceFilePath));
+  const relativePath = path.relative(path.dirname(sourceDocsPath), docsRoot).replace(/\\/g, "/");
+
+  if (!relativePath || relativePath === ".") {
+    return "./";
+  }
+
+  return `${relativePath}/`;
+}
+
+function injectPageBase(html, sourceFilePath) {
+  const basePath = getPageAssetBasePath(sourceFilePath);
+
+  const withBodyDataset = html.includes("<body")
+    ? html.replace(
+        /<body([^>]*)>/i,
+        (_match, attributes) => `<body${attributes} data-asset-base-path="${basePath}">`
+      )
+    : html;
+
+  const headMatch = withBodyDataset.match(/<head\s*>/i);
+
+  if (!headMatch) {
+    return withBodyDataset;
+  }
+
+  const baseTag = `<base href="${basePath}">`;
+
+  if (withBodyDataset.includes("<base ")) {
+    return withBodyDataset.replace(/<base\s+[^>]*>/i, baseTag);
+  }
+
+  return withBodyDataset.replace(headMatch[0], `${headMatch[0]}\n    ${baseTag}`);
+}
+
 function renderHtmlWithPartials(entryFilePath, seen = new Set()) {
   const resolvedEntry = path.resolve(entryFilePath);
 
@@ -38,7 +75,9 @@ function renderHtmlWithPartials(entryFilePath, seen = new Set()) {
   const includePattern = /<!--\s*@include\s+([^\s]+)\s*-->/g;
 
   return html.replace(includePattern, (_match, includePath) => {
-    const partialPath = path.resolve(path.dirname(resolvedEntry), includePath);
+    const fromCurrentDir = path.resolve(path.dirname(resolvedEntry), includePath);
+    const fromSrcRoot = path.resolve(SRC, includePath.replace(/^[/\\]+/, ""));
+    const partialPath = existsSync(fromCurrentDir) ? fromCurrentDir : fromSrcRoot;
 
     if (!existsSync(partialPath)) {
       throw new Error(`Partial not found: ${includePath} in ${entryFilePath}`);
@@ -70,19 +109,38 @@ function removePath(p) {
   if (existsSync(p)) rmSync(p, { recursive: true, force: true });
 }
 
-function renderRootHtmlFile(fileName) {
-  const source = path.join(SRC, fileName);
-  const dest = path.join(DOCS, fileName);
-  const html = renderHtmlWithPartials(source);
+function renderHtmlFile(source) {
+  const dest = toDocsPath(source);
+  const html = injectPageBase(renderHtmlWithPartials(source), source);
 
   ensureDirs();
+  mkdirSync(path.dirname(dest), { recursive: true });
   writeFileWithRetry(dest, html, "utf8");
 }
 
-function renderAllRootHtmlFiles() {
-  for (const file of readdirSync(SRC)) {
-    if (file.endsWith(".html")) {
-      renderRootHtmlFile(file);
+function walkFiles(dir, files = []) {
+  for (const entry of readdirSync(dir, { withFileTypes: true })) {
+    const fullPath = path.join(dir, entry.name);
+
+    if (entry.isDirectory()) {
+      walkFiles(fullPath, files);
+      continue;
+    }
+
+    files.push(fullPath);
+  }
+
+  return files;
+}
+
+function isHtmlFile(p) {
+  return path.extname(p) === ".html";
+}
+
+function renderAllHtmlFiles() {
+  for (const file of walkFiles(SRC)) {
+    if (isHtmlFile(file) && !isPartialsHtmlFile(file)) {
+      renderHtmlFile(file);
     }
   }
 }
@@ -91,19 +149,21 @@ function isPartialsHtmlFile(p) {
   return p.startsWith(path.join(SRC, "partials") + path.sep) && path.extname(p) === ".html";
 }
 
+function isInPartials(p) {
+  return p.startsWith(path.join(SRC, "partials") + path.sep);
+}
+
 function initialSync() {
   ensureDirs();
-  renderAllRootHtmlFiles();
+  renderAllHtmlFiles();
 
-  for (const file of ["robots.txt", "sitemap.xml", "site.webmanifest"]) {
-    const from = path.join(SRC, file);
-    if (existsSync(from)) {
-      copyFile(from, path.join(DOCS, file));
+  for (const file of walkFiles(SRC)) {
+    if (isInPartials(file) || isHtmlFile(file)) {
+      continue;
     }
-  }
 
-  copyDir(path.join(SRC, "js"), path.join(DOCS, "js"));
-  copyDir(path.join(SRC, "assets"), path.join(DOCS, "assets"));
+    copyFile(file, toDocsPath(file));
+  }
 }
 
 function toDocsPath(srcPath) {
@@ -147,43 +207,42 @@ const watcher = chokidar.watch(
   { ignoreInitial: true }
 );
 
-function isRootHtml(p) {
-  // alleen src/*.html (geen subfolders)
-  return p.startsWith(`${SRC}${path.sep}`) &&
-    path.extname(p) === ".html" &&
-    path.dirname(p) === SRC;
-}
-
 watcher
   .on("add", (p) => {
-    if (isPartialsHtmlFile(p)) {
-      renderAllRootHtmlFiles();
+    if (isInPartials(p)) {
+      if (isHtmlFile(p)) {
+        renderAllHtmlFiles();
+      }
       return;
     }
 
-    const dest = toDocsPath(p);
-    copyFile(p, dest);
+    if (isHtmlFile(p)) {
+      renderHtmlFile(p);
+      return;
+    }
+
+    copyFile(p, toDocsPath(p));
   })
   .on("change", (p) => {
-    if (isPartialsHtmlFile(p)) {
-      renderAllRootHtmlFiles();
+    if (isInPartials(p)) {
+      if (isHtmlFile(p)) {
+        renderAllHtmlFiles();
+      }
       return;
     }
 
-    if (isRootHtml(p) ||
-      p.includes(`${path.sep}js${path.sep}`) ||
-      p.includes(`${path.sep}assets${path.sep}`)) {
-      if (isRootHtml(p)) {
-        renderRootHtmlFile(path.basename(p));
-      } else {
-        const dest = toDocsPath(p);
-        copyFile(p, dest);
-      }
+    if (isHtmlFile(p)) {
+      renderHtmlFile(p);
+      return;
     }
+
+    copyFile(p, toDocsPath(p));
   })
   .on("unlink", (p) => {
-    if (isPartialsHtmlFile(p)) {
-      renderAllRootHtmlFiles();
+    if (isInPartials(p)) {
+      if (isHtmlFile(p)) {
+        renderAllHtmlFiles();
+      }
       return;
     }
 

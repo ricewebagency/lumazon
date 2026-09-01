@@ -6,14 +6,15 @@ document.addEventListener('DOMContentLoaded', () => {
   
   if (!loadingScreen || !loadingLogo || !loadingImageA || !loadingImageB) return;
 
+  const basePath = (loadingScreen.dataset.logoBasePath || './').replace(/\/+$/, '');
   const loadingFrames = [
-    './assets/images/logos/lumazon-icon-wit-geel-loading-1.png',
-    './assets/images/logos/lumazon-icon-wit-geel-loading-2.png',
-    './assets/images/logos/lumazon-icon-wit-geel-loading-3.png',
-    './assets/images/logos/lumazon-icon-wit-geel-loading-4.png',
-    './assets/images/logos/lumazon-icon-wit-geel-loading-5.png',
-    './assets/images/logos/lumazon-icon-wit-geel-loading-6.png',
-  ];
+    'assets/images/logos/lumazon-icon-wit-geel-loading-1.png',
+    'assets/images/logos/lumazon-icon-wit-geel-loading-2.png',
+    'assets/images/logos/lumazon-icon-wit-geel-loading-3.png',
+    'assets/images/logos/lumazon-icon-wit-geel-loading-4.png',
+    'assets/images/logos/lumazon-icon-wit-geel-loading-5.png',
+    'assets/images/logos/lumazon-icon-wit-geel-loading-6.png',
+  ].map((frame) => `${basePath}/${frame.replace(/^\/?/, '')}`);
 
   loadingFrames.forEach((source) => {
     const image = new Image();

@@ -1,6 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const existingButtons = document.querySelectorAll('[data-whatsapp-float]');
+  const scriptTag = document.currentScript || document.querySelector('script[src*="whatsapp-float.js"]');
+  const globalConfig = window.lumazonConfig || {};
+  const scriptDelayValue = scriptTag ? scriptTag.getAttribute('data-whatsapp-float-delay') : null;
+  const globalDelayValue = globalConfig.whatsappFloatDelay;
+  const configuredScriptDelay = Number.parseFloat(scriptDelayValue || globalDelayValue || '3.10');
+  const defaultDelaySeconds = Number.isFinite(configuredScriptDelay) ? configuredScriptDelay : 3.1;
   let whatsappButtons = Array.from(existingButtons);
 
   if (!whatsappButtons.length) {
@@ -11,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     button.target = '_blank';
     button.rel = 'noopener noreferrer';
     button.setAttribute('data-whatsapp-float', '');
-    button.setAttribute('data-animate-delay', '3.10');
+    button.setAttribute('data-animate-delay', String(defaultDelaySeconds));
     button.setAttribute('aria-label', 'Chat via WhatsApp');
     button.className = 'fixed bottom-6 right-5 z-50 flex translate-x-[120%] items-center justify-center opacity-0 w-12 h-12 rounded-full bg-green-500 shadow-lg lg:hidden transition-[transform,opacity,background-color] duration-700 ease-out hover:bg-green-600 motion-reduce:translate-x-0 motion-reduce:opacity-100';
     button.innerHTML = `
@@ -49,7 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   whatsappButtons.forEach((button) => {
-    const configuredDelay = Number.parseFloat(button.getAttribute('data-animate-delay') || '0');
+    const buttonDelayValue = button.getAttribute('data-animate-delay');
+    const configuredDelay = Number.parseFloat(buttonDelayValue || String(defaultDelaySeconds));
     const delayMs = Number.isFinite(configuredDelay) ? Math.max(configuredDelay, 0) * 1000 : 0;
 
     if (prefersReducedMotion || delayMs === 0) {
