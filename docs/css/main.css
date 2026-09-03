@@ -1795,6 +1795,11 @@ video {
   background-color: rgb(255 255 255 / 0.8);
 }
 
+.bg-\[\#f8a300\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 163 0 / var(--tw-bg-opacity, 1));
+}
+
 .bg-\[linear-gradient\(to_bottom\2c \#0033c4\2c \#0072ff\2c \#3b96e4\2c \#43c6ff\2c \#80d0f5\)\]{
   background-image: linear-gradient(to bottom,#0033c4,#0072ff,#3b96e4,#43c6ff,#80d0f5);
 }
@@ -2790,6 +2795,14 @@ video {
 
 .\[-ms-overflow-style\:none\]{
   -ms-overflow-style: none;
+}
+
+.\[filter\:drop-shadow\(0_35px_35px_rgb\(0_0_0\)\)\]{
+  filter: drop-shadow(0 35px 35px rgb(0 0 0));
+}
+
+.\[filter\:drop-shadow\(0_35px_35px_rgb\(0_0_0_\/_0\.2\)\)\]{
+  filter: drop-shadow(0 35px 35px rgb(0 0 0 / 0.2));
 }
 
 .\[mask-image\:linear-gradient\(to_right\2c transparent\2c black_12\%\2c black_88\%\2c transparent\)\]{
