@@ -751,6 +751,10 @@ video {
   z-index: 1;
 }
 
+.z-\[200\]{
+  z-index: 200;
+}
+
 .z-\[30\]{
   z-index: 30;
 }
@@ -1720,6 +1724,10 @@ video {
   background-color: rgb(72 59 41 / 0.15);
 }
 
+.bg-\[\#483b29\]\/60{
+  background-color: rgb(72 59 41 / 0.6);
+}
+
 .bg-\[\#655a3e\]\/30{
   background-color: rgb(101 90 62 / 0.3);
 }
@@ -1908,6 +1916,11 @@ video {
 .px-6{
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+.px-8{
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .px-\[20px\]{
@@ -3371,6 +3384,11 @@ video {
   .md\:text-4xl{
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .md\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
 

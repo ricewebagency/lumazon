@@ -279,6 +279,7 @@
     <script defer src="./js/header-menu.js"></script>
     <script defer src="./js/line-reveal.js"></script>
     <script defer src="./js/offerte-label.js"></script>
+    <script defer src="./js/offerte-thank-you-popup.js"></script>
     <script defer src="./js/whatsapp-float.js" data-whatsapp-float-delay="2.1"></script>
     <script defer src="./js/loading-screen-doors.js"></script>
     <script defer src="./js/year.js"></script>
@@ -907,10 +908,12 @@
                     </div>
 
                     <!-- Contact Form -->
-                    <form action="https://api.web3forms.com/submit" method="POST"
-                        class="bg-[#fffdf9] rounded-2xl shadow-xl p-6 md:p-8 lg:p-10 space-y-6">
+                    <form action="https://api.web3forms.com/submit" method="POST" data-offerte-form
+                        class="bg-[#fffdf9] rounded-2xl shadow-xl p-6 md:p-8 lg:p-10 space-y-6"
+                        data-success-message="Bedankt voor uw aanvraag. We nemen meestal binnen 1 werkdag contact met u op."
+                        data-error-message="Verzenden is niet gelukt. Probeer het opnieuw of neem direct contact met ons op.">
 
-                        <input type="hidden" name="access_key" value="d5bfa8dd-2e7d-4bb9-903d-f6b2f31335c1">
+                        <input type="hidden" name="access_key" value="89e26fbd-1174-4ba9-b3b1-165e1b605816">
                         <input type="hidden" name="subject" value="Nieuwe rolluiken aanvraag via website Lumazon">
                         <input type="hidden" name="from_name" value="Lumazon Website">
 
@@ -1057,7 +1060,7 @@
                         </div>
 
                         <!-- Submit Button -->
-                        <button type="submit"
+                        <button type="submit" data-offerte-submit
                             class="w-full bg-[#483b29] text-white font-semibold py-4 px-6 rounded-lg hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 font-georama text-lg">
                             Verstuur aanvraag
                         </button>
@@ -1069,6 +1072,30 @@
                         </p>
 
                     </form>
+
+                    <div data-thank-you-popup
+                        class="fixed inset-0 z-[200] flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-200"
+                        role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="thankYouTitle">
+                        <div data-popup-overlay class="absolute inset-0 bg-[#483b29]/60"></div>
+                        <div
+                            class="relative w-full max-w-2xl bg-[#fffdf9] rounded-2xl shadow-xl p-6 md:p-8 lg:p-10 space-y-6">
+                            <div class="space-y-2 text-center">
+                                <h3 id="thankYouTitle"
+                                    class="text-3xl md:text-4xl font-semibold text-[#483b29] font-georama">
+                                    Bedankt voor uw aanvraag
+                                </h3>
+                                <p data-thank-you-message class="text-base md:text-lg text-[#483b29]/80 font-georama">
+                                    We hebben uw bericht goed ontvangen en nemen zo snel mogelijk contact met u op.
+                                </p>
+                            </div>
+                            <div class="flex justify-center">
+                                <button type="button" data-popup-close
+                                    class="bg-[#483b29] text-white font-semibold py-3 px-8 rounded-lg hover:shadow-lg transition-all duration-200 font-georama">
+                                    Sluiten
+                                </button>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
