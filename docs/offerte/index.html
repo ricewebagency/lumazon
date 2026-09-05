@@ -403,7 +403,7 @@
                     </nav>
 
                     <div class="flex flex-row items-center gap-2">
-                        <a href="#download"
+                        <a href="./offerte/"
                             class="group relative z-30 hidden gap-1 rounded-lg bg-white px-4 py-2 my-1 text-[12px] font-inter font-semibold tracking-tight text-nowrap text-black transition-colors duration-200 md:inline-flex">
                             <span class="relative h-4 w-4 shrink-0">
                                 <img src="./assets/images/logos/lumazon-icon-zwart-geel.png" alt="Lumazon"
@@ -963,14 +963,16 @@
                     </p>
                 </div>
                 <a href="https://www.google.com/search?q=reviews+voor+lumazon" target="_blank"
+                    rel="noopener noreferrer" data-google-reviews-badge
                     class="inline-flex w-max items-center gap-3 rounded-[10px] border border-black/10 bg-white px-4 py-2 shadow-sm">
                     <div class="w-max rounded-[5px] px-2 py-1 bg-white">
                         <img src="./assets/images/logos/google-logo.png" alt="Google reviews" class="h-4" loading="lazy"
                             decoding="async" />
                     </div>
-                    <span class="text-yellow-400 text-sm">★★★★★</span>
+                    <span class="text-yellow-400 text-sm" data-google-reviews-stars>★★★★★</span>
+                    <span class="text-sm text-blue-600 text-nowrap" data-google-reviews-count>(0)</span>
                     <span class="text-sm text-slate-500">|</span>
-                    <span class="text-sm text-slate-500 text-nowrap">Bekijk reviews</span>
+                    <span class="text-sm text-slate-500 text-nowrap">Bekijken</span>
                 </a>
             </div>
         </div>
@@ -996,6 +998,8 @@
         </a>
     </div>
 </div>
+
+<script defer src="./js/google-reviews-badge.js"></script>
     </footer>
 </body>
 
