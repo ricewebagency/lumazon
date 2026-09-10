@@ -1,18 +1,18 @@
 {
-  "updatedAt": "2026-09-03T12:53:00.641Z",
+  "updatedAt": "2026-09-10T09:00:54.850Z",
   "reviews": [
     {
       "position": 1,
-      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xJM1UyUjNhVkZSWkY5WlpFRjFlbXh0UzFZMWNHYxAB!2m1!1s0x0:0x1a6df86c6eb55741!3m1!1s2@1:CAIQACodChtycF9oOlI3U2R3aVFRZF9ZZEF1emxtS1Y1cGc%7C%7C?hl=en-GB",
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xJM1UyUjNhVkZSWkY5WlpFRjFlbXh0UzFZMWNHYxAB!2m1!1s0x0:0x1a6df86c6eb55741!3m1!1s2@1:CAIQACodChtycF9oOlI3U2R3aVFRZF9ZZEF1emxtS1Y1cGc%7C%7C?hl=en-US",
       "rating": 5,
-      "date": "3 weeks ago",
+      "date": "a month ago",
       "iso_date": "2026-08-10T08:33:41Z",
       "iso_date_of_last_edit": "2026-08-10T08:33:41Z",
       "source": "Google",
       "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2xJM1UyUjNhVkZSWkY5WlpFRjFlbXh0UzFZMWNHYxAB",
       "user": {
         "name": "Bee van Theren",
-        "link": "https://www.google.com/maps/contrib/118326836438563715653?hl=en-GB",
+        "link": "https://www.google.com/maps/contrib/118326836438563715653?hl=en-US",
         "contributor_id": "118326836438563715653",
         "thumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjWhBr7M94kBy7SrNe5iaEGuMyHa5Xs0fFWsxrhWfZKOD2I4ZTc=s120-c-rp-mo-br100",
         "local_guide": true,
@@ -28,16 +28,16 @@
     },
     {
       "position": 2,
-      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21kSWJIZG5PRVJWYjFodVRITTFZMnhaTlZoQk5WRRAB!2m1!1s0x0:0x1a6df86c6eb55741!3m1!1s2@1:CAIQACodChtycF9oOmdIbHdnOERVb1huTHM1Y2xZNVhBNVE%7C%7C?hl=en-GB",
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21kSWJIZG5PRVJWYjFodVRITTFZMnhaTlZoQk5WRRAB!2m1!1s0x0:0x1a6df86c6eb55741!3m1!1s2@1:CAIQACodChtycF9oOmdIbHdnOERVb1huTHM1Y2xZNVhBNVE%7C%7C?hl=en-US",
       "rating": 5,
-      "date": "3 weeks ago",
+      "date": "a month ago",
       "iso_date": "2026-08-09T18:58:49Z",
       "iso_date_of_last_edit": "2026-08-09T18:58:49Z",
       "source": "Google",
       "review_id": "Ci9DQUlRQUNvZENodHljRjlvT21kSWJIZG5PRVJWYjFodVRITTFZMnhaTlZoQk5WRRAB",
       "user": {
         "name": "Floran Elisa Ouderland",
-        "link": "https://www.google.com/maps/contrib/111811325484634955047?hl=en-GB",
+        "link": "https://www.google.com/maps/contrib/111811325484634955047?hl=en-US",
         "contributor_id": "111811325484634955047",
         "thumbnail": "https://lh3.googleusercontent.com/a/ACg8ocJI1PbY3r6Pdv-30rzhY3IKImSLqpiy87SNYutqqwQzsdvDUg=s120-c-rp-mo-br100",
         "local_guide": true,
