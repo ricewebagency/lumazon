@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-22T09:29:49.792Z",
+  "updatedAt": "2026-10-29T10:58:27.736Z",
   "reviews": [
     {
       "position": 1,
-      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xJM1UyUjNhVkZSWkY5WlpFRjFlbXh0UzFZMWNHYxAB!2m1!1s0x0:0x1a6df86c6eb55741!3m1!1s2@1:CAIQACodChtycF9oOlI3U2R3aVFRZF9ZZEF1emxtS1Y1cGc%7C%7C?hl=en-US",
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xJM1UyUjNhVkZSWkY5WlpFRjFlbXh0UzFZMWNHYxAB!2m1!1s0x0:0x1a6df86c6eb55741!3m1!1s2@1:CAIQACodChtycF9oOlI3U2R3aVFRZF9ZZEF1emxtS1Y1cGc%7C%7C?hl=en",
       "rating": 5,
       "date": "2 months ago",
       "iso_date": "2026-08-10T08:33:41Z",
@@ -12,10 +12,9 @@
       "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2xJM1UyUjNhVkZSWkY5WlpFRjFlbXh0UzFZMWNHYxAB",
       "user": {
         "name": "Bee van Theren",
-        "link": "https://www.google.com/maps/contrib/118326836438563715653?hl=en-US",
+        "link": "https://www.google.com/maps/contrib/118326836438563715653?hl=en",
         "contributor_id": "118326836438563715653",
         "thumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjWhBr7M94kBy7SrNe5iaEGuMyHa5Xs0fFWsxrhWfZKOD2I4ZTc=s120-c-rp-mo-br100",
-        "local_guide": true,
         "reviews": 4,
         "photos": 0
       },
@@ -28,7 +27,7 @@
     },
     {
       "position": 2,
-      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21kSWJIZG5PRVJWYjFodVRITTFZMnhaTlZoQk5WRRAB!2m1!1s0x0:0x1a6df86c6eb55741!3m1!1s2@1:CAIQACodChtycF9oOmdIbHdnOERVb1huTHM1Y2xZNVhBNVE%7C%7C?hl=en-US",
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21kSWJIZG5PRVJWYjFodVRITTFZMnhaTlZoQk5WRRAB!2m1!1s0x0:0x1a6df86c6eb55741!3m1!1s2@1:CAIQACodChtycF9oOmdIbHdnOERVb1huTHM1Y2xZNVhBNVE%7C%7C?hl=en",
       "rating": 5,
       "date": "2 months ago",
       "iso_date": "2026-08-09T18:58:49Z",
@@ -37,10 +36,9 @@
       "review_id": "Ci9DQUlRQUNvZENodHljRjlvT21kSWJIZG5PRVJWYjFodVRITTFZMnhaTlZoQk5WRRAB",
       "user": {
         "name": "Floran Elisa Ouderland",
-        "link": "https://www.google.com/maps/contrib/111811325484634955047?hl=en-US",
+        "link": "https://www.google.com/maps/contrib/111811325484634955047?hl=en",
         "contributor_id": "111811325484634955047",
         "thumbnail": "https://lh3.googleusercontent.com/a/ACg8ocJI1PbY3r6Pdv-30rzhY3IKImSLqpiy87SNYutqqwQzsdvDUg=s120-c-rp-mo-br100",
-        "local_guide": true,
         "reviews": 6,
         "photos": 1
       },
@@ -51,6 +49,59 @@
       },
       "details": {
         "price_assessment": "Great price"
+      },
+      "likes": 0
+    },
+    {
+      "position": 3,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tkYVdIcE5iRlJqVDNWVmNtdGtPRXhaZW1oNlpGRRAB!2m1!1s0x0:0x1a6df86c6eb55741!3m1!1s2@1:CAIQACodChtycF9oOkdaWHpNbFRjT3VVcmtkOExZemh6ZFE%7C%7C?hl=en",
+      "rating": 5,
+      "date": "19 hours ago",
+      "iso_date": "2026-10-28T15:42:18Z",
+      "iso_date_of_last_edit": "2026-10-28T15:42:18Z",
+      "source": "Google",
+      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2tkYVdIcE5iRlJqVDNWVmNtdGtPRXhaZW1oNlpGRRAB",
+      "user": {
+        "name": "Maurice Terdu",
+        "link": "https://www.google.com/maps/contrib/118420680522315819139?hl=en",
+        "contributor_id": "118420680522315819139",
+        "thumbnail": "https://lh3.googleusercontent.com/a/ACg8ocIRB5x_aUJOuz2KG6-FjlPP7tgSe7TliGzEe92CUa4TuG2PPA=s120-c-rp-mo-ba12-br100",
+        "local_guide": true,
+        "reviews": 15,
+        "photos": 1
+      },
+      "snippet": "Super tevreden met mijn solar rolluik van Lumazon.nl!\n\nIk ben ontzettend blij met mijn solar rolluik van Lumazon.nl! Het rolluik ziet er mooi en strak uit en werkt superhandig op zonne-energie. Geen gedoe met kabels en het geeft meteen een luxe uitstraling aan het huis. Echt een mooie toevoeging! Ik ben erg tevreden met het resultaat en kan Lumazon.nl zeker aanraden!",
+      "extracted_snippet": {
+        "original": "Super tevreden met mijn solar rolluik van Lumazon.nl!\n\nIk ben ontzettend blij met mijn solar rolluik van Lumazon.nl! Het rolluik ziet er mooi en strak uit en werkt superhandig op zonne-energie. Geen gedoe met kabels en het geeft meteen een luxe uitstraling aan het huis. Echt een mooie toevoeging! Ik ben erg tevreden met het resultaat en kan Lumazon.nl zeker aanraden!",
+        "translated": "Super satisfied with my solar roller shutter from Lumazon.nl!\n\nI am incredibly happy with my solar roller shutter from Lumazon.nl! The roller shutter looks beautiful and sleek and works super conveniently on solar energy. No hassle with cables, and it immediately gives the house a luxurious look. A truly beautiful addition! I am very satisfied with the result and can definitely recommend Lumazon.nl!"
+      },
+      "likes": 0
+    },
+    {
+      "position": 4,
+      "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21OdGJWTjZZV0YyVVU5cGIydzJMWEJ6VkVKYVNWRRAB!2m1!1s0x0:0x1a6df86c6eb55741!3m1!1s2@1:CAIQACodChtycF9oOmNtbVN6YWF2UU9pb2w2LXBzVEJaSVE%7C%7C?hl=en",
+      "rating": 5,
+      "date": "20 hours ago",
+      "iso_date": "2026-10-28T14:09:03Z",
+      "iso_date_of_last_edit": "2026-10-28T14:09:03Z",
+      "source": "Google",
+      "review_id": "Ci9DQUlRQUNvZENodHljRjlvT21OdGJWTjZZV0YyVVU5cGIydzJMWEJ6VkVKYVNWRRAB",
+      "user": {
+        "name": "G B",
+        "link": "https://www.google.com/maps/contrib/100209340170457603958?hl=en",
+        "contributor_id": "100209340170457603958",
+        "thumbnail": "https://lh3.googleusercontent.com/a/ACg8ocJio9X9_fisKVUUbAxFwCDGhVImjEcPW6lVOwmGLD4xXoqnUQ=s120-c-rp-mo-br100",
+        "reviews": 2,
+        "photos": 0
+      },
+      "snippet": "Airco en rolluiken laten plaatsen door Lumazon wat erg netjes is gedaan en er is goed meegedacht naar onze wensen .\nIk raad dit bedrijf zeker aan.",
+      "extracted_snippet": {
+        "original": "Airco en rolluiken laten plaatsen door Lumazon wat erg netjes is gedaan en er is goed meegedacht naar onze wensen .\nIk raad dit bedrijf zeker aan.",
+        "translated": "Had air conditioning and roller shutters installed by Lumazon, which was done very neatly, and they really thought along with our wishes.\n\nI definitely recommend this company."
+      },
+      "details": {
+        "price_assessment": "Great price",
+        "services": "Service not listed"
       },
       "likes": 0
     }
